@@ -48,7 +48,7 @@ include "PHP/get_events.php";
                     echo '<div class="event">';
                     echo $event['name'];
                     echo $event['date'];
-                    echo $event['image'];
+                    echo '<div class="event-image">' . $event['image'] . '</div>';
                     echo '<div class="event-description">' . $event['description'] . '</div>';
                     echo '</div>';
                 }

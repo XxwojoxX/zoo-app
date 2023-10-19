@@ -201,6 +201,11 @@ body {
     .event-description {
       display: none;
     }
+
+    .event-image {
+      height: 400px;
+      object-fit: cover;
+    }
     /*koniec css dla wydarzen*/
 
     /*css dla o_nas*/
