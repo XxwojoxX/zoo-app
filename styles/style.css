@@ -531,4 +531,9 @@ footer {
   color: var(--text-color);
 }
 
+.event-image img {
+  height: 300px;
+  width: 400px;
+}
+
 /*koniec css dla wydarzen*/
