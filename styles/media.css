@@ -202,7 +202,10 @@ body {
       display: none;
     }
 
-    
+    .event-image {
+      height: 200px;
+      width: 250px;
+    }
     /*koniec css dla wydarzen*/
 
     /*css dla o_nas*/
