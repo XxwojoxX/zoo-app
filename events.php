@@ -35,6 +35,34 @@ include "PHP/get_events.php";
             }
         });
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    var eventDescriptions = document.querySelectorAll(".event-description");
+
+    eventDescriptions.forEach(function (description) {
+        var text = description.innerText;
+        var maxLength = 30; // Maksymalna liczba znaków, którą chcesz wyświetlić
+
+        if (text.length > maxLength) {
+            var truncatedText = text.slice(0, maxLength);
+            description.innerText = truncatedText;
+            var expandButton = description.nextElementSibling;
+
+            expandButton.addEventListener("click", function () {
+                if (description.innerText === truncatedText) {
+                    description.innerText = text;
+                    expandButton.innerText = "Ukryj";
+                } else {
+                    description.innerText = truncatedText;
+                    expandButton.innerText = "Pokaż całość";
+                }
+            });
+        }
+    });
+});
+
+    </script>
 </head>
 
 <body>
@@ -50,6 +78,7 @@ include "PHP/get_events.php";
                     echo $event['date'];
                     echo '<div class="event-image">' . $event['image'] . '</div>';
                     echo '<div class="event-description">' . $event['description'] . '</div>';
+                    echo '<div class="expand-button">pokaz calosc</div>';
                     echo '</div>';
                 }
                 ?>

@@ -48,7 +48,7 @@ try {
     }
 
     // W przypadku błędu lub nieprawidłowych danych
-    $_SESSION['fail'] = '<span style="color: red">Nieprawidłowy login lub hasło</span>';
+    $_SESSION['fail'] = '<span style="color: red">Nieprawidłowe dane logowania</span>';
     $connect->close();
     header('Location: ../login_form.php');
 } catch (Exception $e) {
