@@ -1,0 +1,209 @@
+/* Standardowe style, które będą obowiązywać na wszystkich rozdzielczościach */
+body {
+  background-color: var(--bg-color);
+}
+
+.header {
+  font-size: 33px;
+}
+
+.section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1600px) {
+  .home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20%; /* Dostosowano szerokość */
+    max-width: 30%; /* Dostosowano maksymalną szerokość */
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+    align-items: center; /* Wyśrodkowano formularz */
+  }
+
+  #login-form label {
+    width: 95%;
+  }
+
+  #demo-form {
+    width: 25%;
+  }
+
+  #demo-form label {
+    width: 80%;
+  }
+
+  .title {
+    font-size: 24px; /* Zmniejszono wielkość czcionki */
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+
+  .title::before,
+  .title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+  }
+
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: royalblue;
+  }
+
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+
+  .message {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .message,
+  .signin {
+    font-size: 14px;
+  }
+
+  .signin {
+    text-align: center;
+  }
+
+  .signin a {
+    color: royalblue;
+  }
+
+  .signin a:hover {
+    text-decoration: underline;
+  }
+
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 4px;
+  }
+
+  .form label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 85%;
+    height: 30%;
+  }
+
+  .form label .input {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+
+  .form label .input + span {
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    color: grey;
+    font-size: 0.7em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+
+  .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.7em;
+  }
+
+  .form label .input:focus + span,
+  .form label .input:valid + span {
+    top: 20px;
+    left: 60%;
+    transform: translateX(10px);
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+
+  .form label .input:valid + span {
+    color: green;
+  }
+
+  .generated-password p {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .submit,
+  #generator {
+    width: 80%;
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 8px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-align: center; /* Wyśrodkowano przycisk */
+    margin-top: 5px; /* Dodano margines od góry */
+  }
+
+  .submit:hover {
+    background-color: rgb(56, 90, 194);
+  }
+
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  .form label .input[type="textarea"] {
+    /* Dodano selektor na element textarea */
+    height: 120px; /* Dostosowano wysokość do preferencji */
+    resize: none; /* Nie pozwala na zmianę rozmiaru */
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .error {
+    font-size: 13px;
+    color: red;
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+}

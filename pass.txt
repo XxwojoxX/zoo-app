@@ -1,0 +1,9 @@
+user1
+nick:		user1
+password:	Lkr$v0A9jB@FVXSnT
+email:		user1@user1.com
+
+admin
+nick:		admin
+password:	dupqgtQMf
+email:		admin@admin.pl
