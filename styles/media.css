@@ -197,6 +197,10 @@ body {
     .page-link:hover {
       border: 3px solid var(--text-color);
     }
+
+    .event-description {
+      display: none;
+    }
     /*koniec css dla wydarzen*/
 
     /*css dla o_nas*/

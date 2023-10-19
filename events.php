@@ -38,42 +38,43 @@ include "PHP/get_events.php";
 </head>
 
 <body>
-        <nav></nav>
-            <div class="home">
-                <div class="content">
+    <nav></nav>
+    <div class="home">
+        <div class="content">
 
             <div class="event-container event-row">
-        <?php
-        foreach ($events as $event) {
-            echo '<div class="event">';
-            echo $event['name'];
-            echo $event['date'];
-            echo $event['image'];
-            echo '</div>';
-        }
-        ?>
-    </div>
-
-    <div class="pagination">
-        <?php
-        $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
-        $prevPage = $currentPage - 1;
-        $nextPage = $currentPage + 1;
-
-        // Wyświetl obie opcje "Następna strona" i "Poprzednia strona" jeśli to możliwe
-        if ($prevPage > 0) {
-            echo "<a href='?page=$prevPage' class='page-link'>Wstecz</a>";
-        }
-
-        if (count($events) == $eventsPerPage) {
-            echo "<a href='?page=$nextPage' class='page-link'>Dalej</a>";
-        }
-        ?>
-    </div>
-            </div>
+                <?php
+                foreach ($events as $event) {
+                    echo '<div class="event">';
+                    echo $event['name'];
+                    echo $event['date'];
+                    echo $event['image'];
+                    echo '<div class="event-description">' . $event['description'] . '</div>';
+                    echo '</div>';
+                }
+                ?>
             </div>
 
-        <footer></footer>
+            <div class="pagination">
+                <?php
+                $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
+                $prevPage = $currentPage - 1;
+                $nextPage = $currentPage + 1;
+
+                // Wyświetl obie opcje "Następna strona" i "Poprzednia strona" jeśli to możliwe
+                if ($prevPage > 0) {
+                    echo "<a href='?page=$prevPage' class='page-link'>Wstecz</a>";
+                }
+
+                if (count($events) == $eventsPerPage) {
+                    echo "<a href='?page=$nextPage' class='page-link'>Dalej</a>";
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
 </body>
 
 </html>
