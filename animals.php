@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "PHP/animals_data.php";
 ?>
 
 <html>
@@ -38,94 +39,41 @@ session_start();
 </head>
 
 <body>
+    <nav></nav>
     <div class="home">
-        <nav></nav>
-
         <div class="sections">
             <div class="section1">
-                <div class="ui-card">
-                    <img src="img/no_photo.jpg">
-                    <div class="description">
-                        <h3>Lew Afrykański</h3>
-                        <a href="javascript:void(0);" onclick="redirectToAnimalPage('lew')">Sprawdź</a>
-                    </div>
-                </div>
+                <?php
+                $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
+                $animalsPerPage = 4; // Liczba zwierząt na stronie
+                $startIndex = ($currentPage - 1) * $animalsPerPage;
+                
+                $animalsToDisplay = array_slice($animals, $startIndex, $animalsPerPage);
 
-                <div class="ui-card">
-                <img src="img/no_photo.jpg">
-                    <div class="description">
-                        <h3>Tygrys Bengalski</h3>
-                        <a href="javascript:void(0);" onclick="redirectToAnimalPage('tygrys')">Sprawdź</a>
-                    </div>
-                </div>
-
-                <div class="ui-card">
-                <img src="img/no_photo.jpg">
-                    <div class="description">
-                        <h3>Słoń Afrykański</h3>
-                        <a href="javascript:void(0);" onclick="redirectToAnimalPage('slon')">Sprawdź</a>
-                    </div>
-                </div>
-
-                <div class="ui-card">
-                <img src="img/no_photo.jpg">
-                    <div class="description">
-                        <h3>Pingwin Cesarski</h3>
-                        <a href="javascript:void(0);" onclick="redirectToAnimalPage('pingwin')">Sprawdź</a>
-                    </div>
-                </div>
-
-                <div class="ui-card">
-                <img src="img/no_photo.jpg">
-                    <div class="description">
-                        <h3>żyrafa Siatkowana</h3>
-                        <a href="javascript:void(0);" onclick="redirectToAnimalPage('zyrafa')">Sprawdź</a>
-                    </div>
-                </div>
+                foreach ($animalsToDisplay as $animal) {
+                    echo '<div class="ui-card">';
+                    echo '<img src="' . $animal['image'] . '">';
+                    echo '<div class="description">';
+                    echo '<h3>' . $animal['name'] . '</h3>';
+                    echo '<a href="javascript:void(0);" onclick="redirectToAnimalPage(\'' . $animal['name'] . '\')">Sprawdź</a>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+                ?>
             </div>
 
-            <div class="section2">
-                <div class="ui-card">
-                <img src="img/no_photo.jpg">
-                    <div class="description">
-                        <h3>Gepard</h3>
-                        <a href="javascript:void(0);" onclick="redirectToAnimalPage('gepard')">Sprawdź</a>
-                    </div>
-                </div>
-
-                <div class="ui-card">
-                <img src="img/no_photo.jpg">
-                    <div class="description">
-                        <h3>Krokodyl Nilowy</h3>
-                        <a href="javascript:void(0);" onclick="redirectToAnimalPage('krokodyl')">Sprawdź</a>
-                    </div>
-                </div>
-
-                <div class="ui-card">
-                <img src="img/no_photo.jpg">
-                    <div class="description">
-                        <h3>Flaming Różowy</h3>
-                        <a href="javascript:void(0);" onclick="redirectToAnimalPage('flaming')">Sprawdź</a>
-                    </div>
-                </div>
-
-                <div class="ui-card">
-                <img src="img/no_photo.jpg">
-                    <div class="description">
-                        <h3>Panda Wielka</h3>
-                        <a href="javascript:void(0);" onclick="redirectToAnimalPage('panda')">Sprawdź</a>
-                    </div>
-                </div>
-                <div class="ui-card">
-                <img src="img/no_photo.jpg">
-                    <div class="description">
-                        <h3>Wilk Szary</h3>
-                        <a href="javascript:void(0);" onclick="redirectToAnimalPage('wilk')">Sprawdź</a>
-                    </div>
-                </div>
+            <div class="pagination">
+                <?php
+                $totalPages = ceil(count($animals) / $animalsPerPage);
+                if ($currentPage > 1) {
+                    echo "<a href='?page=" . ($currentPage - 1) . "' class='page-link'>Wstecz</a>";
+                }
+                if ($currentPage < $totalPages) {
+                    echo "<a href='?page=" . ($currentPage + 1) . "' class='page-link'>Dalej</a>";
+                }
+                ?>
             </div>
         </div>
-
         <footer></footer>
     </div>
 </body>

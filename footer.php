@@ -31,15 +31,12 @@ session_start();
         </div>
 
         <div class="footer-content">
-            <h4>Firma</h4>
 
             <li><a href="index.php">Strona główna</a></li>
             <li><a href="contact_form.php">Kontakt</a></li>
-            <li><a href="location.php">Znajdź nas</a></li>
         </div>
 
         <div class="footer-content">
-            <h4>O nas</h4>
 
             <li><a href="regulations.php">Regulamin</a></li>
             <li><a href="FAQ.php">FAQ</a></li>
