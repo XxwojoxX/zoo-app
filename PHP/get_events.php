@@ -6,14 +6,21 @@ require_once "connect.php";
 $connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 
 if (!$connect) {
-    die("connection failed: " . mysqli_connect_error());
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 $eventsPerPage = 4;
 $page = isset($_GET['page']) ? $_GET['page'] : 1; // Pobierz numer strony z parametru GET
 
 $offset = ($page - 1) * $eventsPerPage;
-$sql = "SELECT * FROM events LIMIT $eventsPerPage OFFSET $offset";
+
+if (isset($_GET['eventName'])) {
+    $eventName = urldecode($_GET['eventName']);
+    $sql = "SELECT * FROM events WHERE eventName = '$eventName' LIMIT 1"; // Zmieniamy zapytanie, aby znaleźć konkretne wydarzenie
+} else {
+    $sql = "SELECT * FROM events ORDER BY Id_wydarzenia DESC LIMIT $eventsPerPage OFFSET $offset";
+}
+
 $result = mysqli_query($connect, $sql);
 
 $events = array();
@@ -29,7 +36,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         $image_base64 = base64_encode($image);
 
         $event = array(
-            'name' => '<h1 class="eventName">' . $eventName . '</h1>',
+            'name' => $eventName,
             'date' => '<h3 class="eventDate">' . $eventDate . '</h3>',
             'description' => '<p class="eventDescription">' . $eventDescription . '</p>',
             'image' => '<img src="data:img/jpg;base64,' . $image_base64 . '" alt="' . $eventName . '">'
@@ -37,7 +44,7 @@ if ($result && mysqli_num_rows($result) > 0) {
         $events[] = $event;
     }
 } else {
-    echo "no events found";
+    echo "Nie znaleziono wydarzenia";
 }
 
 mysqli_close($connect);

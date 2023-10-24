@@ -1,12 +1,36 @@
 <?php
 session_start();
 
+if (isset($_GET['eventName'])) {
+    $eventName = urldecode($_GET['eventName']);
+} else {
+    echo "nie znaleziono wydarzenia";
+    exit;
+}
+
 include "PHP/get_events.php";
+
+$selectedEvent = null;
+foreach ($events as $event) {
+    if ($event['name'] == $eventName) {
+        $selectedEvent = $event;
+        break;
+    }
+}
+
+if (!$selectedEvent) {
+    echo "nie znaleziono wydarzenia";
+    exit;
+}
 ?>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media.css">
 
@@ -39,42 +63,22 @@ include "PHP/get_events.php";
 </head>
 
 <body>
-    <nav></nav>
     <div class="home">
-        <div class="content">
+        <nav></nav>
 
-            <div class="event-container event-row">
-                <?php
-                foreach ($events as $event) {
-                    echo '<div class="event">';
-                    echo '<div class="event-name" onclick="redirectToEventPage(\'' . htmlspecialchars($event['name'], ENT_QUOTES, 'UTF-8') . '\')"><h1>' . $event['name'] . '</h1></div>';
-                    echo $event['date'];
-                    echo '<div class="event-image">' . $event['image'] . '</div>';
-                    echo '</div>';
-                }
-                ?>
-            </div>
-
-            <div class="pagination">
-                <?php
-                $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
-                $prevPage = $currentPage - 1;
-                $nextPage = $currentPage + 1;
-
-                // Wyświetl obie opcje "Następna strona" i "Poprzednia strona" jeśli to możliwe
-                if ($prevPage > 0) {
-                    echo "<a href='?page=$prevPage' class='page-link'>Wstecz</a>";
-                }
-
-                if (count($events) == $eventsPerPage) {
-                    echo "<a href='?page=$nextPage' class='page-link'>Dalej</a>";
-                }
-                ?>
-            </div>
+        <div class="event-container event-row">
+            <?php
+            echo '<div id="chosen-event">';
+            echo '<div class="event-name"><h1>' . $selectedEvent['name'] . '</h1></div>';
+            echo '<div class="event-date">' . $selectedEvent['date'] . '</div>';
+            echo '<div class="event-image" id="chosen-image">' . $selectedEvent['image'] . '</div>';
+            echo '<div class="event-description">' . $selectedEvent['description'] . '</div>';
+            echo '</div>';
+            ?>
         </div>
-    </div>
 
-    <footer></footer>
+        <footer></footer>
+    </div>
 </body>
 
 </html>
