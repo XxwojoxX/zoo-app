@@ -485,6 +485,10 @@ footer {
 }
 
 /*css dla wydarzen*/
+.content {
+  width: 90%;
+}
+
 .event-row {
   display: flex;
   flex-wrap: wrap;
@@ -498,6 +502,20 @@ footer {
   margin: 0 auto 20px; /* Dodaj margines na dole, aby oddzielić wydarzenia */
   max-width: 20%; /* Ogranicz szerokość wydarzenia */
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+#chosen-event {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  max-height: 80%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-left: 30%;
 }
 
 .event-name {
@@ -546,3 +564,9 @@ footer {
 }
 
 /*koniec css dla wydarzen*/
+
+/*css dla chosen_animal*/
+.imageContainer {
+  text-align: center;
+  width: 30%;
+}

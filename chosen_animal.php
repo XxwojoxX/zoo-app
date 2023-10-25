@@ -72,6 +72,7 @@
                             for($i = 0; $i < $animalsCount; $i++)
                             {
                                 echo $animals[$i]['name'];
+                                echo $animals[$i]['description'];
                             }
                         }
                         else

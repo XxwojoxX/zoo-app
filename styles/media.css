@@ -177,20 +177,6 @@ body {
     margin-left: 130px;
   }
 
-  #chosen-event {
-    display: flex;
-    flex-direction: column;
-    max-width: 40%;
-    max-height: 80%;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-left: 30%;
-  }
-
   .pagination {
     padding: 0.4%;
     width: 13%;

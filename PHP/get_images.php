@@ -12,7 +12,7 @@
         die("connection failed: ".mysqli_connect_error());
     }
 
-    $sql = "SELECT animalImage, animalSpecies FROM animals WHERE animalSpecies = '$animalSpecies'";
+    $sql = "SELECT animalImage, animalSpecies, animalDescription FROM animals WHERE animalSpecies = '$animalSpecies'";
     $result = mysqli_query($connect, $sql);
 
     $imageHTML = '';
@@ -26,13 +26,15 @@
         {
             $animalImage = $row['animalImage'];
             $animalSpecies = $row['animalSpecies'];
+            $animalDescription = $row['animalDescription'];
 
             $image = file_get_contents($animalImage);
             $image_base64 = base64_encode($image);
 
             $animal = array(
                 'image' => '<img src="data:img/png;base64,'. $image_base64 .'" alt="'. $animalSpecies .'">',
-                'name' => '<h2 class="animalSpecies">'. $animalSpecies .'</h2>'
+                'name' => '<h2 class="animalSpecies">'. $animalSpecies .'</h2>',
+                'description' => '<p class="animalDescription">'. $animalDescription .'</p>'
             );
             $animals[] = $animal;
         }
