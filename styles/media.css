@@ -169,12 +169,15 @@ body {
   /*koniec css dla stopki*/
 
   /*css dla wydarzen*/
+.content {
+  width: 100%;
+}
+
   .event {
     padding: 10px;
     margin: 0 auto 15px;
-    max-width: 25%;
+    max-width: 20%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-    margin-left: 130px;
   }
 
   .pagination {
@@ -218,6 +221,11 @@ body {
     padding: 1%;
   }
   /*koniec css dla FAQ*/
+
+  .imageContainer {
+    width: 40%;
+    max-width: 45%;
+  }
 
   /* CSS dla innych sekcji i elementów pozostaje bez większych zmian */
 }

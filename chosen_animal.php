@@ -71,7 +71,9 @@
 
                             for($i = 0; $i < $animalsCount; $i++)
                             {
-                                echo $animals[$i]['name'];
+                                echo $animals[$i]['name'] . '<br>';
+                                echo $animals[$i]['diet'] . '<br>';
+                                echo $animals[$i]['feeding'] . '<br>';
                                 echo $animals[$i]['description'];
                             }
                         }
