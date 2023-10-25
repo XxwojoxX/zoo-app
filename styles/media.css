@@ -222,10 +222,17 @@ body {
   }
   /*koniec css dla FAQ*/
 
+  /*css dla chosen_animal*/
   .imageContainer {
     width: 40%;
     max-width: 45%;
   }
+
+  .image img {
+    width: 40%;
+    border-radius: 10px;
+  }
+  /*koniec css dla chosen_animal*/
 
   /* CSS dla innych sekcji i elementów pozostaje bez większych zmian */
 }

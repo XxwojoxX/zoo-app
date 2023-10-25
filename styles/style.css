@@ -569,4 +569,13 @@ footer {
 .imageContainer {
   text-align: center;
   width: 30%;
+  max-width: 80%;
 }
+
+.animalDiet,
+.animalFeeding {
+  text-align: left;
+  margin-left: 10px;
+}
+
+/*koniec css dla chosen_animal*/
