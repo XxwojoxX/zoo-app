@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deleteUserId'])) {
         echo "Nie możesz usunąć rekordu z userId=1.";
     } else {
         try {
-            require_once "PHP/connect.php";
+            require_once "../PHP/connect.php";
 
             $connect = new mysqli($db_host, $db_username, $db_password, $db_name);
 
@@ -24,10 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['deleteUserId'])) {
 
             // Rozpocznij transakcję, aby zapewnić spójność danych
             $connect->begin_transaction();
-
-            // Usuń rekordy z tabeli 'cart' powiązane z usuwanym 'userId'
-            $query_delete_cart = "DELETE FROM cart WHERE productId IN (SELECT productId FROM orders WHERE userId = $userId_do_usuniecia)";
-            $connect->query($query_delete_cart);
 
             // Usuń rekordy z tabeli 'orders' dla danego 'userId'
             $query_delete_orders = "DELETE FROM orders WHERE userId = $userId_do_usuniecia";
