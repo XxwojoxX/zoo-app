@@ -69,6 +69,13 @@ if (isset($_SESSION['e_bot']))
                                         <h2>udalo sie zarejestrowac</h2>
                                     </div>';
             }
+
+            if(isset($_GET['success']) && $_GET['success'] == 2)
+            {
+                echo '<div class="remind-success" id="remind-success">
+                                        <h2>wiadomosc zostala wyslana</h2>
+                                    </div>';
+            }
             ?>
 
             <p class="title">Login </p>

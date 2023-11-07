@@ -53,19 +53,14 @@
             ?>
 
             <p class="title">Remind password</p>
-            <p class="message">Podaj nazwe uzytkownika oraz email</p>
-
-            <label>
-                <input required="" placeholder="" type="text" class="input" name="nick">
-                <span>username</span>
-            </label>
+            <p class="message">Podaj email</p>
 
             <label>
                 <input required="" placeholder="" type="text" class="input" name="email">
                 <span>Email</span>
             </label>
 
-            <button class="submit">Submit</button>
+            <button class="submit" name="remind-button">Submit</button>
         </form>
 
         <footer></footer>
