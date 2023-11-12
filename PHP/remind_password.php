@@ -21,43 +21,58 @@ if (isset($_POST['email'])) {
 
         $email = htmlspecialchars($email);
 
-        // Zapisz e-mail w bazie danych
-        $query = "INSERT INTO users (userEmail) VALUES ('$email')";
-        $result = mysqli_query($db, $query);
+        // Sprawdź, czy istnieje użytkownik o podanym adresie e-mail
+        $checkUserQuery = "SELECT userId FROM users WHERE userEmail = '$email'";
+        $checkUserResult = mysqli_query($db, $checkUserQuery);
 
-        if ($result) {
-            try {
-                $mail = new PHPMailer();
+        if ($checkUserResult && mysqli_num_rows($checkUserResult) > 0) {
+            $userId = mysqli_fetch_assoc($checkUserResult)['userId'];
 
-                $mail->isSMTP();
+            // Wygeneruj unikalny token resetowania hasła
+            $resetToken = bin2hex(random_bytes(32));
 
-                $mail->Host = 'smtp.gmail.com';
-                $mail->Port = 465;
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-                $mail->SMTPAuth = true;
+            // Ustaw datę wygaśnięcia (np. 1 godzina od teraz)
+            $expiresAt = date('Y-m-d H:i:s', strtotime('+1 hour'));
 
-                $mail->Username = 'zoo.inz.test@gmail.com';
-                $mail->Password = 'ywew cepu jfbk tjtc';
+            // Zapisz token w bazie danych
+            $insertTokenQuery = "INSERT INTO password_reset_tokens (user_id, token, expires_at) VALUES ($userId, '$resetToken', '$expiresAt')";
+            $insertTokenResult = mysqli_query($db, $insertTokenQuery);
 
-                $mail->CharSet = 'UTF-8';
-                $mail->setFrom('zoo.inz.test@gmail.com', 'cos');
-                $mail->addAddress($email);
+            if ($insertTokenResult) {
+                try {
+                    $mail = new PHPMailer();
 
-                $mail->isHTML(true);
-                $mail->Subject = 'Przypomnienie hasła';
-                $mail->Body = 'Twoje hasło to: /n
-                                twoja nazwa uzytkownika to: ';
+                    $mail->isSMTP();
 
-                if ($mail->send()) {
-                    header("Location: ../login_form.php?success=2");
-                } else {
-                    echo "Błąd wysyłania: " . $mail->ErrorInfo;
+                    $mail->Host = 'smtp.gmail.com';
+                    $mail->Port = 465;
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+                    $mail->SMTPAuth = true;
+
+                    $mail->Username = 'zoo.inz.test@gmail.com';
+                    $mail->Password = 'ywew cepu jfbk tjtc';
+
+                    $mail->CharSet = 'UTF-8';
+                    $mail->setFrom('zoo.inz.test@gmail.com', 'test');
+                    $mail->addAddress($email);
+
+                    $mail->isHTML(true);
+                    $mail->Subject = 'Resetowanie hasła';
+                    $mail->Body = 'Aby zresetować hasło, kliknij <a href="http://localhost/inx2/reset_password_form.php?token=' . $resetToken . '">tutaj</a>.';
+
+                    if ($mail->send()) {
+                        header("Location: ../remind_pass_form.php?success=1");
+                    } else {
+                        echo "Błąd wysyłania: " . $mail->ErrorInfo;
+                    }
+                } catch (Exception $e) {
+                    echo "Błąd wysyłania: " . $e->getMessage();
                 }
-            } catch (Exception $e) {
-                echo "Błąd wysyłania: " . $e->getMessage();
+            } else {
+                echo "Błąd zapisu tokenu do bazy danych: " . mysqli_error($db);
             }
         } else {
-            echo "Błąd zapisu e-maila do bazy danych: " . mysqli_error($db);
+            echo "Użytkownik o podanym adresie e-mail nie istnieje.";
         }
     }
 }

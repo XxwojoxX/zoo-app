@@ -70,10 +70,15 @@ if (isset($_SESSION['e_bot']))
                                     </div>';
             }
 
-            if(isset($_GET['success']) && $_GET['success'] == 2)
-            {
+            if (isset($_GET['success']) && $_GET['success'] == 2) {
                 echo '<div class="remind-success" id="remind-success">
                                         <h2>wiadomosc zostala wyslana</h2>
+                                    </div>';
+            }
+
+            if (isset($_GET['success']) && $_GET['success'] == 3) {
+                echo '<div class="remind-success" id="remind-success">
+                                        <h2>haslo zostalo zresetowane</h2>
                                     </div>';
             }
             ?>
@@ -102,7 +107,7 @@ if (isset($_SESSION['e_bot']))
             </label>
 
             <button class="submit">Submit</button>
-            <p class="signin">Forgot your password ? <a href="remind_pass.php">Remind me</a> </p>
+            <p class="signin">Forgot your password ? <a href="remind_pass_form.php">Remind me</a> </p>
         </form>
 
         <footer></footer>
