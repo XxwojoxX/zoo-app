@@ -11,7 +11,7 @@ session_start();
         <div class="footer-content">
             <h1>Zaobserwuj nas</h1>
 
-            <div class="card">
+            <div class="social-card">
                 <a class="socialContainer containerOne" target="_blank" href="https://www.instagram.com/">
                     <svg viewBox="0 0 16 16" class="socialSvg instagramSvg">
                         <path
@@ -44,18 +44,18 @@ session_start();
         </div>
 
         <?php
-    $showAdminButton = false; // Ustaw zmienną na true, jeśli przycisk ma być widoczny
-                
-    if (isset($_SESSION['userId']) && $_SESSION['userId'] == 1) {
-        $showAdminButton = true; // Jeśli zalogowany użytkownik ma ID=1, ustawiamy na true
-    }
-?>
+        $showAdminButton = false; // Ustaw zmienną na true, jeśli przycisk ma być widoczny
+        
+        if (isset($_SESSION['userId']) && $_SESSION['userId'] == 1) {
+            $showAdminButton = true; // Jeśli zalogowany użytkownik ma ID=1, ustawiamy na true
+        }
+        ?>
 
-<div class="admin" id="admin" style="<?php echo $showAdminButton ? 'display: block;' : 'display: none;'; ?>">
-    <a href="PHP/admin_check.php">
-        <button class="admin-btn">admin panel</button>
-    </a>
-</div>
+        <div class="admin" id="admin" style="<?php echo $showAdminButton ? 'display: block;' : 'display: none;'; ?>">
+            <a href="PHP/admin_check.php">
+                <button class="admin-btn">admin panel</button>
+            </a>
+        </div>
     </footer>
 </body>
 

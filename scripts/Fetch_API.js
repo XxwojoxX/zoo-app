@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("http://localhost/cos/navbar.php", { mode: "no-cors" })
+  fetch("http://localhost/inx2/navbar.php", { mode: "no-cors" })
     .then((response) => response.text())
     .then((data) => {
       $("nav").html(data);
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("http://localhost/cos/footer.php", { mode: "no-cors" })
+  fetch("http://localhost/inx2/footer.php", { mode: "no-cors" })
     .then((response) => response.text())
     .then((data) => {
       $("footer").html(data);
