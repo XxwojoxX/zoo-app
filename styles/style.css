@@ -695,7 +695,8 @@ footer {
   margin-top: 5%;
   margin-bottom: 5%;
   margin-left: 2%;
-  width: 20%;
+  min-width: 12%; /* Minimalna szerokość na 10% */
+  max-width: 40%; /* Maksymalna szerokość na 100% */
   max-height: 75%;
   margin-right: 1%;
   overflow-x: auto;
@@ -726,6 +727,7 @@ footer {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   margin-top: 5%;
   margin-bottom: 5%;
+  margin-right: 2%;
   max-width: 90%;
   max-height: 75%;
   overflow-y: scroll;
