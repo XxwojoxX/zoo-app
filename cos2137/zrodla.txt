@@ -1,0 +1,11 @@
+zdjecia
+	wikipedia	lew, flaming, zyrafa
+	wiktionary.org	wilk
+	wyborcza.pl	tygrys, pingwin
+	dinoanimals.pl	slon
+	drapiezniki.pl	gepard, panda
+	rmf.fm		krokodyl
+
+
+linki do stron
+https://grafmag.pl/artykuly/tworzymy-wlasny-komunikat-o-wykorzystaniu-plikow-cookies
