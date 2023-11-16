@@ -1,32 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Paź 03, 2023 at 08:41 AM
--- Wersja serwera: 10.4.28-MariaDB
--- Wersja PHP: 8.2.4
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `zoo`
---
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `animals`
---
-
 CREATE TABLE `animals` (
   `animalId` int(11) NOT NULL,
   `animalSpecies` varchar(25) DEFAULT NULL,
@@ -42,16 +13,16 @@ CREATE TABLE `animals` (
 --
 
 INSERT INTO `animals` (`animalId`, `animalSpecies`, `animalDescription`, `animalName`, `animalDiet`, `animalFeeding`, `animalImage`) VALUES
-(1, 'LEW AFRYKAŃSKI', 'opis', 'lef', 'mienso', 'codziennie o 14:00', 'http://localhost/cos/img/lew.png'),
-(2, 'TYGRYS BENGALSKI', 'opis', 'Tygrys', 'mienso', 'codziennie o 15:00', 'http://localhost/cos/img/tygrys.png'),
-(3, 'SŁOŃ AFRYKAŃSKI', 'opis', 'Slon', 'rosliny', 'codziennie o 10:00', 'http://localhost/cos/img/slon.png'),
-(4, 'Pingwin Cesarski', 'opis', 'Pingwin', 'ryby', 'codziennie o 11:00', 'http://localhost/cos/img/pingwin.png'),
-(5, 'Żyrafa Siatkowana', 'opis', 'Zyrafa', 'roslina', 'codziennie o 9:00', 'http://localhost/cos/img/zyrafa.png'),
-(6, 'Gepard', 'opis', 'Gepard', 'mienso', 'codziennie o 9:30', 'http://localhost/cos/img/gepard.png'),
-(7, 'Krokodyl Nilowy', 'opis', 'Krokodyl', 'mienso', 'codziennie o 10:30', 'http://localhost/cos/img/krokodyl.png'),
-(8, 'Flaming Różowy', 'opis', 'Flaming', 'skorupiaki', 'codziennie o 11:30', 'http://localhost/cos/img/flaming.png'),
-(9, 'Panda Wielka', 'opis', 'Panda', 'roslina', 'codziennie o 12:30', 'http://localhost/cos/img/panda.png'),
-(10, 'Wilk Szary', 'opis', 'Wilk', 'mienso', 'codziennie o 15:00', 'http://localhost/cos/img/wilk.png');
+(1, 'LEW AFRYKAŃSKI', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'lew', 'mieso', 'codziennie o 14:00', 'http://localhost/cos/img/no_photo.jpg'),
+(2, 'TYGRYS BENGALSKI', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'Tygrys', 'mieso', 'codziennie o 15:00', 'http://localhost/cos/img/no_photo.jpg'),
+(3, 'SŁOŃ AFRYKAŃSKI', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'Slon', 'rosliny', 'codziennie o 10:00', 'http://localhost/cos/img/no_photo.jpg'),
+(4, 'Pingwin Cesarski', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'Pingwin', 'ryby', 'codziennie o 11:00', 'http://localhost/cos/img/no_photo.jpg'),
+(5, 'Żyrafa Siatkowana', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'Zyrafa', 'roslina', 'codziennie o 9:00', 'http://localhost/cos/img/no_photo.jpg'),
+(6, 'Gepard', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'Gepard', 'mieso', 'codziennie o 9:30', 'http://localhost/cos/img/no_photo.jpg'),
+(7, 'Krokodyl Nilowy', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'Krokodyl', 'mieso', 'codziennie o 10:30', 'http://localhost/cos/img/no_photo.jpg'),
+(8, 'Flaming Różowy', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'Flaming', 'skorupiaki', 'codziennie o 11:30', 'http://localhost/cos/img/no_photo.jpg'),
+(9, 'Panda Wielka', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'Panda', 'roslina', 'codziennie o 12:30', 'http://localhost/cos/img/no_photo.jpg'),
+(10, 'Wilk Szary', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'Wilk', 'mieso', 'codziennie o 15:00', 'http://localhost/cos/img/no_photo.jpg');
 
 -- --------------------------------------------------------
 
@@ -108,7 +79,17 @@ INSERT INTO `contact` (`contactId`, `contactName`, `contactEmail`, `contactMessa
 (13, 'bbb', 'admin@admin.pl', 'a', '2023-09-16 12:48:33'),
 (14, 'bbb', 'admin@gmail.com', 'a', '2023-09-16 12:50:42'),
 (15, 'bbb', 'admin@admin.pl', 'a', '2023-09-16 12:55:37'),
-(16, 'proba', 'proba@proba.pl', 'proba', '2023-09-16 13:04:54');
+(16, 'proba', 'proba@proba.pl', 'proba', '2023-09-16 13:04:54'),
+(17, 'ddd', 'ddd@ddd.pl', 'ddddddddddddddddd', '2023-10-04 18:25:28'),
+(18, 'aaa', 'aaa@aaa', 'aaa', '2023-10-04 18:45:02'),
+(19, 'aaa', 'aaa@aaa', 'abc', '2023-10-05 11:30:32'),
+(20, 'a', 'a@a', 'a', '2023-10-05 11:50:17'),
+(21, 'a', 'aaa@aaa', 'aa', '2023-10-05 11:53:55'),
+(22, 'bbb', 'aaa@aaa', 'aaa', '2023-10-05 11:55:27'),
+(23, 'bbb', 'aaa@aaa', 'a', '2023-10-05 11:56:43'),
+(24, 'aaa', 'admin@admin.pl', 'a', '2023-10-05 11:56:57'),
+(25, 'a', 'aaa@aaa', 'a', '2023-10-05 12:04:40'),
+(26, 'aaa', 'aaa@aaa', 'a', '2023-10-05 12:05:39');
 
 -- --------------------------------------------------------
 
@@ -123,6 +104,23 @@ CREATE TABLE `events` (
   `eventDescription` varchar(999) DEFAULT NULL,
   `eventImage` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`ID_wydarzenia`, `eventName`, `eventDate`, `eventDescription`, `eventImage`) VALUES
+(1, 'wydarzenie 1', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'http://localhost/cos/img/no_photo.jpg'),
+(2, 'wydarzenie 2', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'http://localhost/cos/img/no_photo.jpg'),
+(3, 'wydarzenie 3', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'http://localhost/cos/img/no_photo.jpg'),
+(4, 'wydarzenie 4', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'http://localhost/cos/img/no_photo.jpg'),
+(5, 'wydarzenie 5', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'http://localhost/cos/img/no_photo.jpg'),
+(6, 'wydarzenie 6', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'http://localhost/cos/img/no_photo.jpg'),
+(7, 'wydarzenie 7', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'http://localhost/cos/img/no_photo.jpg'),
+(8, 'wydarzenie 8', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'http://localhost/cos/img/no_photo.jpg'),
+(9, 'wydarzenie 9', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'http://localhost/cos/img/no_photo.jpg'),
+(10, 'wydarzenie 10', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'http://localhost/cos/img/no_photo.jpg'),
+(11, 'wydarzenie 11', '0000-00-00 00:00:00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.\r\n\r\nSed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.\r\n\r\nFusce eget augue eu quam dignissim faucibus eget id dolor. Nulla faci', 'http://localhost/cos/img/no_photo.jpg');
 
 -- --------------------------------------------------------
 
@@ -150,6 +148,19 @@ CREATE TABLE `orders` (
   `userId` int(11) DEFAULT NULL,
   `productId` int(11) DEFAULT NULL,
   `Data_zamówienia` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `password_reset_tokens`
+--
+
+CREATE TABLE `password_reset_tokens` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `token` varchar(255) DEFAULT NULL,
+  `expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -195,7 +206,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userId`, `userName`, `userPassword`, `userEmail`) VALUES
 (1, 'admin', '$2y$10$aPf3xY/QyazBA8BMKXwlBOZartiLyytonGt5OXGDy5gCNIMk8/Y1.', 'admin@admin.pl'),
-(2, 'user1', '$2y$10$a/w53mMFFmAlz2nWRRhl.eSDr7OIDd9OWzvSLPRv/L4IuA5akhewe', 'user1@user1.com');
+(2, 'user1', '$2y$10$gh/NA5WJ2G0b9xUPKGcoLuS4e/UIHrNEau8nNtvlq8yg41SWiMkZi', 'cos.test.inz@gmail.com');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -248,6 +259,13 @@ ALTER TABLE `orders`
   ADD KEY `productId` (`productId`);
 
 --
+-- Indeksy dla tabeli `password_reset_tokens`
+--
+ALTER TABLE `password_reset_tokens`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indeksy dla tabeli `products`
 --
 ALTER TABLE `products`
@@ -285,13 +303,13 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `contactId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `contactId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `ID_wydarzenia` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_wydarzenia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -304,6 +322,12 @@ ALTER TABLE `news`
 --
 ALTER TABLE `orders`
   MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `password_reset_tokens`
+--
+ALTER TABLE `password_reset_tokens`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -339,8 +363,9 @@ ALTER TABLE `news`
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`),
   ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`productId`) REFERENCES `products` (`productId`);
-COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+--
+-- Constraints for table `password_reset_tokens`
+--
+ALTER TABLE `password_reset_tokens`
+  ADD CONSTRAINT `password_reset_tokens_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`userId`) ON DELETE CASCADE;
