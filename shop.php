@@ -18,6 +18,7 @@ session_start();
 </head>
 
 <body>
+    <div class="home">
 <header>
         <a href="index.php" class="logo">ZOO</span></a>
 
@@ -66,12 +67,156 @@ session_start();
         </div>
     </header>
 
-    <div class="card">
-        <div class="align">
-        </div>
-
-        <p>STRONA W BUDOWIE</p>
+    <div class="filter-section">
+        <h3>filtr1</p>
+        <button class="filter-btn" id="filter-btn" type="checkbox">opcja1</button>
+        <button class="filter-btn" id="filter-btn" type="checkbox">opcja2</button>
+        <button class="filter-btn" id="filter-btn" type="checkbox">opcja3</button>
+        <h3>filtr2</p>
+        <button class="filter-btn" id="filter-btn" type="checkbox">opcja1</button>
+        <button class="filter-btn" id="filter-btn" type="checkbox">opcja2</button>
+        <button class="filter-btn" id="filter-btn" type="checkbox">opcja3</button>
+        <h3>filtr3</p>
+        <button class="filter-btn" id="filter-btn" type="checkbox">opcja1</button>
+        <button class="filter-btn" id="filter-btn" type="checkbox">opcja2</button>
+        <button class="filter-btn" id="filter-btn" type="checkbox">opcja3</button>
     </div>
+
+    <div class="shop-container">
+        <div class="flip-card-section">
+    <div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p>Cena</p>
+        </div>
+        <div class="flip-card-back">
+            <p>Opis</p>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p>Cena</p>
+        </div>
+        <div class="flip-card-back">
+            <p>Opis</p>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p>Cena</p>
+        </div>
+        <div class="flip-card-back">
+            <p>Opis</p>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p>Cena</p>
+        </div>
+        <div class="flip-card-back">
+            <p>Opis</p>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p>Cena</p>
+        </div>
+        <div class="flip-card-back">
+            <p>Opis</p>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p>Cena</p>
+        </div>
+        <div class="flip-card-back">
+            <p>Opis</p>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p>Cena</p>
+        </div>
+        <div class="flip-card-back">
+            <p>Opis</p>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p>Cena</p>
+        </div>
+        <div class="flip-card-back">
+            <p>Opis</p>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p>Cena</p>
+        </div>
+        <div class="flip-card-back">
+            <p>Opis</p>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p>Cena</p>
+        </div>
+        <div class="flip-card-back">
+            <p>Opis</p>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p>Cena</p>
+        </div>
+        <div class="flip-card-back">
+            <p>Opis</p>
+        </div>
+    </div>
+</div>
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <p>Cena</p>
+        </div>
+        <div class="flip-card-back">
+            <p>Opis</p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
 
     <footer>
         <div class="footer-content">
@@ -123,6 +268,7 @@ session_start();
             </a>
         </div>
     </footer>
+    </div>
 </body>
 
 </html>
