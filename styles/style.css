@@ -687,16 +687,33 @@ footer {
 .filter-section {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   background: rgba(255, 255, 255, 0.2);
-  padding: 20px;
+  padding: 25px;
   border-radius: 20px;
   margin: 0 auto 20px; /* Dodaj margines na dole, aby oddzielić wydarzenia */
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   margin-top: 5%;
   margin-bottom: 5%;
-  max-width: 90%;
-  max-height: 90%;
+  margin-left: 2%;
+  width: 20%;
+  max-height: 75%;
+  margin-right: 1%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.filter-section h3 {
+  font-size: 36px;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.filter-options button {
+  font-size: 20px;
 }
 
 .shop-container {
@@ -710,22 +727,52 @@ footer {
   margin-top: 5%;
   margin-bottom: 5%;
   max-width: 90%;
-  max-height: 90%;
+  max-height: 75%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+/* Styl dla suwaka */
+.filter-section::-webkit-scrollbar,
+.shop-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.filter-section::-webkit-scrollbar-track,
+.shop-container::-webkit-scrollbar-track {
+  margin: 10px; /* Dostosuj tę wartość do swoich preferencji */
+}
+
+.filter-section::-webkit-scrollbar-thumb,
+.shop-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 20px;
+}
+
+/* Dodatkowe style dla suwaka, które mogą pomóc w innych przeglądarkach */
+.filter-section::-webkit-scrollbar-thumb:hover,
+.shop-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.filter-section::-webkit-scrollbar-thumb:active,
+.shop-container::-webkit-scrollbar-thumb:active {
+  background-color: #444;
 }
 
 .flip-card-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  gap: 15%;
-  row-gap: 1%;
-  column-gap: 1%;
+  gap: 20%;
+  row-gap: 5%;
+  column-gap: 5%;
 }
 
 .flip-card {
   background-color: transparent;
-  width: 190px;
+  width: 320px;
   height: 254px;
   perspective: 1000px;
   font-family: sans-serif;
@@ -775,5 +822,9 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+#filer-btn {
+  display: block;
 }
 /*koniec css dla sklepu*/
