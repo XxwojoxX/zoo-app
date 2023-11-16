@@ -1,9 +1,0 @@
-user1
-nick:		user1
-password:	zaq1@WSX
-email:		cos.test.inz@gmail.com
-
-admin
-nick:		admin
-password:	dupqgtQMf
-email:		admin@admin.pl

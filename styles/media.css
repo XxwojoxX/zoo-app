@@ -12,7 +12,7 @@ body {
   margin: 0 auto;
 }
 
-/* Media queries dla ekranów 1600x900 */
+/* Media queries dla ekranów 1600px szerokosci */
 @media screen and (max-width: 1600px) {
   * {
     padding: 0;
@@ -49,51 +49,22 @@ body {
     --p-font: 0.9rem; /* Zmniejszono wielkość czcionki paragrafu */
   }
 
-  body {
-    color: var(--text-color);
-    background: var(--bg-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-
   /* CSS dla nawigacji (navbar) */
   header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     padding: 0.5% 2%; /* Zmniejszono padding */
-    background: rgba(225, 225, 225, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(10px);
   }
 
   .logo {
     font-size: 28px; /* Zmniejszono wielkość czcionki logo */
-    color: var(--text-color);
-    font-weight: 700;
-    text-decoration: none;
-    cursor: pointer;
-    letter-spacing: 2%;
   }
 
   .username {
-    color: var(--text-color);
     font-size: 1.5rem; /* Zmniejszono wielkość czcionki username */
     margin-left: 1%;
-    font-family: "Pacifico";
   }
 
   .navbar a {
-    font-size: var(--p-font);
-    font-weight: 500;
     margin: 10px 15px; /* Dostosowano marginesy */
-    transition: all 0.5s ease;
   }
 
   /* CSS dla sekcji "home" */
@@ -101,41 +72,18 @@ body {
     padding: 0 10%; /* Zmniejszono padding */
   }
 
-  .home {
-    background-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.6)
-      ),
-      url(../img/background.jpg);
-    background-size: cover;
-    background-position: bottom center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
   .home-text h5 {
     font-size: 1.2rem; /* Dostosowano wielkość czcionki */
-    font-weight: 600;
     margin-bottom: 1%;
-    text-transform: uppercase;
     letter-spacing: 3px; /* Dostosowano odstępy liter */
-    color: var(--main-color);
   }
 
   .home-text h1 {
-    font-size: var(--h1-font);
-    font-weight: 800;
-    line-height: 1.2;
     margin-bottom: 2%;
   }
 
   .home-text p {
-    font-size: var(--p-font);
-    font-weight: 500;
     line-height: 24px; /* Dostosowano odstępy linii */
-    color: #ffffffab;
     margin-bottom: 4.5%; /* Dostosowano margines */
   }
   /*koniec css dla home*/
@@ -176,7 +124,6 @@ body {
   .event {
     padding: 10px;
     margin: 0 auto 15px;
-    max-width: 20%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   }
 

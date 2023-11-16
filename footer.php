@@ -1,10 +1,15 @@
 <?php
 session_start();
+
+// Dodaj nagłówek CORS
+header("Access-Control-Allow-Origin: *");
 ?>
 
 <html>
 
-<head></head>
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
 
 <body>
     <footer>

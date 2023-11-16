@@ -14,23 +14,15 @@ body {
 
 @media screen and (max-width: 1600px) {
   .home {
-    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100vh;
   }
 
   .form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     width: 20%; /* Dostosowano szerokość */
     max-width: 30%; /* Dostosowano maksymalną szerokość */
-    background-color: rgba(255, 255, 255, 0.2);
     padding: 1%;
-    border-radius: 20px;
-    position: relative;
     align-items: center; /* Wyśrodkowano formularz */
   }
 
@@ -48,36 +40,7 @@ body {
 
   .title {
     font-size: 24px; /* Zmniejszono wielkość czcionki */
-    color: royalblue;
-    font-weight: 600;
-    letter-spacing: -1px;
-    position: relative;
-    display: flex;
-    align-items: center;
     padding-left: 10%;
-  }
-
-  .title::before,
-  .title::after {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    left: 0px;
-    background-color: royalblue;
-  }
-
-  .title::before {
-    width: 18px;
-    height: 18px;
-    background-color: royalblue;
-  }
-
-  .title::after {
-    width: 18px;
-    height: 18px;
-    animation: pulse 1s linear infinite;
   }
 
   .message {
@@ -85,75 +48,33 @@ body {
     font-weight: bold;
   }
 
-  .message,
-  .signin {
-    font-size: 14px;
-  }
-
-  .signin {
-    text-align: center;
-  }
-
-  .signin a {
-    color: royalblue;
-  }
-
-  .signin a:hover {
-    text-decoration: underline;
-  }
-
   .flex {
-    display: flex;
-    width: 100%;
     gap: 4px;
   }
 
   .form label {
-    position: relative;
-    display: flex;
-    align-items: center;
     gap: 6px;
     width: 85%;
     height: 30%;
   }
 
   .form label .input {
-    width: 100%;
     padding: 4%;
-    outline: 0;
-    border: 1px solid rgba(105, 105, 105, 0.397);
-    border-radius: 10px;
   }
 
   .form label .input + span {
-    position: absolute;
     left: 6px;
     top: 10px;
-    color: grey;
     font-size: 0.7em;
-    cursor: text;
-    transition: 0.3s ease;
   }
 
   .form label .input:placeholder-shown + span {
-    top: 15px;
     font-size: 0.7em;
   }
 
   .form label .input:focus + span,
   .form label .input:valid + span {
     top: 25px;
-    font-size: 0.7em;
-    font-weight: 600;
-  }
-
-  .form label .input:valid + span {
-    color: green;
-  }
-
-  .generated-password p {
-    display: inline-block;
-    margin-right: 20px;
   }
 
   .submit,
@@ -169,10 +90,6 @@ body {
     transition: 0.3s ease;
     cursor: pointer;
     text-align: center; /* Wyśrodkowano przycisk */
-  }
-
-  .submit:hover {
-    background-color: rgb(56, 90, 194);
   }
 
   @keyframes pulse {
@@ -193,13 +110,8 @@ body {
     resize: none; /* Nie pozwala na zmianę rozmiaru */
   }
 
-  .hidden {
-    visibility: hidden;
-  }
-
   .error {
     font-size: 13px;
-    color: red;
     margin-top: 1px;
     margin-bottom: 1px;
   }
