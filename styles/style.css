@@ -67,7 +67,7 @@ header {
 }
 
 span {
-  color: var(--main-color);
+  color: var(--text-color);
 }
 
 .username {
@@ -695,16 +695,16 @@ footer {
   margin-top: 5%;
   margin-bottom: 5%;
   margin-left: 2%;
-  min-width: 12%; /* Minimalna szerokość na 10% */
-  max-width: 40%; /* Maksymalna szerokość na 100% */
+  min-width: 10%; /* Minimalna szerokość na 10% */
+  max-width: 60%; /* Maksymalna szerokość na 100% */
   max-height: 75%;
   margin-right: 1%;
   overflow-x: auto;
   scroll-behavior: smooth;
 }
 
-.filter-section h3 {
-  font-size: 36px;
+.filter-section button {
+  font-size: 20px;
 }
 
 .filter-options {
@@ -715,6 +715,81 @@ footer {
 
 .filter-options button {
   font-size: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+select, input, button {
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#category,
+#sort {
+  background: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+#category option,
+#sort option {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #000;
+}
+
+#sort-label {
+  margin-top: 30px;
+}
+
+.price-slider-container {
+  position: relative;
+}
+
+#price-range {
+  width: 100%;
+}
+
+.min-price,
+.max-price {
+  position: absolute;
+  top: 25;
+}
+
+.min-price,
+.max-price,
+.selected-price {
+  color: #ffffff;
+}
+
+.min-price {
+  left: 0;
+}
+
+.max-price {
+  right: 0;
+}
+
+.selected-price-container {
+  position: absolute;
+  top: 40px; /* Dostosuj tę wartość do preferowanego odstępu od suwaka */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .shop-container {
@@ -728,6 +803,7 @@ footer {
   margin-top: 5%;
   margin-bottom: 5%;
   margin-right: 2%;
+  min-width: 40%;
   max-width: 90%;
   max-height: 75%;
   overflow-y: scroll;
