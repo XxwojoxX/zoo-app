@@ -58,7 +58,7 @@ if (isset($_POST['email'])) {
 
                     $mail->isHTML(true);
                     $mail->Subject = 'Resetowanie hasła';
-                    $mail->Body = 'Aby zresetować hasło, kliknij <a href="http://localhost/inx2/reset_password_form.php?token=' . $resetToken . '">tutaj</a>.';
+                    $mail->Body = 'Aby zresetować hasło, kliknij <a href="http://localhost/cos/reset_password_form.php?token=' . $resetToken . '">tutaj</a>.';
 
                     if ($mail->send()) {
                         header("Location: ../remind_pass_form.php?success=1");
