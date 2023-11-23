@@ -181,5 +181,31 @@ body {
   }
   /*koniec css dla chosen_animal*/
 
+  /*css dla sklepu*/
+  .filter-section {
+    padding: 20px;
+    margin: 0 auto;
+    max-height: 80%;
+  }
+
+  #sort-label {
+    margin-top: 50px;
+  }
+
+  .shop-container {
+    max-width: 80%;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 15px;
+    margin-left: 0;
+  }
+
+  .flip-card-section {
+    row-gap: 5%;
+    column-gap: 5%;
+  }
+  /*koniec css dla sklepu*/
+
   /* CSS dla innych sekcji i elementów pozostaje bez większych zmian */
 }

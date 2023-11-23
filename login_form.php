@@ -93,19 +93,19 @@ if (isset($_SESSION['e_bot']))
         <form class="form" id="login-form" action="PHP/login.php" method="POST" name="login_form" autocomplete="off">
             <?php
             if (isset($_GET['success']) && $_GET['success'] == 1) {
-                echo '<div class="login-success" id="login-success">
+                echo '<div class="login-success" id="message">
                                         <h2>udalo sie zarejestrowac</h2>
                                     </div>';
             }
 
             if (isset($_GET['success']) && $_GET['success'] == 2) {
-                echo '<div class="remind-success" id="remind-success">
+                echo '<div class="remind-success" id="message">
                                         <h2>wiadomosc zostala wyslana</h2>
                                     </div>';
             }
 
             if (isset($_GET['success']) && $_GET['success'] == 3) {
-                echo '<div class="remind-success" id="remind-success">
+                echo '<div class="remind-success" id="message">
                                         <h2>haslo zostalo zresetowane</h2>
                                     </div>';
             }

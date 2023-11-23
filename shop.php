@@ -109,159 +109,26 @@ session_start();
 
         <div class="shop-container">
             <div class="flip-card-section">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                include "PHP/get_products.php";
 
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>Cena</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p>Opis</p>
-                        </div>
-                    </div>
-                </div>
+                foreach ($products as $product) {
+                    echo '<div class="flip-card">';
+                    echo '<div class="flip-card-inner">';
+                    echo '<div class="flip-card-front">';
+                    echo '<img src="' . $product['image'] . '" alt="t-shirt" style="width: 75%; height: 75%; border-radius: 20px; margin-top: 30px;">';
+                    echo '<p>' . $product['name'] . '</p>';
+                    echo '<p>' . $product['price'] . '</p>';
+                    echo '</div>';
+                    echo '<div class="flip-card-back">';
+                    echo '<img src="' . $product['image'] . '" alt="t-shirt" style="width: 75%; height: 75%; border-radius: 20px; margin-top: 30px;">';
+                    echo '<p>' . $product['description'] . '</p>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+                ?>
             </div>
         </div>
 
@@ -289,17 +156,15 @@ session_start();
             </div>
 
             <div class="footer-content">
+        <div class="footer-link"><a href="index.php">Strona główna</a></div>
+        <div class="footer-link"><a href="contact_form.php">Kontakt</a></div>
+    </div>
 
-                <li><a href="index.php">Strona główna</a></li>
-                <li><a href="contact_form.php">Kontakt</a></li>
-            </div>
-
-            <div class="footer-content">
-
-                <li><a href="regulations.php">Regulamin</a></li>
-                <li><a href="FAQ.php">FAQ</a></li>
-                <li><a href="about_us.php">O nas</a></li>
-            </div>
+    <div class="footer-content">
+        <div class="footer-link"><a href="regulations.php">Regulamin</a></div>
+        <div class="footer-link"><a href="FAQ.php">FAQ</a></div>
+        <div class="footer-link"><a href="about_us.php">O nas</a></div>
+    </div>
 
             <?php
             $showAdminButton = false; // Ustaw zmienną na true, jeśli przycisk ma być widoczny

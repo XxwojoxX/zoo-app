@@ -15,9 +15,6 @@
     $sql = "SELECT animalImage, animalSpecies, animalDescription, animalDiet, animalFeeding FROM animals WHERE animalSpecies = '$animalSpecies'";
     $result = mysqli_query($connect, $sql);
 
-    $imageHTML = '';
-    $nameHTML = '';
-
     $animals = array();
 
     if($result && mysqli_num_rows($result) > 0)

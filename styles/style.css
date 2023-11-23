@@ -323,8 +323,8 @@ section {
 footer {
   display: grid;
   flex-wrap: wrap;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-  gap: 3.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  gap: 2.5rem;
   background: rgba(225, 225, 225, 0.1);
   position: fixed;
   left: 0;
@@ -335,19 +335,10 @@ footer {
 
 .footer-content {
   margin-left: 10px;
+  color: #ffffff;
 }
 
-.footer-content h4 {
-  color: var(--text-color);
-  margin-bottom: 1.5rem;
-  font-size: 20px;
-}
-
-.footer-content li {
-  margin-bottom: 16px;
-}
-
-.footer-content li a {
+.footer-link a {
   display: block;
   color: var(--text-color);
   font-size: 15px;
@@ -355,7 +346,7 @@ footer {
   transition: all 0.4s ease;
 }
 
-.footer-content li a:hover {
+.footer-link a:hover {
   transform: translateY(-3px) translateX(-5px);
   color: var(--text-color);
 }
@@ -365,6 +356,14 @@ footer {
   color: var(--text-color);
   line-height: 30px;
   margin: 20px 0;
+}
+
+.footer-link {
+  margin-bottom: 10px;
+}
+
+.footer-link a{
+  color: #ffffff;
 }
 
 /*animacja social media*/

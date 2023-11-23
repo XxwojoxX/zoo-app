@@ -5,6 +5,7 @@ zdjecia
 	dinoanimals.pl	slon
 	drapiezniki.pl	gepard, panda
 	rmf.fm		krokodyl
+	images.ai	zdjecie do sklepu
 
 
 linki do stron

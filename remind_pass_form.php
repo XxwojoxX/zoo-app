@@ -74,7 +74,7 @@
         <form class="form" id="remind-form" action="PHP/remind_password.php" method="POST" name="remind_form" autocomplete="off">
             <?php
             if (isset($_GET['success']) && $_GET['success'] == 1) {
-                echo '<div class="remind-success" id="remind-success">
+                echo '<div class="remind-success" id="message">
                                         <h2>wyslano wiadomosc na podany adres email</h2>
                                     </div>';
             }
