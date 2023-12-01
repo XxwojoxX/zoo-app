@@ -10,8 +10,7 @@ session_start();
 
     <script src="scripts/cookie.js"></script>
     <script src="scripts/cookie2.js"></script>
-    <script src="scripts/price_range.js"></script>
-    <script src="scripts/redirect.js"></script>
+    <script src="scripts/go_back.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -69,71 +68,32 @@ session_start();
             </div>
         </header>
 
-        <div class="filter-section">
-            <label for="category">Kategoria:</label>
-            <select id="category">
-                <option value="all">Wszystkie kategorie</option>
-                <option value="tshirts">Koszulki</option>
-                <option value="hoodies">Bluzy</option>
-                <option value="mascots">Maskotki</option>
-                <option value="tickets">Bilety</option>
-            </select>
+        <div class="chosen-product-container">
+            <button id="go-back-btn" onclick="goBack()">Powrót</button>
+    <?php
+    require_once "PHP/chosen_product_info.php";
 
-            <label for="price-range">Zakres cenowy:</label>
-<div class="price-slider-container">
-    <span class="min-price" id="min-price">10</span>
-    <input type="range" id="price-range" min="0" max="500" step="1" oninput="updatePrice()">
-    <span class="max-price" id="max-price">1500</span>
-    <div class="selected-price-container">
-        <span id="selected-price">Wybrana cena: 10</span>
-    </div>
+    // Sprawdź, czy zmienna sesji z informacjami o produkcie istnieje
+    if (isset($_SESSION['chosenProduct'])) {
+        $productData = $_SESSION['chosenProduct'];
+
+        // Wyświetl informacje o produkcie
+        echo '<img src="' . $productData['image'] . '" alt="' . $productData['name'] . '">';
+        echo '<div class="chosen-product-details">';
+        echo '<h1>' . $productData['name'] . '</h1>';
+        echo '<p id="product-price">Cena: ' . $productData['price'] . ' zł</p>';
+        echo '<button class="add-to-card-btn">Dodaj do koszyka</button>';
+        echo '<p id="product-description">' . $productData['description'] . '</p>';
+        echo '</div>';
+    } else {
+        // Wyświetl błąd, jeśli zmienna sesji z błędem istnieje
+        echo '<p>Error: ';
+        echo isset($_SESSION['chosenProductError']) ? $_SESSION['chosenProductError'] : 'Product data not available';
+        echo '</p>';
+    }
+    ?>
 </div>
 
-            <label for="sort" id="sort-label">Sortuj:</label>
-            <select id="sort">
-                <option value="price-asc">Cena rosnąco</option>
-                <option value="price-desc">Cena malejąco</option>
-                <option value="alphabetical-asc" selected>Alfabetycznie A-Z</option>
-                <option value="alphabetical-desc">Alfabetycznie Z-A</option>
-                <!-- Dodaj więcej opcji sortowania -->
-            </select>
-
-            <label for="category" style="display: none">filtr4</label for="category">
-            <div class="filter-options" style="display: none">
-                <button class="filter-btn" type="checkbox">opcja1</button>
-                <button class="filter-btn" type="checkbox">opcja2</button>
-                <button class="filter-btn" type="checkbox">opcja3</button>
-            </div>
-
-            <button id="filter-btn">Zastosuj</button>
-        </div>
-
-        <div class="shop-container">
-            <div class="flip-card-section">
-
-                <?php
-                include "PHP/get_products.php";
-
-                foreach ($products as $product) {
-                    echo '<div class="flip-card">';
-                    echo '<div class="flip-card-inner">';
-                    echo '<div class="flip-card-front">';
-                    echo '<img src="' . $product['image'] . '" style="width: 75%; height: 75%; border-radius: 20px; margin-top: 30px;">';
-                    echo '<p>' . $product['name'] . '</p>';
-                    echo '<p>' . $product['price'] . '</p>';
-                    echo '</div>';
-                    echo '<div class="flip-card-back">';
-                    echo '<img src="' . $product['image'] . '" style="width: 75%; height: 75%; border-radius: 20px; margin-top: 30px;">';
-                    echo '<div><button class="product-btn" onclick="redirectToProductPage(\'' . htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8') . '\')">Zobacz</button>';
-                    echo '<p>' . $product['price'] . ' zł</p>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
-                }
-                ?>
-            </div>
-        </div>
 
         <footer>
             <div class="footer-content">
