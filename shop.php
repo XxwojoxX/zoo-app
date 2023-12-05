@@ -116,7 +116,7 @@ if (!isset($_SESSION['userName'])) {
                 <button class="filter-btn" type="checkbox">opcja3</button>
             </div>
 
-            <button class="filter-btn">Zastosuj</button>
+            <button class="filter-btn">Zastosuj Filtry</button>
         </div>
 
         <div class="shop-container">

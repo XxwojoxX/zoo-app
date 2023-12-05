@@ -773,10 +773,6 @@ footer {
   font-size: 20px;
 }
 
-label {
-  margin-bottom: 5px;
-}
-
 #category,
 #sort {
   appearance: none;
@@ -990,6 +986,11 @@ select, input, button {
   max-width: 60%;
   max-height: 70%;
   position: relative;
+}
+
+.chosen-product-container img {
+  max-width: 70%;
+  min-width: 50%;
 }
 
 #go-back-btn {
