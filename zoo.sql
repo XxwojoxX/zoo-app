@@ -1,3 +1,32 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Dec 09, 2023 at 02:22 PM
+-- Wersja serwera: 10.4.28-MariaDB
+-- Wersja PHP: 8.2.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `zoo`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `animals`
+--
+
 CREATE TABLE `animals` (
   `animalId` int(11) NOT NULL,
   `animalSpecies` varchar(25) DEFAULT NULL,
@@ -67,29 +96,29 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`contactId`, `contactName`, `contactEmail`, `contactMessage`, `contactDate`) VALUES
-(1, 'aaa', 'aaa@aaa', '', '2023-09-15 11:23:40'),
-(3, 'aaa', 'aaa@aaa', '', '2023-09-15 11:23:48'),
-(4, 'aaa', 'aaa@aaa', '', '2023-09-15 11:23:48'),
-(7, 'aaa', 'admin@gmail.com', 'a', '2023-09-15 11:43:18'),
-(8, 'aaa', 'aaa@aaa', 'aaaaaaaa', '2023-09-15 11:53:51'),
-(9, 'bbb', 'bbb@bbb', 'bbb', '2023-09-15 12:03:28'),
-(10, 'bbbb', 'bbb@bbb', 'bbbb', '2023-09-15 12:04:42'),
-(11, 'aaa', 'admin@admin.pl', 'aaa', '2023-09-15 12:08:09'),
-(12, 'ccc', 'ccc@ccc', 'ccc', '2023-09-15 12:11:09'),
-(13, 'bbb', 'admin@admin.pl', 'a', '2023-09-16 12:48:33'),
-(14, 'bbb', 'admin@gmail.com', 'a', '2023-09-16 12:50:42'),
-(15, 'bbb', 'admin@admin.pl', 'a', '2023-09-16 12:55:37'),
-(16, 'proba', 'proba@proba.pl', 'proba', '2023-09-16 13:04:54'),
-(17, 'ddd', 'ddd@ddd.pl', 'ddddddddddddddddd', '2023-10-04 18:25:28'),
-(18, 'aaa', 'aaa@aaa', 'aaa', '2023-10-04 18:45:02'),
-(19, 'aaa', 'aaa@aaa', 'abc', '2023-10-05 11:30:32'),
-(20, 'a', 'a@a', 'a', '2023-10-05 11:50:17'),
-(21, 'a', 'aaa@aaa', 'aa', '2023-10-05 11:53:55'),
-(22, 'bbb', 'aaa@aaa', 'aaa', '2023-10-05 11:55:27'),
-(23, 'bbb', 'aaa@aaa', 'a', '2023-10-05 11:56:43'),
-(24, 'aaa', 'admin@admin.pl', 'a', '2023-10-05 11:56:57'),
-(25, 'a', 'aaa@aaa', 'a', '2023-10-05 12:04:40'),
-(26, 'aaa', 'aaa@aaa', 'a', '2023-10-05 12:05:39');
+(1, 'aaa', 'aaa@aaa', '', '2023-09-15 09:23:40'),
+(3, 'aaa', 'aaa@aaa', '', '2023-09-15 09:23:48'),
+(4, 'aaa', 'aaa@aaa', '', '2023-09-15 09:23:48'),
+(7, 'aaa', 'admin@gmail.com', 'a', '2023-09-15 09:43:18'),
+(8, 'aaa', 'aaa@aaa', 'aaaaaaaa', '2023-09-15 09:53:51'),
+(9, 'bbb', 'bbb@bbb', 'bbb', '2023-09-15 10:03:28'),
+(10, 'bbbb', 'bbb@bbb', 'bbbb', '2023-09-15 10:04:42'),
+(11, 'aaa', 'admin@admin.pl', 'aaa', '2023-09-15 10:08:09'),
+(12, 'ccc', 'ccc@ccc', 'ccc', '2023-09-15 10:11:09'),
+(13, 'bbb', 'admin@admin.pl', 'a', '2023-09-16 10:48:33'),
+(14, 'bbb', 'admin@gmail.com', 'a', '2023-09-16 10:50:42'),
+(15, 'bbb', 'admin@admin.pl', 'a', '2023-09-16 10:55:37'),
+(16, 'proba', 'proba@proba.pl', 'proba', '2023-09-16 11:04:54'),
+(17, 'ddd', 'ddd@ddd.pl', 'ddddddddddddddddd', '2023-10-04 16:25:28'),
+(18, 'aaa', 'aaa@aaa', 'aaa', '2023-10-04 16:45:02'),
+(19, 'aaa', 'aaa@aaa', 'abc', '2023-10-05 09:30:32'),
+(20, 'a', 'a@a', 'a', '2023-10-05 09:50:17'),
+(21, 'a', 'aaa@aaa', 'aa', '2023-10-05 09:53:55'),
+(22, 'bbb', 'aaa@aaa', 'aaa', '2023-10-05 09:55:27'),
+(23, 'bbb', 'aaa@aaa', 'a', '2023-10-05 09:56:43'),
+(24, 'aaa', 'admin@admin.pl', 'a', '2023-10-05 09:56:57'),
+(25, 'a', 'aaa@aaa', 'a', '2023-10-05 10:04:40'),
+(26, 'aaa', 'aaa@aaa', 'a', '2023-10-05 10:05:39');
 
 -- --------------------------------------------------------
 
@@ -163,6 +192,13 @@ CREATE TABLE `password_reset_tokens` (
   `expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `password_reset_tokens`
+--
+
+INSERT INTO `password_reset_tokens` (`id`, `user_id`, `token`, `expires_at`) VALUES
+(26, 2, '207af7c47a64b0d2163e71fcb3e3652cbb82c9d02663095ee76b83a83e1b9004', '2023-11-23 13:47:04');
+
 -- --------------------------------------------------------
 
 --
@@ -172,11 +208,10 @@ CREATE TABLE `password_reset_tokens` (
 CREATE TABLE `products` (
   `productId` int(11) NOT NULL,
   `productName` varchar(50) DEFAULT NULL,
-  `productDescription` varchar(999) DEFAULT NULL,
+  `productDescription` varchar(9999) DEFAULT NULL,
   `productPrice` float(10,2) DEFAULT NULL,
   `productQuantity` int(11) DEFAULT NULL,
   `productCategory` varchar(15) DEFAULT NULL,
-  `productRating` float(10,2) DEFAULT NULL,
   `productImage` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -184,8 +219,23 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`productId`, `productName`, `productDescription`, `productPrice`, `productQuantity`, `productCategory`, `productRating`, `productImage`) VALUES
-(1, 'a', 'a', 1.00, 1, 'a', 1.00, 'a');
+INSERT INTO `products` (`productId`, `productName`, `productDescription`, `productPrice`, `productQuantity`, `productCategory`, `productImage`) VALUES
+(2, 'T-shirt 1', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opopis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opopis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opopis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis ', 40.00, 100, 't-shirt', 'http://localhost/cos/img/no_photo.png'),
+(3, 'T-shirt 2', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 50.00, 100, 't-shirt', 'http://localhost/cos/img/no_photo.png'),
+(4, 'T-shirt 3', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 30.00, 100, 't-shirt', 'http://localhost/cos/img/no_photo.png'),
+(5, 'T-shirt 4', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 60.00, 100, 't-shirt', 'http://localhost/cos/img/no_photo.png'),
+(6, 'Bluza 1', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 100.00, 100, 'hoodie', 'http://localhost/cos/img/no_photo.png'),
+(7, 'Bluza 2', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 120.00, 100, 'hoodie', 'http://localhost/cos/img/no_photo.png'),
+(8, 'Bluza 3', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 200.00, 100, 'hoodie', 'http://localhost/cos/img/no_photo.png'),
+(9, 'Bluza 4', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 160.00, 100, 'hoodie', 'http://localhost/cos/img/no_photo.png'),
+(10, 'Maskotka 1', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 40.00, 100, 'mascot', 'http://localhost/cos/img/no_photo.png'),
+(11, 'Maskotka 2', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 50.00, 100, 'mascot', 'http://localhost/cos/img/no_photo.png'),
+(12, 'Maskotka 3', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 45.00, 100, 'mascot', 'http://localhost/cos/img/no_photo.png'),
+(13, 'Maskotka 4', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 55.00, 100, 'mascot', 'http://localhost/cos/img/no_photo.png'),
+(14, 'Bilet ulgowy', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 20.00, 0, 'ticket', 'http://localhost/cos/img/no_photo.png'),
+(15, 'Bilet normalny', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 30.00, 0, 'ticket', 'http://localhost/cos/img/no_photo.png'),
+(16, 'Bilet rodzinny', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 80.00, 0, 'ticket', 'http://localhost/cos/img/no_photo.png'),
+(17, 'Bilet grupowy', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 18.00, 0, 'ticket', 'http://localhost/cos/img/no_photo.png');
 
 -- --------------------------------------------------------
 
@@ -206,7 +256,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`userId`, `userName`, `userPassword`, `userEmail`) VALUES
 (1, 'admin', '$2y$10$aPf3xY/QyazBA8BMKXwlBOZartiLyytonGt5OXGDy5gCNIMk8/Y1.', 'admin@admin.pl'),
-(2, 'user1', '$2y$10$gh/NA5WJ2G0b9xUPKGcoLuS4e/UIHrNEau8nNtvlq8yg41SWiMkZi', 'cos.test.inz@gmail.com');
+(2, 'user1', '$2y$10$5RLd8/3I2IDtKqUlg/gGW.v.n7KvKoyJr08KU8EMYqDJhORIeopuq', 'cos.test.inz@gmail.com'),
+(3, 'user2', '$2y$10$gCm4qNjJwnx63.msKxfgYOoPM.2kyeDTeXv93/.dtY.L8vnSceK7i', 'cos2.test.inz@gmail.com');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -327,13 +378,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `password_reset_tokens`
 --
 ALTER TABLE `password_reset_tokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -369,3 +420,8 @@ ALTER TABLE `orders`
 --
 ALTER TABLE `password_reset_tokens`
   ADD CONSTRAINT `password_reset_tokens_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`userId`) ON DELETE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
