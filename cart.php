@@ -73,31 +73,7 @@ session_start();
             </div>
         </header>
 
-        <div class="chosen-product-container">
-            <button id="go-back-btn" onclick="goBack()">Powrót</button>
-            <?php
-            require_once "PHP/chosen_product_info.php";
-
-            // Sprawdź, czy zmienna sesji z informacjami o produkcie istnieje
-            if (isset($_SESSION['chosenProduct'])) {
-                $productData = $_SESSION['chosenProduct'];
-
-                // Wyświetl informacje o produkcie
-                echo '<img src="' . $productData['image'] . '" alt="' . $productData['name'] . '">';
-                echo '<div class="chosen-product-details">';
-                echo '<h1>' . $productData['name'] . '</h1>';
-                echo '<p id="product-price">Cena: ' . $productData['price'] . ' zł</p>';
-                echo '<button id="add-to-card-btn" onclick="addToCart()">Dodaj do koszyka</button>';
-                echo '<p id="product-description">' . $productData['description'] . '</p>';
-                echo '</div>';
-            } else {
-                // Wyświetl błąd, jeśli zmienna sesji z błędem istnieje
-                echo '<p>Error: ';
-                echo isset($_SESSION['chosenProductError']) ? $_SESSION['chosenProductError'] : 'Product data not available';
-                echo '</p>';
-            }
-            ?>
-        </div>
+        <h1>STRONA W BUDOWIE</h1>
 
 
         <footer>

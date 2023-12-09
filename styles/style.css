@@ -286,10 +286,25 @@ button {
   top: 105%;
 }
 
-.quantity {
-  display: none;
+.cart img {
+  height: 80%;
 }
 
+#cart-products {
+  display: none;
+  position: fixed; /* Zmiana na fixed */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  color: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
+#cart-products.show {
+  display: block;
+}
 /*koniec css dla navbar*/
 
 /*zawartosc strony glownej*/
@@ -1019,7 +1034,7 @@ select, input, button {
 
 .chosen-product-details h1,
 .chosen-product-details p,
-.add-to-card-btn {
+#add-to-card-btn {
   text-align: center; /* Wyśrodkuj tekst wewnątrz .chosen-product-details */
   margin: 0; /* Usuń domyślne marginesy */
 }
@@ -1037,7 +1052,7 @@ select, input, button {
   font-weight: bold;
 }
 
-.add-to-card-btn {
+#add-to-card-btn {
   margin-top: 10px;
   min-width: 70%;
   max-width: 80%;
