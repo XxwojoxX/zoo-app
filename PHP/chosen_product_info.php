@@ -26,15 +26,15 @@ if (isset($_GET['productName'])) {
         $productPrice = $row['productPrice'];
         $productImage = $row['productImage'];
 
-        $image = file_get_contents($productImage);
-        $image_base64 = base64_encode($image);
+        // Zamień kropki na podkreślenia w nazwie pliku, aby uniknąć problemów z dostępem
+        $imageName = str_replace('.', '_', $productName);
 
         // Zapisz informacje o wybranym produkcie w zmiennej sesji
         $_SESSION['chosenProduct'] = array(
             'name' => $productName,
             'description' => $productDescription,
             'price' => $productPrice,
-            'image' => 'data:image/png;base64,' . $image_base64
+            'image' => 'data:image/png;base64,' . base64_encode(file_get_contents($productImage)),
         );
     } else {
         // Ustaw zmienną sesji na błąd, jeśli produkt nie został znaleziony

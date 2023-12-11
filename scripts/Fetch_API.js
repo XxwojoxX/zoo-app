@@ -1,22 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("http://localhost/cos/navbar.php", { mode: "no-cors" })
+  // Pobierz i wstaw nagłówek
+  fetch("http://localhost/inx2/navbar.php")
     .then((response) => response.text())
     .then((data) => {
-      $("nav").html(data);
+      document.querySelector("header").innerHTML = data;
     })
     .catch((error) => {
-      console.error(
-        "Wystąpił błąd podczas ładowania paska nawigacyjnego:",
-        error
-      );
+      console.error("Wystąpił błąd podczas ładowania paska nawigacyjnego:", error);
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("http://localhost/cos/footer.php", { mode: "no-cors" })
+  // Pobierz i wstaw stopkę
+  fetch("http://localhost/inx2/footer.php")
     .then((response) => response.text())
     .then((data) => {
-      $("footer").html(data);
+      document.querySelector("footer").innerHTML = data;
     })
     .catch((error) => {
       console.error("Wystąpił błąd podczas ładowania stopki:", error);

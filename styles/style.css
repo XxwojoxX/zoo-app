@@ -234,76 +234,57 @@ button {
   color: black;
 }
 
-.btn-cart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  border: none;
-  background-color: transparent;
+.cart {
   position: relative;
-  top: 10;
+  display: inline-block;
 }
 
-.btn-cart::after {
-  content: attr(data-quantity);
-  width: fit-content;
-  height: fit-content;
+.cart-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; /* Dodatkowo, zalecane dla linków */
+}
+
+.cart-products {
   position: absolute;
-  font-size: 15px;
+  top: 0;
+  right: 0;
+  background-color: red; /* Możesz dostosować styl pod swoje potrzeby */
   color: white;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  opacity: 0;
-  visibility: hidden;
-  transition: .2s linear;
-  top: 115%;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 20px;
 }
 
-.icon-cart {
-  width: 24.38px;
-  height: 30.52px;
-  transition: .2s linear;
+.cart-item-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red; /* Możesz dostosować styl pod swoje potrzeby */
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 12px;
 }
 
-.icon-cart path {
-  fill: rgb(240, 8, 8);
-  transition: .2s linear;
-}
-
-.btn-cart:hover > .icon-cart {
-  transform: scale(1.2);
-}
-
-.btn-cart:hover > .icon-cart path {
-  fill: rgb(186, 34, 233);
-}
-
-.btn-cart:hover::after {
-  visibility: visible;
-  opacity: 1;
-  top: 105%;
-}
-
-.cart img {
-  height: 80%;
-}
-
-#cart-products {
+#cart-popup {
   display: none;
-  position: fixed; /* Zmiana na fixed */
+  position: absolute;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  color: #000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  z-index: 1000;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#cart-products.show {
-  display: block;
+.product-info {
+  margin-bottom: 10px;
+}
+
+#remove-from-cart-btn {
+  background-color: #ff0000;
+  color: #fff;
+  cursor: pointer;
 }
 /*koniec css dla navbar*/
 
@@ -998,8 +979,8 @@ select, input, button {
   margin-top: 5%;
   margin-bottom: 5%;
   min-width: 30%;
-  max-width: 60%;
-  max-height: 70%;
+  max-width: 70%;
+  max-height: 60%;
   position: relative;
 }
 
@@ -1009,13 +990,14 @@ select, input, button {
 }
 
 #go-back-btn {
-  position: absolute; /* Dodaj atrybut position: absolute; */
-  top: 10px; /* Ustaw odległość od góry */
-  left: 10px; /* Ustaw odległość od lewej strony */
-  text-decoration: none; /* Usuń podkreślenie linku */
-  color: #fff; /* Ustaw kolor tekstu na biały */
-  margin: 1%;
-  border-top-left-radius: 20px;
+  padding: 13px;
+  border-radius: 13px;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border: 5px solid transparent;
+  font-size: 15px;
+  font-weight: 350;
+  cursor: pointer;
 }
 
 .chosen-product-container img {
@@ -1091,3 +1073,115 @@ select, input, button {
 }
 
 /*koniec css dla chosen_product*/
+
+/*css dla strony koszyka*/
+.cart-section {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+  max-width: 80%;
+  max-height: 70%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.cart-section::-webkit-scrollbar {
+  width: 10px;
+}
+
+.cart-section::-webkit-scrollbar-track {
+  margin: 10px; /* Dostosuj tę wartość do swoich preferencji */
+}
+
+.cart-section::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 20px;
+}
+
+/* Dodatkowe style dla suwaka, które mogą pomóc w innych przeglądarkach */
+.cart-section::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.cart-section::-webkit-scrollbar-thumb:active {
+  background-color: #444;
+}
+
+.cart-section h2 {
+  margin-bottom: 20px;
+}
+
+.cart-section p {
+  margin-left: 20px;
+}
+
+.product-info {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.product-info > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info img {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+
+.product-info strong {
+  margin-right: 20px;
+}
+
+.product-info strong + strong {
+  margin-left: 50px; /* Dodajemy margin-left dla kolejnych elementów <strong> */
+}
+
+.product-info button {
+  margin-top: auto; /* Dodatkowy odstęp między przyciskiem a resztą informacji o produkcie */
+}
+
+.back-to-shop-btn {
+  margin-top: 5px;
+  border-radius: 13px;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border: 5px solid transparent;
+  font-size: 15px;
+  font-weight: 350;
+  cursor: pointer;
+}
+
+.back-to-shop-btn:hover {
+  border: 5px solid var(--text-color);
+  background: transparent;
+  color: var(--text-color);
+}
+
+#remove-from-cart-btn {
+  cursor: pointer;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 40px;
+}
+
+#remove-from-cart-btn:hover {
+  background-color: white;
+  color: black;
+}
+/*koniec css dla koszyka*/
