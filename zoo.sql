@@ -1,3 +1,32 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Dec 13, 2023 at 06:01 PM
+-- Wersja serwera: 10.4.28-MariaDB
+-- Wersja PHP: 8.2.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `zoo`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `animals`
+--
+
 CREATE TABLE `animals` (
   `animalId` int(11) NOT NULL,
   `animalSpecies` varchar(25) DEFAULT NULL,
@@ -67,29 +96,30 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`contactId`, `contactName`, `contactEmail`, `contactMessage`, `contactDate`) VALUES
-(1, 'aaa', 'aaa@aaa', '', '2023-09-15 09:23:40'),
-(3, 'aaa', 'aaa@aaa', '', '2023-09-15 09:23:48'),
-(4, 'aaa', 'aaa@aaa', '', '2023-09-15 09:23:48'),
-(7, 'aaa', 'admin@gmail.com', 'a', '2023-09-15 09:43:18'),
-(8, 'aaa', 'aaa@aaa', 'aaaaaaaa', '2023-09-15 09:53:51'),
-(9, 'bbb', 'bbb@bbb', 'bbb', '2023-09-15 10:03:28'),
-(10, 'bbbb', 'bbb@bbb', 'bbbb', '2023-09-15 10:04:42'),
-(11, 'aaa', 'admin@admin.pl', 'aaa', '2023-09-15 10:08:09'),
-(12, 'ccc', 'ccc@ccc', 'ccc', '2023-09-15 10:11:09'),
-(13, 'bbb', 'admin@admin.pl', 'a', '2023-09-16 10:48:33'),
-(14, 'bbb', 'admin@gmail.com', 'a', '2023-09-16 10:50:42'),
-(15, 'bbb', 'admin@admin.pl', 'a', '2023-09-16 10:55:37'),
-(16, 'proba', 'proba@proba.pl', 'proba', '2023-09-16 11:04:54'),
-(17, 'ddd', 'ddd@ddd.pl', 'ddddddddddddddddd', '2023-10-04 16:25:28'),
-(18, 'aaa', 'aaa@aaa', 'aaa', '2023-10-04 16:45:02'),
-(19, 'aaa', 'aaa@aaa', 'abc', '2023-10-05 09:30:32'),
-(20, 'a', 'a@a', 'a', '2023-10-05 09:50:17'),
-(21, 'a', 'aaa@aaa', 'aa', '2023-10-05 09:53:55'),
-(22, 'bbb', 'aaa@aaa', 'aaa', '2023-10-05 09:55:27'),
-(23, 'bbb', 'aaa@aaa', 'a', '2023-10-05 09:56:43'),
-(24, 'aaa', 'admin@admin.pl', 'a', '2023-10-05 09:56:57'),
-(25, 'a', 'aaa@aaa', 'a', '2023-10-05 10:04:40'),
-(26, 'aaa', 'aaa@aaa', 'a', '2023-10-05 10:05:39');
+(1, 'aaa', 'aaa@aaa', '', '2023-09-15 07:23:40'),
+(3, 'aaa', 'aaa@aaa', '', '2023-09-15 07:23:48'),
+(4, 'aaa', 'aaa@aaa', '', '2023-09-15 07:23:48'),
+(7, 'aaa', 'admin@gmail.com', 'a', '2023-09-15 07:43:18'),
+(8, 'aaa', 'aaa@aaa', 'aaaaaaaa', '2023-09-15 07:53:51'),
+(9, 'bbb', 'bbb@bbb', 'bbb', '2023-09-15 08:03:28'),
+(10, 'bbbb', 'bbb@bbb', 'bbbb', '2023-09-15 08:04:42'),
+(11, 'aaa', 'admin@admin.pl', 'aaa', '2023-09-15 08:08:09'),
+(12, 'ccc', 'ccc@ccc', 'ccc', '2023-09-15 08:11:09'),
+(13, 'bbb', 'admin@admin.pl', 'a', '2023-09-16 08:48:33'),
+(14, 'bbb', 'admin@gmail.com', 'a', '2023-09-16 08:50:42'),
+(15, 'bbb', 'admin@admin.pl', 'a', '2023-09-16 08:55:37'),
+(16, 'proba', 'proba@proba.pl', 'proba', '2023-09-16 09:04:54'),
+(17, 'ddd', 'ddd@ddd.pl', 'ddddddddddddddddd', '2023-10-04 14:25:28'),
+(18, 'aaa', 'aaa@aaa', 'aaa', '2023-10-04 14:45:02'),
+(19, 'aaa', 'aaa@aaa', 'abc', '2023-10-05 07:30:32'),
+(20, 'a', 'a@a', 'a', '2023-10-05 07:50:17'),
+(21, 'a', 'aaa@aaa', 'aa', '2023-10-05 07:53:55'),
+(22, 'bbb', 'aaa@aaa', 'aaa', '2023-10-05 07:55:27'),
+(23, 'bbb', 'aaa@aaa', 'a', '2023-10-05 07:56:43'),
+(24, 'aaa', 'admin@admin.pl', 'a', '2023-10-05 07:56:57'),
+(25, 'a', 'aaa@aaa', 'a', '2023-10-05 08:04:40'),
+(26, 'aaa', 'aaa@aaa', 'a', '2023-10-05 08:05:39'),
+(27, 'cos', 'cos@cos.gmail', 'abc', '2023-12-13 14:13:51');
 
 -- --------------------------------------------------------
 
@@ -146,9 +176,49 @@ CREATE TABLE `news` (
 CREATE TABLE `orders` (
   `orderId` int(11) NOT NULL,
   `userId` int(11) DEFAULT NULL,
+  `orderDeliveryStreet` varchar(50) DEFAULT NULL,
+  `orderDeliveryOption` varchar(30) DEFAULT NULL,
+  `orderPaymentMethod` varchar(30) DEFAULT NULL,
   `productId` int(11) DEFAULT NULL,
-  `Data_zamówienia` date DEFAULT NULL
+  `Data_zamówienia` date DEFAULT current_timestamp(),
+  `orderDeliveryLocal` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`orderId`, `userId`, `orderDeliveryStreet`, `orderDeliveryOption`, `orderPaymentMethod`, `productId`, `Data_zamówienia`, `orderDeliveryLocal`) VALUES
+(23, 2, 'cos 1', 'standard', '0', NULL, '2023-12-13', '23'),
+(24, 2, 'cos 1', 'standard', '0', NULL, '2023-12-13', '23'),
+(25, 2, 'cos 1', 'standard', '0', NULL, '2023-12-13', '23'),
+(26, 2, 'cos 1', 'standard', '0', NULL, '2023-12-13', '23'),
+(27, 2, 'cos 1', 'standard', '0', NULL, '2023-12-13', '23');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `order_products`
+--
+
+CREATE TABLE `order_products` (
+  `order_productsId` int(11) NOT NULL,
+  `order_id` int(11) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `order_products`
+--
+
+INSERT INTO `order_products` (`order_productsId`, `order_id`, `product_id`) VALUES
+(15, 24, 7),
+(16, 24, 8),
+(17, 25, 7),
+(18, 25, 8),
+(19, 26, 7),
+(20, 26, 8),
+(21, 27, 9);
 
 -- --------------------------------------------------------
 
@@ -191,22 +261,22 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`productId`, `productName`, `productDescription`, `productPrice`, `productQuantity`, `productCategory`, `productImage`) VALUES
-(2, 'T-shirt 1', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opopis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opopis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opopis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis ', 40.00, 100, 't-shirt', 'http://localhost/cos/img/no_photo.png'),
-(3, 'T-shirt 2', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 50.00, 100, 't-shirt', 'http://localhost/cos/img/no_photo.png'),
-(4, 'T-shirt 3', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 30.00, 100, 't-shirt', 'http://localhost/cos/img/no_photo.png'),
-(5, 'T-shirt 4', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 60.00, 100, 't-shirt', 'http://localhost/cos/img/no_photo.png'),
-(6, 'Bluza 1', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 100.00, 100, 'hoodie', 'http://localhost/cos/img/no_photo.png'),
-(7, 'Bluza 2', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 120.00, 100, 'hoodie', 'http://localhost/cos/img/no_photo.png'),
-(8, 'Bluza 3', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 200.00, 100, 'hoodie', 'http://localhost/cos/img/no_photo.png'),
-(9, 'Bluza 4', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 160.00, 100, 'hoodie', 'http://localhost/cos/img/no_photo.png'),
-(10, 'Maskotka 1', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 40.00, 100, 'mascot', 'http://localhost/cos/img/no_photo.png'),
-(11, 'Maskotka 2', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 50.00, 100, 'mascot', 'http://localhost/cos/img/no_photo.png'),
-(12, 'Maskotka 3', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 45.00, 100, 'mascot', 'http://localhost/cos/img/no_photo.png'),
-(13, 'Maskotka 4', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 55.00, 100, 'mascot', 'http://localhost/cos/img/no_photo.png'),
-(14, 'Bilet ulgowy', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 20.00, 0, 'ticket', 'http://localhost/cos/img/no_photo.png'),
-(15, 'Bilet normalny', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 30.00, 0, 'ticket', 'http://localhost/cos/img/no_photo.png'),
-(16, 'Bilet rodzinny', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 80.00, 0, 'ticket', 'http://localhost/cos/img/no_photo.png'),
-(17, 'Bilet grupowy', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 18.00, 0, 'ticket', 'http://localhost/cos/img/no_photo.png');
+(2, 'T-shirt 1', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opopis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opopis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opopis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opisopis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis ', 40.00, 100, 't-shirt', 'http://localhost/inx2/img/no_photo.png'),
+(3, 'T-shirt 2', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 50.00, 100, 't-shirt', 'http://localhost/inx2/img/no_photo.png'),
+(4, 'T-shirt 3', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 30.00, 100, 't-shirt', 'http://localhost/inx2/img/no_photo.png'),
+(5, 'T-shirt 4', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 60.00, 100, 't-shirt', 'http://localhost/inx2/img/no_photo.png'),
+(6, 'Bluza 1', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 100.00, 100, 'hoodie', 'http://localhost/inx2/img/no_photo.png'),
+(7, 'Bluza 2', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 120.00, 100, 'hoodie', 'http://localhost/inx2/img/no_photo.png'),
+(8, 'Bluza 3', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 200.00, 100, 'hoodie', 'http://localhost/inx2/img/no_photo.png'),
+(9, 'Bluza 4', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 160.00, 100, 'hoodie', 'http://localhost/inx2/img/no_photo.png'),
+(10, 'Maskotka 1', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 40.00, 100, 'mascot', 'http://localhost/inx2/img/no_photo.png'),
+(11, 'Maskotka 2', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 50.00, 100, 'mascot', 'http://localhost/inx2/img/no_photo.png'),
+(12, 'Maskotka 3', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 45.00, 100, 'mascot', 'http://localhost/inx2/img/no_photo.png'),
+(13, 'Maskotka 4', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 55.00, 100, 'mascot', 'http://localhost/inx2/img/no_photo.png'),
+(14, 'Bilet ulgowy', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 20.00, 0, 'ticket', 'http://localhost/inx2/img/no_photo.png'),
+(15, 'Bilet normalny', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 30.00, 0, 'ticket', 'http://localhost/inx2/img/no_photo.png'),
+(16, 'Bilet rodzinny', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 80.00, 0, 'ticket', 'http://localhost/inx2/img/no_photo.png'),
+(17, 'Bilet grupowy', 'opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis opis', 18.00, 0, 'ticket', 'http://localhost/inx2/img/no_photo.png');
 
 -- --------------------------------------------------------
 
@@ -281,6 +351,14 @@ ALTER TABLE `orders`
   ADD KEY `productId` (`productId`);
 
 --
+-- Indeksy dla tabeli `order_products`
+--
+ALTER TABLE `order_products`
+  ADD PRIMARY KEY (`order_productsId`),
+  ADD KEY `order_id` (`order_id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
 -- Indeksy dla tabeli `password_reset_tokens`
 --
 ALTER TABLE `password_reset_tokens`
@@ -325,7 +403,7 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `contactId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `contactId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -343,7 +421,13 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT for table `order_products`
+--
+ALTER TABLE `order_products`
+  MODIFY `order_productsId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `password_reset_tokens`
@@ -387,7 +471,19 @@ ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`productId`) REFERENCES `products` (`productId`);
 
 --
+-- Constraints for table `order_products`
+--
+ALTER TABLE `order_products`
+  ADD CONSTRAINT `order_products_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`orderId`),
+  ADD CONSTRAINT `order_products_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`productId`);
+
+--
 -- Constraints for table `password_reset_tokens`
 --
 ALTER TABLE `password_reset_tokens`
   ADD CONSTRAINT `password_reset_tokens_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`userId`) ON DELETE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
