@@ -1148,7 +1148,8 @@ select, input, button {
 }
 
 .back-to-shop-btn,
-.payment-delivery-btn {
+.payment-delivery-btn,
+.back-to-cart-btn {
   margin-top: 5px;
   border-radius: 13px;
   background-color: var(--main-color);
@@ -1160,7 +1161,8 @@ select, input, button {
 }
 
 .back-to-shop-btn:hover,
-.payment-delivery-btn:hover {
+.payment-delivery-btn:hover,
+.back-to-cart-btn:hover {
   border: 5px solid var(--text-color);
   background: transparent;
   color: var(--text-color);
@@ -1205,3 +1207,41 @@ select, input, button {
   margin-top: 7px;
 }
 /*koniec css dla koszyka*/
+
+/*css dla skladania zamowienia*/
+.form-container,
+.order-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 15%;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  margin: auto;
+}
+
+.order-container {
+  max-width: 40%;
+}
+
+.order-container h2 {
+  margin-bottom: 20px;
+}
+
+.payment-product-info {
+  margin-bottom: 30px;
+}
+
+.payment-product-info img {
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.payment-product-info strong + strong {
+  margin-left: 30px;
+}
+/*koniec css dla skladania zamowienia*/

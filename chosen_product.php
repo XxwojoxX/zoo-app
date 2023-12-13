@@ -38,6 +38,7 @@ session_start();
                 echo '<p id="product-price">Cena: ' . $productData['price'] . ' zł</p>';
                 echo '<form method="post" action="PHP/add_to_cart.php">';
                 echo '<input type="hidden" name="product_name" value="' . $productData['name'] . '">';
+                echo '<input type="hidden" name="product_id" value="' . $productData['id'] . '">';
                 echo '<button type="submit" id="add-to-cart-btn">Dodaj do koszyka</button>';
                 echo '</form>';
                 echo '<p id="product-description">' . $productData['description'] . '</p>';

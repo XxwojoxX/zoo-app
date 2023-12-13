@@ -15,7 +15,7 @@ if (isset($_GET['productName'])) {
     $productName = mysqli_real_escape_string($connect, $_GET['productName']);
 
     // Zmodyfikowany zapytanie SQL, aby pobrać tylko wybrany produkt
-    $sql = "SELECT productName, productDescription, productPrice, productImage FROM products WHERE productName = '$productName'";
+    $sql = "SELECT productName, productDescription, productPrice, productImage, productId FROM products WHERE productName = '$productName'";
     $result = mysqli_query($connect, $sql);
 
     if ($result && mysqli_num_rows($result) > 0) {
@@ -25,6 +25,7 @@ if (isset($_GET['productName'])) {
         $productDescription = $row['productDescription'];
         $productPrice = $row['productPrice'];
         $productImage = $row['productImage'];
+        $productId = $row['productId'];
 
         // Zamień kropki na podkreślenia w nazwie pliku, aby uniknąć problemów z dostępem
         $imageName = str_replace('.', '_', $productName);
@@ -35,6 +36,7 @@ if (isset($_GET['productName'])) {
             'description' => $productDescription,
             'price' => $productPrice,
             'image' => 'data:image/png;base64,' . base64_encode(file_get_contents($productImage)),
+            'id' => $productId
         );
     } else {
         // Ustaw zmienną sesji na błąd, jeśli produkt nie został znaleziony
