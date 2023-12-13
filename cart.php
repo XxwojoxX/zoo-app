@@ -22,6 +22,17 @@ session_start();
     <div class="home">
         <header></header>
 
+        <?php
+// Oblicz sumę cen produktów w koszyku
+$totalPrice = 0;
+
+if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
+    foreach ($_SESSION['cart'] as $product) {
+        $totalPrice += $product['price'];
+    }
+}
+?>
+
         <div class="cart-section">
             <a href="shop.php"><button class="back-to-shop-btn">Powrot do sklepu</button></a>
             <h2>Twój koszyk:</h2>
@@ -45,6 +56,13 @@ session_start();
                 echo '<p>Twój koszyk jest pusty.</p>';
             }
             ?>
+            <div class="cart-total">
+                <h1 class="total-price">Suma: </h1>
+                <h2 class="total-amount"><?php echo number_format($totalPrice, 2); ?> zł</h2>
+            </div>
+            <div class="payment-delivery-link">
+            <a href="payment_delivery.php"><button class="payment-delivery-btn">Przejdź do płatności</button></a>
+            </div>
         </div>
 
         <footer></footer>

@@ -1147,7 +1147,8 @@ select, input, button {
   margin-top: auto; /* Dodatkowy odstęp między przyciskiem a resztą informacji o produkcie */
 }
 
-.back-to-shop-btn {
+.back-to-shop-btn,
+.payment-delivery-btn {
   margin-top: 5px;
   border-radius: 13px;
   background-color: var(--main-color);
@@ -1158,10 +1159,16 @@ select, input, button {
   cursor: pointer;
 }
 
-.back-to-shop-btn:hover {
+.back-to-shop-btn:hover,
+.payment-delivery-btn:hover {
   border: 5px solid var(--text-color);
   background: transparent;
   color: var(--text-color);
+}
+
+.payment-delivery-link {
+  display: flex;
+  justify-content: flex-end;
 }
 
 #remove-from-cart-btn {
@@ -1183,5 +1190,18 @@ select, input, button {
 #remove-from-cart-btn:hover {
   background-color: white;
   color: black;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price {
+  margin-right: 30px;
+}
+
+.total-amount {
+  margin-top: 7px;
 }
 /*koniec css dla koszyka*/
