@@ -27,25 +27,31 @@ header("Access-Control-Allow-Origin: *");
     </ul>
 
     <div class="log-reg">
-        <div class="cart" id="cart">
-            <a href="cart.php" class="cart-link">
-                <img src="img/koszyk11.png" alt="koszyk">
-                <span id="cart-products" class="cart-products" data-cart-content="">
-                    <?php
-                    // Pobierz liczbę przedmiotów w koszyku
-                    $cartItemCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+        <?php
+        // Sprawdź, czy użytkownik jest zalogowany
+        if (isset($_SESSION['userId'])) {
+            // Fragment koszyka widoczny tylko dla zalogowanego użytkownika
+            echo '<div class="cart" id="cart">';
+            echo '<a href="cart.php" class="cart-link">';
+            echo '<img src="img/koszyk11.png" alt="koszyk">';
+            echo '<span id="cart-products" class="cart-products" data-cart-content="">';
 
-                    // Wyświetl liczbę przedmiotów
-                    echo $cartItemCount;
-                    ?>
-                </span>
-            </a>
-        </div>
+            // Pobierz liczbę przedmiotów w koszyku
+            $cartItemCount = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+
+            // Wyświetl liczbę przedmiotów
+            echo $cartItemCount;
+
+            echo '</span>';
+            echo '</a>';
+            echo '</div>';
+        }
+        ?>
         <?php
         if (isset($_SESSION['userName'])) {
             $userName = $_SESSION['userName'];
             echo
-                '<a href="PHP/logout.php">
+            '<a href="PHP/logout.php">
                                 <button class="log-reg-btn">Logout</button>
                             </a>';
 
@@ -63,12 +69,12 @@ header("Access-Control-Allow-Origin: *");
               </div>';
         } else {
             echo
-                '<a href="login_form.php">
+            '<a href="login_form.php">
                                 <button class="log-reg-btn">Login</button>
                             </a>';
 
             echo
-                '<a href="register_form.php">
+            '<a href="register_form.php">
                                 <button class="log-reg-btn">Register</button>
                             </a>';
         }

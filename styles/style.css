@@ -989,7 +989,8 @@ select, input, button {
   min-width: 50%;
 }
 
-#go-back-btn {
+#go-back-btn,
+#add-to-cart-btn {
   padding: 13px;
   border-radius: 13px;
   background-color: var(--main-color);

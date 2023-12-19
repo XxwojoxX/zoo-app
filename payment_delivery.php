@@ -80,10 +80,10 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
             <label>
                 <select required="" class="input" name="delivery_option">
                     <option value="default" selected>Wybierz sposób dostawy</option>
-                    <option value="standard">Paczkomat Inpost</option>
-                    <option value="express">Kurier DHL</option>
-                    <option value="express">Kurier DPD</option>
-                    <option value="slow">Poczta Polska</option>
+                    <option value="paczkomat">Paczkomat Inpost</option>
+                    <option value="DHL">Kurier DHL</option>
+                    <option value="DPD">Kurier DPD</option>
+                    <option value="poczta Polska">Poczta Polska</option>
                     <!-- Dodaj inne opcje dostawy -->
                 </select>
             </label>

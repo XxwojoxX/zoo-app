@@ -33,7 +33,7 @@ $user_id = isset($_SESSION['userId']) ? $_SESSION['userId'] : null;
 $sql = "INSERT INTO orders (userId, orderDeliveryStreet, orderDeliveryLocal, orderDeliveryOption, orderPaymentMethod)
         VALUES (?, ?, ?, ?, ?)";
 $stmt = $connect->prepare($sql);
-$stmt->bind_param("isssi", $user_id, $delivery_street, $delivery_local, $delivery_option, $payment_method);
+$stmt->bind_param("issss", $user_id, $delivery_street, $delivery_local, $delivery_option, $payment_method);
 $stmt->execute();
 
 // Pobierz ID ostatnio wstawionego zamówienia
