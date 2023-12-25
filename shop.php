@@ -29,43 +29,38 @@ if (!isset($_SESSION['userName'])) {
         <header></header>
 
         <div class="filter-section">
-            <label for="category">Kategoria:</label>
-            <select id="category">
-                <option value="all">Wszystkie kategorie</option>
-                <option value="tshirts">Koszulki</option>
-                <option value="hoodies">Bluzy</option>
-                <option value="mascots">Maskotki</option>
-                <option value="tickets">Bilety</option>
-            </select>
+    <form id="filterForm" method="get" action="PHP/get_products.php">
+        <label for="category">Kategoria:</label>
+        <select id="category" name="category">
+            <option value="all" selected>Wszystkie kategorie</option>
+            <option value="t-shirt">Koszulki</option>
+            <option value="hoodie">Bluzy</option>
+            <option value="mascot">Maskotki</option>
+            <option value="ticket">Bilety</option>
+        </select>
 
-            <label for="price-range">Zakres cenowy:</label>
-<div class="price-slider-container">
-    <span class="min-price" id="min-price">10</span>
-    <input type="range" id="price-range" min="0" max="500" step="1" oninput="updatePrice()">
-    <span class="max-price" id="max-price">1500</span>
-    <div class="selected-price-container">
-        <span id="selected-price">Wybrana cena: 10</span>
-    </div>
-</div>
-
-            <label for="sort" id="sort-label">Sortuj:</label>
-            <select id="sort">
-                <option value="default" selected>Domyślnie</option>
-                <option value="price-asc">Cena rosnąco</option>
-                <option value="price-desc">Cena malejąco</option>
-                <option value="alphabetical-asc">Alfabetycznie A-Z</option>
-                <option value="alphabetical-desc">Alfabetycznie Z-A</option>
-            </select>
-
-            <label for="category" style="display: none">filtr4</label for="category">
-            <div class="filter-options" style="display: none">
-                <button class="filter-btn" type="checkbox">opcja1</button>
-                <button class="filter-btn" type="checkbox">opcja2</button>
-                <button class="filter-btn" type="checkbox">opcja3</button>
+        <label for="price-range">Zakres cenowy:</label>
+        <div class="price-slider-container">
+            <span class="min-price" id="min-price">10</span>
+            <input type="range" id="price-range" min="0" max="500" step="1" oninput="updatePrice()" name="price-range">
+            <span class="max-price" id="max-price">500</span>
+            <div class="selected-price-container">
+                <span id="selected-price">Wybrana cena: </span>
             </div>
-
-            <button class="filter-btn">Zastosuj Filtry</button>
         </div>
+
+        <label for="sort" id="sort-label">Sortuj:</label>
+        <select id="sort" name="sort">
+            <option value="default" selected>Domyślnie</option>
+            <option value="price-asc">Cena rosnąco</option>
+            <option value="price-desc">Cena malejąco</option>
+            <option value="alphabetical-asc">Alfabetycznie A-Z</option>
+            <option value="alphabetical-desc">Alfabetycznie Z-A</option>
+        </select>
+
+        <button class="filter-btn" type="submit">Zastosuj Filtry</button>
+    </form>
+</div>
 
         <div class="shop-container">
             <div class="flip-card-section">

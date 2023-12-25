@@ -742,13 +742,11 @@ footer {
   background: rgba(255, 255, 255, 0.2);
   padding: 25px;
   border-radius: 20px;
-  margin: 0 auto 20px; /* Dodaj margines na dole, aby oddzielić wydarzenia */
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   margin-top: 5%;
   margin-bottom: 5%;
   margin-left: 2%;
-  min-width: 10%; /* Minimalna szerokość na 10% */
-  max-width: 60%; /* Maksymalna szerokość na 100% */
+  max-width: 10%; /* Maksymalna szerokość na 100% */
+  min-height: 30%;
   max-height: 75%;
   margin-right: 1%;
   overflow-x: auto;
@@ -860,7 +858,7 @@ select, input, button {
   margin-bottom: 5%;
   margin-right: 2%;
   min-width: 40%;
-  max-width: 90%;
+  max-width: 80%;
   max-height: 75%;
   overflow-y: scroll;
   scroll-behavior: smooth;
