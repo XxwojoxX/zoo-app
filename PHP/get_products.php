@@ -7,7 +7,7 @@ require_once "connect.php";
 $connect = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 
 if (!$connect) {
-    die("connection failed: " . mysqli_connect_error());
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 // Początkowe zapytanie bez warunków
@@ -21,11 +21,16 @@ if (isset($_GET['category']) && $_GET['category'] !== 'all') {
 }
 
 // Dodaj warunek dla zakresu cenowego
-if (isset($_GET['price-range'])) {
-    $priceRange = explode('-', $_GET['price-range']);
-    $maxPrice = isset($priceRange[1]) ? mysqli_real_escape_string($connect, $priceRange[1]) : '';
-    if ($maxPrice !== '') {
-        $whereClauses[] = "productPrice BETWEEN 0 AND $maxPrice";
+if (isset($_GET['min-price'], $_GET['max-price'])) {
+    $minPrice = mysqli_real_escape_string($connect, $_GET['min-price']);
+    $maxPrice = mysqli_real_escape_string($connect, $_GET['max-price']);
+
+    if ($minPrice !== '' && $maxPrice !== '') {
+        $whereClauses[] = "productPrice BETWEEN $minPrice AND $maxPrice";
+    } elseif ($minPrice !== '') {
+        $whereClauses[] = "productPrice >= $minPrice";
+    } elseif ($maxPrice !== '') {
+        $whereClauses[] = "productPrice <= $maxPrice";
     }
 }
 
@@ -69,27 +74,27 @@ if (!$result) {
 
 $products = array();
 
-if (mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        $productName = $row['productName'];
-        $productDescription = $row['productDescription'];
-        $productPrice = $row['productPrice'];
-        $productImage = $row['productImage'];
+while ($row = mysqli_fetch_assoc($result)) {
+    $productName = $row['productName'];
+    $productDescription = $row['productDescription'];
+    $productPrice = $row['productPrice'];
+    $productImage = $row['productImage'];
 
-        $image = file_get_contents($productImage);
-        $image_base64 = base64_encode($image);
+    $image = file_get_contents($productImage);
+    $image_base64 = base64_encode($image);
 
-        $product = array(
-            'name' => $productName,
-            'description' => $productDescription,
-            'price' => $productPrice,
-            'image' => 'data:image/png;base64,' . $image_base64
-        );
+    $product = array(
+        'name' => $productName,
+        'description' => $productDescription,
+        'price' => $productPrice,
+        'image' => 'data:image/png;base64,' . $image_base64
+    );
 
-        $products[] = $product;
-    }
-} else {
-    echo "no products found";
+    $products[] = $product;
+}
+
+if (empty($products)) {
+    echo "No products found";
 }
 
 mysqli_close($connect);

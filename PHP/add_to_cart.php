@@ -30,5 +30,8 @@ function addToCart($productInfo) {
 
     // Dodaj produkt do koszyka
     $_SESSION['cart'][] = $productInfo;
+
+    // Ustaw zmienną sesji na informację o dodaniu do koszyka
+    $_SESSION['addToCartSuccess'] = true;
 }
 ?>

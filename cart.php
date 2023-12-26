@@ -15,6 +15,7 @@ if (!isset($_SESSION['userName'])) {
     <script src="scripts/cookie.js"></script>
     <script src="scripts/cookie2.js"></script>
     <script src="scripts/Fetch_api.js"></script>
+    <script src="scripts/autohide.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -38,6 +39,17 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
 ?>
 
         <div class="cart-section">
+            <?php
+                // Sprawdź, czy produkt został dodany do koszyka i wyświetl komunikat
+                if (isset($_SESSION['deleteFromCartSuccess']) && $_SESSION['deleteFromCartSuccess']) {
+                    echo '<div class="delete-success-message" id="delete-success-message">';
+                    echo '<h2>Produkt został usunięty z koszyka!</h2>';
+                    echo '</div>';
+                    
+                    // Resetuj zmienną sesji po wyświetleniu komunikatu
+                    $_SESSION['addToCartSuccess'] = false;
+                }
+            ?>
             <a href="shop.php"><button class="back-to-shop-btn">Powrot do sklepu</button></a>
             <h2>Twój koszyk:</h2>
 

@@ -10,11 +10,12 @@ if (!isset($_SESSION['userName'])) {
 
 <head>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/media.css">
+    <link rel="stylesheet" href="styles/media_form.css">
 
     <script src="scripts/cookie.js"></script>
     <script src="scripts/cookie2.js"></script>
-    <script src="scripts/price_range.js"></script>
     <script src="scripts/redirect.js"></script>
     <script src="scripts/Fetch_api.js"></script>
 
@@ -29,34 +30,38 @@ if (!isset($_SESSION['userName'])) {
         <header></header>
 
         <div class="filter-section">
-    <form id="filterForm" method="get" action="PHP/get_products.php">
+        <form id="filterForm" onsubmit="applyFilters(); return false;">
         <label for="category">Kategoria:</label>
         <select id="category" name="category">
-            <option value="all" selected>Wszystkie kategorie</option>
-            <option value="t-shirt">Koszulki</option>
-            <option value="hoodie">Bluzy</option>
-            <option value="mascot">Maskotki</option>
-            <option value="ticket">Bilety</option>
-        </select>
+    <option value="all" <?php echo (!isset($_GET['category']) || $_GET['category'] === 'all') ? 'selected' : ''; ?>>Wszystkie kategorie</option>
+    <option value="t-shirt" <?php echo (isset($_GET['category']) && $_GET['category'] === 't-shirt') ? 'selected' : ''; ?>>Koszulki</option>
+    <option value="hoodie" <?php echo (isset($_GET['category']) && $_GET['category'] === 'hoodie') ? 'selected' : ''; ?>>Bluzy</option>
+    <option value="mascot" <?php echo (isset($_GET['category']) && $_GET['category'] === 'mascot') ? 'selected' : ''; ?>>Maskotki</option>
+    <option value="ticket" <?php echo (isset($_GET['category']) && $_GET['category'] === 'ticket') ? 'selected' : ''; ?>>Bilety</option>
+</select>
 
-        <label for="price-range">Zakres cenowy:</label>
-        <div class="price-slider-container">
-            <span class="min-price" id="min-price">10</span>
-            <input type="range" id="price-range" min="0" max="500" step="1" oninput="updatePrice()" name="price-range">
-            <span class="max-price" id="max-price">500</span>
-            <div class="selected-price-container">
-                <span id="selected-price">Wybrana cena: </span>
-            </div>
-        </div>
+<div class="flex">
+    <!-- Cena od -->
+    <div class="price-input">
+        <label for="min-price">Cena od:</label>
+        <input type="number" id="min-price" name="min-price" value="<?php echo isset($_GET['min-price']) ? htmlspecialchars($_GET['min-price'], ENT_QUOTES, 'UTF-8') : '10'; ?>" min="0" inputmode="numeric">
+    </div>
+
+    <!-- Cena do -->
+    <div class="price-input">
+        <label for="max-price">Cena do:</label>
+        <input type="number" id="max-price" name="max-price" value="<?php echo isset($_GET['max-price']) ? htmlspecialchars($_GET['max-price'], ENT_QUOTES, 'UTF-8') : '300'; ?>" min="0" inputmode="numeric">
+    </div>
+</div>
 
         <label for="sort" id="sort-label">Sortuj:</label>
-        <select id="sort" name="sort">
-            <option value="default" selected>Domyślnie</option>
-            <option value="price-asc">Cena rosnąco</option>
-            <option value="price-desc">Cena malejąco</option>
-            <option value="alphabetical-asc">Alfabetycznie A-Z</option>
-            <option value="alphabetical-desc">Alfabetycznie Z-A</option>
-        </select>
+<select id="sort" name="sort">
+    <option value="default" <?php echo (!isset($_GET['sort']) || $_GET['sort'] === 'default') ? 'selected' : ''; ?>>Domyślnie</option>
+    <option value="price-asc" <?php echo (isset($_GET['sort']) && $_GET['sort'] === 'price-asc') ? 'selected' : ''; ?>>Cena rosnąco</option>
+    <option value="price-desc" <?php echo (isset($_GET['sort']) && $_GET['sort'] === 'price-desc') ? 'selected' : ''; ?>>Cena malejąco</option>
+    <option value="alphabetical-asc" <?php echo (isset($_GET['sort']) && $_GET['sort'] === 'alphabetical-asc') ? 'selected' : ''; ?>>Alfabetycznie A-Z</option>
+    <option value="alphabetical-desc" <?php echo (isset($_GET['sort']) && $_GET['sort'] === 'alphabetical-desc') ? 'selected' : ''; ?>>Alfabetycznie Z-A</option>
+</select>
 
         <button class="filter-btn" type="submit">Zastosuj Filtry</button>
     </form>

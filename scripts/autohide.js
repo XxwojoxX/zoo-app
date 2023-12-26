@@ -9,3 +9,23 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 20000); // Ukryj komunikat po 20 sekundach
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var messageElement = document.getElementById("cart-success-message");
+
+  if (messageElement) {
+      setTimeout(function () {
+          messageElement.style.display = "none";
+      }, 20000);
+  }
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+  var messageElement = document.getElementById("delete-success-message");
+
+  if (messageElement) {
+      setTimeout(function () {
+          messageElement.style.display = "none";
+      }, 20000);
+  }
+})

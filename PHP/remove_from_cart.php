@@ -27,5 +27,7 @@ function removeFromCart($productName) {
             }
         }
     }
+    // Ustaw zmienną sesji na informację o dodaniu do koszyka
+    $_SESSION['deleteFromCartSuccess'] = true;
 }
 ?>
