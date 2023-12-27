@@ -42,7 +42,7 @@ if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
             <?php
                 // Sprawdź, czy produkt został dodany do koszyka i wyświetl komunikat
                 if (isset($_SESSION['deleteFromCartSuccess']) && $_SESSION['deleteFromCartSuccess']) {
-                    echo '<div class="delete-success-message" id="delete-success-message">';
+                    echo '<div class="delete-success-message" id="message">';
                     echo '<h2>Produkt został usunięty z koszyka!</h2>';
                     echo '</div>';
                     

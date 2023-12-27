@@ -1,6 +1,5 @@
 <?php
 session_start();
-include "PHP/animals_data.php";
 ?>
 
 <html>
@@ -27,6 +26,7 @@ include "PHP/animals_data.php";
         <div class="sections">
             <div class="section1">
                 <?php
+                include "PHP/get_animals.php";
                 $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
                 $animalsPerPage = 4; // Liczba zwierząt na stronie
                 $startIndex = ($currentPage - 1) * $animalsPerPage;

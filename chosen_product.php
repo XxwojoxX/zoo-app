@@ -47,7 +47,7 @@ session_start();
 
         // Sprawdź, czy produkt został dodany do koszyka i wyświetl komunikat
         if (isset($_SESSION['addToCartSuccess']) && $_SESSION['addToCartSuccess']) {
-            echo '<div class="cart-success-message" id="cart-success-message">';
+            echo '<div class="cart-success-message" id="message">';
             echo '<h2>Produkt został dodany do koszyka!</h2>';
             echo '</div>';
             
