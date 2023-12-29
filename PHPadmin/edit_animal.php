@@ -13,19 +13,20 @@ if ($conn->connect_error) {
 // Sprawdź, czy formularz został przesłany
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Pobierz dane z formularza
+    $animalId = $_POST["animalId"];
     $animalSpecies = $_POST["animalSpecies"];
     $animalDescription = $_POST["animalDescription"];
     $animalDiet = $_POST["animalDiet"];
     $animalFeeding = $_POST["animalFeeding"];
 
     // Sprawdź, czy plik został przesłany bez błędów
-    if ($_FILES['animalImage']['error'] != UPLOAD_ERR_OK) {
-        echo "Błąd przy przesyłaniu pliku: " . $_FILES['animalImage']['error'];
+    if ($_FILES['newAnimalImage']['error'] != UPLOAD_ERR_OK) {
+        echo "Błąd przy przesyłaniu pliku: " . $_FILES['newAnimalImage']['error'];
         exit;
     }
 
     // Odczytaj zawartość pliku
-    $image = file_get_contents($_FILES['animalImage']['tmp_name']);
+    $image = file_get_contents($_FILES['newAnimalImage']['tmp_name']);
 
     // Generuj unikalną nazwę pliku
     $file_name = uniqid() . '.jpg';
@@ -42,12 +43,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ścieżka do zapisania w bazie danych
     $animalImagePath = 'http://localhost/inx2/img/' . $file_name;
 
-    // Przygotuj zapytanie SQL do dodania danych do bazy
-    $sql = "INSERT INTO animals (animalSpecies, animalDescription, animalDiet, animalFeeding, animalImage) VALUES (?, ?, ?, ?, ?)";
+    // Przygotuj zapytanie SQL do aktualizacji danych w bazie
+    $sql = "UPDATE animals SET 
+            animalSpecies = ?,
+            animalDescription = ?,
+            animalDiet = ?,
+            animalFeeding = ?,
+            animalImage = ?
+            WHERE animalId = ?";
 
     // Przygotuj zapytanie SQL do wykonania
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssss", $animalSpecies, $animalDescription, $animalDiet, $animalFeeding, $animalImagePath);
+    $stmt->bind_param("sssssi", $animalSpecies, $animalDescription, $animalDiet, $animalFeeding, $animalImagePath, $animalId);
 
     // Wykonaj zapytanie i sprawdź, czy się udało
     if ($stmt->execute()) {
@@ -55,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['success_message'] = true;
 
         // Przekieruj po zakończeniu przetwarzania
-        header("Location: ../admin/admin_panel.php?success=1");
+        header("Location: ../admin/admin_panel.php");
         exit;
     } else {
         echo "Błąd: " . $stmt->error;

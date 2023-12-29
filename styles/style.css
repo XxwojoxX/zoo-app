@@ -749,7 +749,7 @@ footer {
   margin-top: 5%;
   margin-bottom: 5%;
   margin-left: 2%;
-  max-width: 15%; /* Maksymalna szerokość na 100% */
+  max-width: 10%; /* Maksymalna szerokość na 100% */
   min-height: 30%;
   max-height: 75%;
   margin-right: 1%;
@@ -886,6 +886,7 @@ select, input, button {
   margin-top: 5%;
   margin-bottom: 5%;
   margin-right: 2%;
+  min-width: 60%;
   max-width: 80%;
   max-height: 75%;
   overflow-y: scroll;

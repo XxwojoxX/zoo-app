@@ -11,12 +11,38 @@ body {
 }
 
 form {
-    display: none;
     margin-left: 10px;
+    display: flex;
 }
 
 button {
-    background-color: #e74c3c;
+    background-color: blue;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+img {
+    width: 90px;
+}
+
+#delete-button,
+#accept-button,
+#add-button {
+    background-color: green; /* Ustaw ten kolor dla obu przycisków */
+    color: white;
+    margin: 0;
+    padding: 10px;
+    height: 100px; /* Dostosuj wysokość według potrzeb */
+}
+
+#accept-button {
+    margin-left: 10px;
+}
+
+#delete-button {
+    background-color: red;
 }
 
 label {
@@ -29,6 +55,7 @@ input {
     width: calc(100% - 10px);
     box-sizing: border-box;
     margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 #adminPanel {
@@ -41,7 +68,10 @@ input {
 
 .form-container {
     background-color: rgba(255, 255, 255, 0.2);
-    max-height: 70%;
+    padding: 10px;
+    display: none;
+    align-items: center;
+    width: 100%;
 }
 
 /* Dodaj stylizację dla przycisków panelu */
@@ -55,4 +85,29 @@ input {
 .adminForm {
     clear: both;
     margin-top: 20px;
+}
+
+/* Dodaj stylizację dla informacji o użytkowniku */
+.info {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    display: flex; /* Dodaj display: flex, aby elementy były ułożone obok siebie */
+    align-items: center; /* Wyśrodkuj elementy wzdłuż osi X */
+    text-align: center; /* Wyśrodkuj tekst */
+    min-width: 80%;
+    max-width: 100%;
+}
+
+.info label {
+    margin-right: 10px; /* Dodaj margines między etykietami a polami wejściowymi */
+}
+
+.info input {
+    flex-grow: 1; /* Daj polom wejściowym elastyczny wzrost, aby zajmowały dostępną przestrzeń */
+}
+
+.success-message {
+    background-color: rgba(255, 255, 255, 0.2);
 }

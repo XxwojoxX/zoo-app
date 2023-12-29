@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (messageElement) {
       setTimeout(function () {
           messageElement.style.display = "none";
-      }, 20000); // Ukryj komunikat po 20 sekundach
+      }, 5000); // Ukryj komunikat po 20 sekundach
   }
 });

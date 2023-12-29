@@ -1,10 +1,15 @@
 function showForm(formId) {
-    // Ukryj wszystkie formularze
-    var forms = document.getElementsByTagName('form');
-    for (var i = 0; i < forms.length; i++) {
-        forms[i].style.display = 'none';
-    }
+        // Ukryj wszystkie formularze
+        var forms = document.getElementsByClassName('form-container');
+        Array.from(forms).forEach(function(form) {
+            form.style.display = 'none';
+        });
 
-    // Pokaż wybrany formularz
-    document.getElementById(formId).style.display = 'block';
-}
+        // Pokaż wybrany formularz
+        document.getElementById(formId).style.display = 'block';
+    }
+    
+    // Obsługa kliknięcia przycisku "Dodaj zwierzę"
+    function showAddAnimalForm() {
+        showForm('add-animal-form');
+    }
