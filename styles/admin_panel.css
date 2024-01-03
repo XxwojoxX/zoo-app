@@ -24,7 +24,7 @@ button {
 }
 
 img {
-    width: 90px;
+    width: 50px;
 }
 
 #delete-button,
@@ -37,6 +37,11 @@ img {
     height: 100px; /* Dostosuj wysokość według potrzeb */
 }
 
+#delete-button,
+#accept-button {
+    float: right;
+}
+
 #accept-button {
     margin-left: 10px;
 }
@@ -47,15 +52,19 @@ img {
 
 label {
     display: block;
-    width: auto;
     margin-bottom: 5px;
 }
 
 input {
-    width: calc(100% - 10px);
+    width: calc(100% - 20%);
     box-sizing: border-box;
     margin-bottom: 10px;
     margin-right: 10px;
+}
+
+textarea {
+    resize: none;
+    height: 80%;
 }
 
 #adminPanel {
@@ -96,8 +105,9 @@ input {
     display: flex; /* Dodaj display: flex, aby elementy były ułożone obok siebie */
     align-items: center; /* Wyśrodkuj elementy wzdłuż osi X */
     text-align: center; /* Wyśrodkuj tekst */
-    min-width: 80%;
     max-width: 100%;
+    min-height: 5%;
+    max-height: 10%;
 }
 
 .info label {

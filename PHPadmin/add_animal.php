@@ -24,45 +24,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // Odczytaj zawartość pliku
-    $image = file_get_contents($_FILES['animalImage']['tmp_name']);
-
-    // Generuj unikalną nazwę pliku
-    $file_name = uniqid() . '.jpg';
-
     // Ścieżka do folderu, w którym przechowujesz obrazy
     $upload_dir = '../img/';
 
     // Pełna ścieżka do zapisu pliku
-    $file_path = $upload_dir . $file_name;
+    $file_path = $upload_dir . basename($_FILES['animalImage']['name']);
 
-    // Zapisz plik na serwerze
-    file_put_contents($file_path, $image);
+    // Przenoś plik z folderu tymczasowego do docelowego
+    if (move_uploaded_file($_FILES['animalImage']['tmp_name'], $file_path)) {
+        // Ścieżka do zapisania w bazie danych
+        $animalImagePath = 'http://localhost/inx2/img/' . basename($_FILES['animalImage']['name']);
 
-    // Ścieżka do zapisania w bazie danych
-    $animalImagePath = 'http://localhost/inx2/img/' . $file_name;
+        // Przygotuj zapytanie SQL do dodania danych do bazy
+        $sql = "INSERT INTO animals (animalSpecies, animalDescription, animalDiet, animalFeeding, animalImage) VALUES (?, ?, ?, ?, ?)";
 
-    // Przygotuj zapytanie SQL do dodania danych do bazy
-    $sql = "INSERT INTO animals (animalSpecies, animalDescription, animalDiet, animalFeeding, animalImage) VALUES (?, ?, ?, ?, ?)";
+        // Przygotuj zapytanie SQL do wykonania
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sssss", $animalSpecies, $animalDescription, $animalDiet, $animalFeeding, $animalImagePath);
 
-    // Przygotuj zapytanie SQL do wykonania
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssss", $animalSpecies, $animalDescription, $animalDiet, $animalFeeding, $animalImagePath);
+        // Wykonaj zapytanie i sprawdź, czy się udało
+        if ($stmt->execute()) {
+            // Ustaw zmienną sesji, aby poinformować o pomyślnym działaniu
+            $_SESSION['success_message'] = true;
 
-    // Wykonaj zapytanie i sprawdź, czy się udało
-    if ($stmt->execute()) {
-        // Ustaw zmienną sesji, aby poinformować o pomyślnym działaniu
-        $_SESSION['success_message'] = true;
+            // Przekieruj po zakończeniu przetwarzania
+            header("Location: ../admin/admin_panel.php?success=1");
+            exit;
+        } else {
+            echo "Błąd: " . $stmt->error;
+        }
 
-        // Przekieruj po zakończeniu przetwarzania
-        header("Location: ../admin/admin_panel.php?success=1");
-        exit;
+        // Zamknij przygotowane zapytanie
+        $stmt->close();
     } else {
-        echo "Błąd: " . $stmt->error;
+        echo "Błąd przy przesyłaniu pliku.";
     }
-
-    // Zamknij przygotowane zapytanie
-    $stmt->close();
 }
 
 // Zamknij połączenie z bazą danych

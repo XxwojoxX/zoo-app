@@ -8,8 +8,3 @@ function showForm(formId) {
         // Pokaż wybrany formularz
         document.getElementById(formId).style.display = 'block';
     }
-    
-    // Obsługa kliknięcia przycisku "Dodaj zwierzę"
-    function showAddAnimalForm() {
-        showForm('add-animal-form');
-    }

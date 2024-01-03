@@ -13,15 +13,14 @@ if ($conn->connect_error) {
 // Sprawdź, czy formularz został przesłany
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Pobierz dane z formularza
-    $animalId = $_POST["animalId"];
-    $animalSpecies = $_POST["animalSpecies"];
-    $animalDescription = $_POST["animalDescription"];
-    $animalDiet = $_POST["animalDiet"];
-    $animalFeeding = $_POST["animalFeeding"];
+    $productName = $_POST["productName"];
+    $productDescription = $_POST["productDescription"];
+    $productPrice = $_POST["productPrice"];
+    $productCategory = $_POST["productCategory"];
 
     // Sprawdź, czy plik został przesłany bez błędów
-    if ($_FILES['newAnimalImage']['error'] != UPLOAD_ERR_OK) {
-        echo "Błąd przy przesyłaniu pliku: " . $_FILES['newAnimalImage']['error'];
+    if ($_FILES['productImage']['error'] != UPLOAD_ERR_OK) {
+        echo "Błąd przy przesyłaniu pliku: " . $_FILES['productImage']['error'];
         exit;
     }
 
@@ -29,25 +28,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $upload_dir = '../img/';
 
     // Pełna ścieżka do zapisu pliku
-    $file_path = $upload_dir . basename($_FILES['newAnimalImage']['name']);
+    $file_path = $upload_dir . basename($_FILES['productImage']['name']);
 
     // Przenoś plik z folderu tymczasowego do docelowego
-    if (move_uploaded_file($_FILES['newAnimalImage']['tmp_name'], $file_path)) {
+    if (move_uploaded_file($_FILES['productImage']['tmp_name'], $file_path)) {
         // Ścieżka do zapisania w bazie danych
-        $animalImagePath = 'http://localhost/inx2/img/' . basename($_FILES['newAnimalImage']['name']);
+        $productImagePath = 'http://localhost/inx2/img/' . basename($_FILES['productImage']['name']);
 
-        // Przygotuj zapytanie SQL do aktualizacji danych w bazie
-        $sql = "UPDATE animals SET 
-                animalSpecies = ?,
-                animalDescription = ?,
-                animalDiet = ?,
-                animalFeeding = ?,
-                animalImage = ?
-                WHERE animalId = ?";
+        // Przygotuj zapytanie SQL do dodania danych do bazy
+        $sql = "INSERT INTO products (productName, productDescription, productPrice, productCategory, productImage) VALUES (?, ?, ?, ?, ?)";
 
         // Przygotuj zapytanie SQL do wykonania
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssssi", $animalSpecies, $animalDescription, $animalDiet, $animalFeeding, $animalImagePath, $animalId);
+        $stmt->bind_param("ssiss", $productName, $productDescription, $productPrice, $productCategory, $productImagePath);
 
         // Wykonaj zapytanie i sprawdź, czy się udało
         if ($stmt->execute()) {
@@ -55,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['success_message'] = true;
 
             // Przekieruj po zakończeniu przetwarzania
-            header("Location: ../admin/admin_panel.php");
+            header("Location: ../admin/admin_panel.php?success=1");
             exit;
         } else {
             echo "Błąd: " . $stmt->error;

@@ -18,7 +18,7 @@ if (isset($_GET['eventName'])) {
     $eventName = urldecode($_GET['eventName']);
     $sql = "SELECT * FROM events WHERE eventName = '$eventName' LIMIT 1"; // Zmieniamy zapytanie, aby znaleźć konkretne wydarzenie
 } else {
-    $sql = "SELECT * FROM events ORDER BY Id_wydarzenia DESC LIMIT $eventsPerPage OFFSET $offset";
+    $sql = "SELECT * FROM events ORDER BY eventId DESC LIMIT $eventsPerPage OFFSET $offset";
 }
 
 $result = mysqli_query($connect, $sql);

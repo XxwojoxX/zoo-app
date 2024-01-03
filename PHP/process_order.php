@@ -28,12 +28,13 @@ if ($connect->connect_error) {
 
 // Pobierz ID aktualnie zalogowanego użytkownika (załóżmy, że jest to zmienna sesji 'userId')
 $user_id = isset($_SESSION['userId']) ? $_SESSION['userId'] : null;
+$orderStatus = 0;
 
 // Przygotuj zapytanie SQL i wykonaj wstawienie danych zamówienia do bazy
-$sql = "INSERT INTO orders (userId, orderDeliveryStreet, orderDeliveryLocal, orderDeliveryOption, orderPaymentMethod)
-        VALUES (?, ?, ?, ?, ?)";
+$sql = "INSERT INTO orders (userId, orderDeliveryStreet, orderDeliveryLocal, orderDeliveryOption, orderPaymentMethod, orderStatus)
+        VALUES (?, ?, ?, ?, ?, ?)";
 $stmt = $connect->prepare($sql);
-$stmt->bind_param("issss", $user_id, $delivery_street, $delivery_local, $delivery_option, $payment_method);
+$stmt->bind_param("issssi", $user_id, $delivery_street, $delivery_local, $delivery_option, $payment_method, $orderStatus);
 $stmt->execute();
 
 // Pobierz ID ostatnio wstawionego zamówienia
@@ -47,7 +48,7 @@ if (!empty($_SESSION['cart'])) {
             $product_id = $cart_item['id'];
 
             // Wstaw produkt do tabeli z produktami w zamówieniu
-            $sql_products = "INSERT INTO order_products (order_id, product_id) VALUES (?, ?)";
+            $sql_products = "INSERT INTO order_products (order_id, productId) VALUES (?, ?)";
             $stmt_products = $connect->prepare($sql_products);
             $stmt_products->bind_param("ii", $order_id, $product_id);
             $stmt_products->execute();

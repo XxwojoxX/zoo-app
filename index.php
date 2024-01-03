@@ -33,7 +33,6 @@ session_start();
             <p>adipiscing elit, sed do eiusmod tempor <br>
                 incididunt ut labore et dolore magna aliqua. Quis commodo odio aenean sed <br>
                 adipiscing diam donec. Diam sollicitudin tempor id eu. Nisi vitae suscipit tellus <br> </p>
-            <a href="shop.php" class="btn">Kup bilety</a>
         </div>
 
         <footer></footer>
