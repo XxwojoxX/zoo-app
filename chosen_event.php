@@ -52,7 +52,10 @@ if (!$selectedEvent) {
         <div class="event-container event-row">
             <?php
             echo '<div id="chosen-event">';
+            echo '<div id="flex">';
+            echo '<a href="events.php"><button id="go-back-btn">Powrót</button></a>';
             echo '<div class="event-name"><h1>' . $selectedEvent['name'] . '</h1></div>';
+            echo '</div>';
             echo '<div class="event-date">' . $selectedEvent['date'] . '</div>';
             echo '<div class="event-image" id="chosen-image">' . $selectedEvent['image'] . '</div>';
             echo '<div class="event-description">' . $selectedEvent['description'] . '</div>';

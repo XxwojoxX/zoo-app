@@ -659,9 +659,14 @@ footer {
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;
   border-radius: 20px;
-  margin: 0 auto 20px; /* Dodaj margines na dole, aby oddzielić wydarzenia */
-  max-width: 20%; /* Ogranicz szerokość wydarzenia */
+  max-width: 25%; /* Ogranicz szerokość wydarzenia */
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.event-image img {
+  max-width: 70%;
+  border-radius: 20px;
+  margin-left: 15%;
 }
 
 #chosen-event {
@@ -678,7 +683,15 @@ footer {
   margin-left: 30%;
 }
 
-.event-name {
+#chosen-image {
+  max-width: 100%;
+}
+
+#flex {
+  display: flex;
+}
+
+.event-name h1{
   cursor: pointer;
 }
 
