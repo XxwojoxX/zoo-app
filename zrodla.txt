@@ -2,6 +2,8 @@ zdjecia
 	images.ai	zdjecie do sklepu
 	copilot		zdjecia zwierzat, wydarzen, produktow w sklepie
 	canva		zdjecia biletow w sklepie
+	copilot		opisy wydarzen, produktow, zwierzat
+	chat gpt	opisy wydarzen, produktow, zwierzat
 
 
 linki do stron
