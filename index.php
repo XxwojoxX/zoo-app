@@ -15,6 +15,7 @@ session_start();
     <script src="scripts/cookie.js"></script>
     <script src="scripts/cookie2.js"></script>
     <script src="scripts/Fetch_api.js"></script>
+    <script src="scripts/autohide.js"></script>
 
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media.css">
@@ -27,12 +28,24 @@ session_start();
     <section class="home">
         <header></header>
 
+        <?php
+            // Sprawdź, czy zmienna sesji success_message jest ustawiona
+            if (isset($_SESSION['success_message']) && $_SESSION['success_message'] === true) {
+                echo '<div class="success-message" id="message">
+            <h2>Operacja zakończona pomyślnie!</h2>
+          </div>';
+
+                // Usuń zmienną sesji, aby komunikat nie pojawił się po odświeżeniu strony
+                unset($_SESSION['success_message']);
+            }
+            ?>
+
         <div class="home-text">
-            <h5>Lorem ipsum</h5>
-            <h1>dolor sit <br> amet, consectetur</h1>
-            <p>adipiscing elit, sed do eiusmod tempor <br>
-                incididunt ut labore et dolore magna aliqua. Quis commodo odio aenean sed <br>
-                adipiscing diam donec. Diam sollicitudin tempor id eu. Nisi vitae suscipit tellus <br> </p>
+            <h5>Witaj w naszym zoo!</h5>
+            <h1>Odkryj fascynujący świat <br> zwierząt</h1>
+            <p>Zapraszamy do fascynującej podróży po świecie przyrody, gdzie możesz odkrywać różnorodność <br>
+                zwierząt. Nasze unikalne wystawy pozwalają Ci zanurzyć się w ich naturalnym środowisku. <br>
+                Doświadcz niezapomnianych chwil i zgłębiaj tajemnice naszych podopiecznych. <br> </p>
         </div>
 
         <footer></footer>

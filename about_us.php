@@ -28,31 +28,19 @@
             <section class="about-us">
                 <h1>O Nas</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.
-                </p>
-                <p>
-                    Sed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.
+                    Jesteśmy pasjonatami przyrody, którzy oddają się niesamowitemu świecie zwierząt. Nasze zoo to miejsce, w którym starannie dbamy o dobrostan i edukację naszych podopiecznych. 
                 </p>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.
                 </p>
                 <p>
-                    Sed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.
+                    Dążymy do stworzenia przestrzeni, w której zarówno zwierzęta, jak i odwiedzający, mogą czerpać radość z bliskiego kontaktu z naturą.
                 </p>
                 <p>
-                    Fusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.
                 </p>
                 <p>
-                    Sed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.
-                </p>
-                <p>
-                    Fusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.
-                </p>
-                <p>
-                    Fusce eget augue eu quam dignissim faucibus eget id dolor. Nulla facilisi. Nulla ultrices neque et elit facilisis, a bibendum libero volutpat.
-                </p>
-                <p>
-                    Sed in convallis tortor. Cras varius massa eget bibendum. Sed gravida metus eget ligula varius, nec interdum tortor tristique.
+                    Przyjdź i odkryj fascynujący świat fauny, doświadczając jednocześnie naszej troski o każde zwierzę. Razem tworzymy miejsce, gdzie natura i edukacja łączą się w jedną niezapomnianą podróż.
                 </p>
             </section>
         </section>

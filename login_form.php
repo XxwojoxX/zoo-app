@@ -49,7 +49,7 @@ if (isset($_SESSION['e_bot']))
             <?php
             if (isset($_GET['success']) && $_GET['success'] == 1) {
                 echo '<div class="login-success" id="message">
-                                        <h2>udalo sie zarejestrowac</h2>
+                                        <h2>Operacja zakończona pomyślnie</h2>
                                     </div>';
             }
 

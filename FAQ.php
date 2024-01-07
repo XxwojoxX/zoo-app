@@ -30,13 +30,13 @@
                     <div class="bars" id="bar3"></div>
                 </label>
                 <div class="question">
-                    <h2>Pytanie 1: Kiedy ZOO jest otwarte?</h2>
+                    <h2>Jakie są godziny otwarcia ZOO?</h2>
                 </div>
                 </div>
                 <div class="answer" id="answer1">
-                    <p>ZOO jest otwarte od poniedziałku do piątku w godzinach od 8:00 do 17:00</p>
-                </div>
-            
+                    <p>ZOO jest otwarte od poniedziałku do piątku w godzinach od 8:00 do 17:00.</p>
+            </div>
+
 
             <!-- Drugie pytanie -->
             <div class="faq-item">
@@ -47,11 +47,11 @@
                     <div class="bars" id="bar3"></div>
                 </label>
                 <div class="question">
-                    <h2>Pytanie 2: Zwiedzanie ZOO</h2>
+                    <h2>Czym wyróżnia się zoo</h2>
                 </div>
                 </div>
                 <div class="answer" id="answer2">
-                    <p>Jakie są główne atrakcje w naszym ZOO?</p>
+                    <p>Nasze ZOO oferuje unikalne atrakcje i wyjątkowe wydarzenia.</p>
                 </div>
 
                 <div class="faq-item">
@@ -62,11 +62,11 @@
                     <div class="bars" id="bar3"></div>
                 </label>
                 <div class="question">
-                    <h2>Pytanie 3: Zwiedzanie ZOO</h2>
+                    <h2>Jakie są główne atrakcje w naszym ZOO?</h2>
                 </div>
                 </div>
                 <div class="answer" id="answer3">
-                    <p>Jakie są główne atrakcje w naszym ZOO?</p>
+                    <p>Nasze ZOO oferuje różne atrakcje, obejmujące interakcje z zwierzętami, edukacyjne pokazy.</p>
                 </div>
 
                 <div class="faq-item">
@@ -77,11 +77,11 @@
                     <div class="bars" id="bar3"></div>
                 </label>
                 <div class="question">
-                    <h2>Pytanie 4: Zwiedzanie ZOO</h2>
+                    <h2>Jakie są zasady korzystania z placu zabaw dla dzieci?</h2>
                 </div>
                 </div>
                 <div class="answer" id="answer4">
-                    <p>Jakie są główne atrakcje w naszym ZOO?</p>
+                    <p>Plac zabaw dla dzieci jest dostępny dla wszystkich małych gości ZOO.</p>
                 </div>
 
                 <div class="faq-item">
@@ -92,11 +92,11 @@
                     <div class="bars" id="bar3"></div>
                 </label>
                 <div class="question">
-                    <h2>Pytanie 5: Zwiedzanie ZOO</h2>
+                    <h2>Jak mogę zakupić bilet online?</h2>
                 </div>
                 </div>
                 <div class="answer" id="answer5">
-                    <p>Jakie są główne atrakcje w naszym ZOO?</p>
+                    <p>Bilety online są dostępne na naszej stronie internetowej w zakładce "Bilety".</p>
                 </div>
 
                 <div class="faq-item">
@@ -107,11 +107,11 @@
                     <div class="bars" id="bar3"></div>
                 </label>
                 <div class="question">
-                    <h2>Pytanie 6: Zwiedzanie ZOO</h2>
+                    <h2>Czy ZOO organizuje warsztaty edukacyjne dla dzieci?</h2>
                 </div>
                 </div>
                 <div class="answer" id="answer6">
-                    <p>Jakie są główne atrakcje w naszym ZOO?</p>
+                    <p>Tak, regularnie organizujemy warsztaty edukacyjne dla dzieci.</p>
                 </div>
 
                 <div class="faq-item">
@@ -122,11 +122,11 @@
                     <div class="bars" id="bar3"></div>
                 </label>
                 <div class="question">
-                    <h2>Pytanie 7: Zwiedzanie ZOO</h2>
+                    <h2>Jakie są zasady fotografowania zwierząt?</h2>
                 </div>
                 </div>
                 <div class="answer" id="answer7">
-                    <p>Jakie są główne atrakcje w naszym ZOO?</p>
+                    <p>Fotografowanie zwierząt jest dozwolone, jednak prosimy o niekorzystanie z flesza.</p>
                 </div>
             
             

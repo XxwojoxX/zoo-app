@@ -9,7 +9,7 @@ if (!$connect) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$eventsPerPage = 4;
+$eventsPerPage = 3;
 $page = isset($_GET['page']) ? $_GET['page'] : 1; // Pobierz numer strony z parametru GET
 
 $offset = ($page - 1) * $eventsPerPage;

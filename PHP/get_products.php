@@ -87,7 +87,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         'name' => $productName,
         'description' => $productDescription,
         'price' => $productPrice,
-        'image' => 'data:image/png;base64,' . $image_base64
+        'image' => 'data:image/jpg;base64,' . $image_base64
     );
 
     $products[] = $product;

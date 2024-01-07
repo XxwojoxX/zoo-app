@@ -25,66 +25,41 @@
 
         <!-- Dodaj sekcję z regulaminem -->
         <section class="regulamin" id="regulamin">
-            <h2>Regulamin Strony Internetowej ZOO</h2><br>
-            <p>1. Definicje</p>
-            <p>
-                - <strong>Strona Internetowa:</strong> Odnosi się do strony internetowej zoo, dostępnej pod adresem [adres_strony_zoo.pl](http://www.adres_strony_zoo.pl).
-            </p>
-            <p>
-                - <strong>ZOO:</strong> Odnosi się do ogrodu zoologicznego, którego informacje są udostępniane na Stronie Internetowej.
-            </p>
-            <p>
-                - <strong>Użytkownik:</strong> Osoba korzystająca z Strony Internetowej ZOO.
-            </p>
+    <h2>Regulamin Strony Internetowej ZOO</h2><br>
+    <p><strong>1. Definicje</strong></p>
+    <p>- <strong>Strona Internetowa:</strong> [adres_strony_zoo.pl](http://www.adres_strony_zoo.pl).</p>
+    <p>- <strong>ZOO:</strong> Ogród zoologiczny, którego informacje są udostępniane na Stronie Internetowej.</p>
+    <p>- <strong>Użytkownik:</strong> Osoba korzystająca z Strony Internetowej ZOO.</p>
 
-            <p>2. Cel Strony Internetowej</p>
-            <p>
-                Strona Internetowa ZOO ma na celu:
-                - Udostępnianie informacji na temat ZOO, w tym godzin otwarcia, cenników biletów, wydarzeń, i innych informacji związanych z ZOO.
-                - Edukację na temat zwierząt i ochrony środowiska naturalnego.
-                - Promowanie ZOO i jego działań.
-            </p>
+    <p><strong>2. Cel Strony Internetowej</strong></p>
+    <p>
+        Udostępnianie informacji o ZOO, edukacja na temat zwierząt i ochrony środowiska, promowanie działań ZOO.
+    </p>
 
-            <p>3. Akceptacja Regulaminu</p>
-            <p>
-                Korzystanie z Strony Internetowej ZOO oznacza akceptację niniejszego regulaminu.
-            </p>
+    <p><strong>3. Akceptacja Regulaminu</strong></p>
+    <p>Korzystanie z Strony Internetowej ZOO oznacza akceptację regulaminu.</p>
 
-            <p>4. Prawa Autorskie</p>
-            <p>
-                Wszelkie materiały, zdjęcia i treści udostępnione na Stronie Internetowej ZOO podlegają prawom autorskim. Wykorzystywanie tych materiałów bez zgody ZOO jest zabronione.
-            </p>
+    <p><strong>4. Prawa Autorskie</strong></p>
+    <p>Wszystkie materiały na Stronie Internetowej ZOO podlegają prawom autorskim.</p>
 
-            <p>5. Odpowiedzialność</p>
-            <p>
-                ZOO dokłada wszelkich starań, aby zawarte na Stronie Internetowej informacje były dokładne i aktualne. Jednakże ZOO nie ponosi odpowiedzialności za ewentualne błędy czy nieścisłości.
-            </p>
+    <p><strong>5. Odpowiedzialność</strong></p>
+    <p>ZOO nie ponosi odpowiedzialności za ewentualne błędy czy nieścisłości w informacjach.</p>
 
-            <p>6. Prywatność</p>
-            <p>
-                ZOO szanuje prywatność Użytkowników. Więcej informacji na temat zbierania, przetwarzania i ochrony danych osobowych znajduje się w Polityce Prywatności dostępnej na Stronie Internetowej.
-            </p>
+    <p><strong>6. Prywatność</strong></p>
+    <p>Szanowanie prywatności Użytkowników zgodnie z Polityką Prywatności na Stronie Internetowej.</p>
 
-            <p>7. Zakaz Działalności Nielegalnej</p>
-            <p>
-                Użytkownik zobowiązuje się do korzystania z Strony Internetowej ZOO zgodnie z obowiązującymi przepisami prawa. Zakazane jest umieszczanie treści nielegalnych lub obraźliwych.
-            </p>
+    <p><strong>7. Zakaz Działalności Nielegalnej</strong></p>
+    <p>Użytkownik zobowiązuje się do korzystania zgodnie z obowiązującymi przepisami prawa.</p>
 
-            <p>8. Reklama i Marketing</p>
-            <p>
-                Strona Internetowa ZOO może zawierać treści reklamowe. ZOO nie ponosi odpowiedzialności za treści reklamowe dostarczone przez innych reklamodawców.
-            </p>
+    <p><strong>8. Reklama i Marketing</strong></p>
+    <p>Strona może zawierać treści reklamowe, za które ZOO nie ponosi odpowiedzialności.</p>
 
-            <p>9. Zmiany w Regulaminie</p>
-            <p>
-                ZOO zastrzega sobie prawo do zmiany niniejszego regulaminu w dowolnym momencie. Zmiany będą publikowane na Stronie Internetowej i wchodzą w życie od daty ich opublikowania.
-            </p>
+    <p><strong>9. Zmiany w Regulaminie</strong></p>
+    <p>ZOO zastrzega sobie prawo do zmiany regulaminu. Zmiany będą publikowane na Stronie Internetowej.</p>
 
-            <p>10. Kontakt</p>
-            <p>
-                W razie pytań lub uwag dotyczących Strony Internetowej ZOO prosimy o kontakt na adres: <a href="mailto:adres_kontaktowy@zoo.pl"><i><br>adres_kontaktowy@zoo.pl</i></a>.
-            </p>
-        </section>
+    <p><strong>10. Kontakt</strong></p>
+    <p>W razie pytań lub uwag prosimy o kontakt: <a href="mailto:adres_kontaktowy@zoo.pl"><i>adres_kontaktowy@zoo.pl</i></a>.</p>
+</section>
 
         <footer></footer>
         </div>

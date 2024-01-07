@@ -63,7 +63,6 @@ header("Access-Control-Allow-Origin: *");
                   <span></span>
                 </button>
                 <ul class="menu__options">
-                  <li><a href="orders.php">Zamówienia</a></li>
                   <li><a href="account.php">Konto</a></li>
                 </ul>
               </div>';

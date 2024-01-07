@@ -1,11 +1,7 @@
 zdjecia
-	wikipedia	lew, flaming, zyrafa
-	wiktionary.org	wilk
-	wyborcza.pl	tygrys, pingwin
-	dinoanimals.pl	slon
-	drapiezniki.pl	gepard, panda
-	rmf.fm		krokodyl
 	images.ai	zdjecie do sklepu
+	copilot		zdjecia zwierzat, wydarzen, produktow w sklepie
+	canva		zdjecia biletow w sklepie
 
 
 linki do stron

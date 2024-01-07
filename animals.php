@@ -28,7 +28,7 @@ session_start();
                 <?php
                 include "PHP/get_animals.php";
                 $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
-                $animalsPerPage = 4; // Liczba zwierząt na stronie
+                $animalsPerPage = 3; // Liczba zwierząt na stronie
                 $startIndex = ($currentPage - 1) * $animalsPerPage;
                 
                 $animalsToDisplay = array_slice($animals, $startIndex, $animalsPerPage);

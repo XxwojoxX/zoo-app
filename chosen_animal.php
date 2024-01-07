@@ -25,7 +25,7 @@
                         {
                             $animalName = $_GET['animalName'];
 
-                            include "PHP/get_images.php";
+                            include "PHP/get_chosen_animal.php";
 
                             $animalsCount = count($animals);
 
@@ -48,16 +48,16 @@
                         {
                             $animalName = $_GET['animalName'];
 
-                            include "PHP/get_images.php";
+                            include "PHP/get_chosen_animal.php";
 
                             $animalsCount = count($animals);
 
                             for($i = 0; $i < $animalsCount; $i++)
                             {
                                 echo $animals[$i]['name'] . '<br>';
-                                echo $animals[$i]['diet'] . '<br>';
-                                echo $animals[$i]['feeding'] . '<br>';
-                                echo $animals[$i]['description'];
+                                echo $animals[$i]['diet'];
+                                echo $animals[$i]['feeding'];
+                                echo '<p>' . $animals[$i]['description'] . '</p>';
                             }
                         }
                         else
