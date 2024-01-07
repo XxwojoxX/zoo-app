@@ -31,7 +31,6 @@ include "PHP/get_events.php";
                 foreach ($events as $event) {
                     echo '<div class="event">';
                     echo '<div class="event-name" onclick="redirectToEventPage(\'' . htmlspecialchars($event['name'], ENT_QUOTES, 'UTF-8') . '\')"><h1>' . $event['name'] . '</h1></div>';
-                    echo $event['date'];
                     echo '<div class="event-image">' . $event['image'] . '</div>';
                     echo '</div>';
                 }
@@ -49,7 +48,8 @@ include "PHP/get_events.php";
                     echo "<a href='?page=$prevPage' class='page-link'>Wstecz</a>";
                 }
 
-                if (count($events) == $eventsPerPage) {
+                // Sprawdź, czy istnieje następna strona, zanim wyświetlisz link do niej
+                if ($currentPage < $eventsPerPage) {
                     echo "<a href='?page=$nextPage' class='page-link'>Dalej</a>";
                 }
                 ?>

@@ -53,7 +53,8 @@ if (!empty($_SESSION['cart'])) {
             $stmt_products->bind_param("ii", $order_id, $product_id);
             $stmt_products->execute();
             $stmt_products->close();
-            header("Location: ../index.php");
+            $_SESSION['success_message'] = true;
+            header("Location: ../index.php?success=1");
         } else {
             // Tutaj możesz obsłużyć sytuację, gdy klucz 'id' nie istnieje
             // np. przez zalogowanie komunikatu lub podjęcie innej akcji

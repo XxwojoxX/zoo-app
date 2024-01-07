@@ -32,10 +32,14 @@
 
         <form class="form" id="remind-form" action="PHP/remind_password.php" method="POST" name="remind_form" autocomplete="off">
             <?php
-            if (isset($_GET['success']) && $_GET['success'] == 1) {
-                echo '<div class="remind-success" id="message">
-                                        <h2>wyslano wiadomosc na podany adres email</h2>
-                                    </div>';
+            // Sprawdź, czy zmienna sesji success_message jest ustawiona
+            if (isset($_SESSION['success_message']) && $_SESSION['success_message'] === true) {
+                echo '<div class="success-message" id="message">
+                <h2>Operacja zakończona pomyślnie!</h2>
+            </div>';
+
+                // Usuń zmienną sesji, aby komunikat nie pojawił się po odświeżeniu strony
+                unset($_SESSION['success_message']);
             }
             ?>
 

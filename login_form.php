@@ -47,22 +47,14 @@ if (isset($_SESSION['e_bot']))
 
         <form class="form" id="login-form" action="PHP/login.php" method="POST" name="login_form" autocomplete="off">
             <?php
-            if (isset($_GET['success']) && $_GET['success'] == 1) {
-                echo '<div class="login-success" id="message">
-                                        <h2>Operacja zakończona pomyślnie</h2>
-                                    </div>';
-            }
+            // Sprawdź, czy zmienna sesji success_message jest ustawiona
+            if (isset($_SESSION['success_message']) && $_SESSION['success_message'] === true) {
+                echo '<div class="success-message" id="message">
+                <h2>Operacja zakończona pomyślnie!</h2>
+            </div>';
 
-            if (isset($_GET['success']) && $_GET['success'] == 2) {
-                echo '<div class="remind-success" id="message">
-                                        <h2>wiadomosc zostala wyslana</h2>
-                                    </div>';
-            }
-
-            if (isset($_GET['success']) && $_GET['success'] == 3) {
-                echo '<div class="remind-success" id="message">
-                                        <h2>haslo zostalo zresetowane</h2>
-                                    </div>';
+                // Usuń zmienną sesji, aby komunikat nie pojawił się po odświeżeniu strony
+                unset($_SESSION['success_message']);
             }
             ?>
 

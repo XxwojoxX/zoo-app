@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['success_message'] = true;
 
             // Przekieruj na stronę z komunikatem sukcesu lub inną stronę
-            header("Location: ../index.php?success=1");
+            header("Location: ../login_form.php?success=1");
             exit();
         } catch (Exception $e) {
             // W przypadku błędu anuluj transakcję

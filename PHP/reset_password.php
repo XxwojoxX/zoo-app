@@ -45,8 +45,9 @@ if (isset($_POST['token'])) {
                     $stmtUpdate->bind_param("si", $hashedPassword, $userId);
 
                     if ($stmtUpdate->execute()) {
+                        $_SESSION['success_message'] = true;
                         // Przekierowanie do strony logowania po pomyślnym zresetowaniu hasła
-                        header("Location: ../login_form.php?success=3");
+                        header("Location: ../login_form.php?success=1");
                         $deleteTokenQuery = "DELETE FROM password_reset_tokens WHERE token = ?";
                         $stmtDelete = $db->prepare($deleteTokenQuery);
                         $stmtDelete->bind_param("s", $dbToken);

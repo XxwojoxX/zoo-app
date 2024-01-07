@@ -108,6 +108,7 @@ if(isset($_POST["Email"]))
             
             if(mysqli_query($connect, $query))
             {
+                $_SESSION['success_message'] = true;
                 header("Location: ../login_form.php?success=1");
                 exit;
             }

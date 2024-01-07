@@ -61,6 +61,7 @@ if (isset($_POST['email'])) {
                     $mail->Body = 'Aby zresetować hasło, kliknij <a href="http://localhost/cos/reset_password_form.php?token=' . $resetToken . '">tutaj</a>.';
 
                     if ($mail->send()) {
+                        $_SESSION['success_message'] = true;
                         header("Location: ../remind_pass_form.php?success=1");
                     } else {
                         echo "Błąd wysyłania: " . $mail->ErrorInfo;

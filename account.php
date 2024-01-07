@@ -43,18 +43,6 @@ if (!isset($_SESSION['userName'])) {
                 <h2>Zmień e-mail</h2>
             </button>
 
-            <?php
-                // Sprawdź, czy zmienna sesji success_message jest ustawiona
-                if (isset($_SESSION['success_message']) && $_SESSION['success_message'] === true) {
-                    echo '<div class="success-message" id="message">
-                    <h2>Operacja zakończona pomyślnie!</h2>
-                </div>';
-
-                    // Usuń zmienną sesji, aby komunikat nie pojawił się po odświeżeniu strony
-                    unset($_SESSION['success_message']);
-                }
-            ?>
-
             <div class="info" id="user-info">
                 <?php
                 require "PHP/account_info.php";

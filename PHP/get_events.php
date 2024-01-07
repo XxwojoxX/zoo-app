@@ -10,36 +10,32 @@ if (!$connect) {
 }
 
 $eventsPerPage = 3;
-$page = isset($_GET['page']) ? $_GET['page'] : 1; // Pobierz numer strony z parametru GET
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
 
 $offset = ($page - 1) * $eventsPerPage;
 
-if (isset($_GET['eventName'])) {
-    $eventName = urldecode($_GET['eventName']);
-    $sql = "SELECT * FROM events WHERE eventName = '$eventName' LIMIT 1"; // Zmieniamy zapytanie, aby znaleźć konkretne wydarzenie
-} else {
-    $sql = "SELECT * FROM events ORDER BY eventId DESC LIMIT $eventsPerPage OFFSET $offset";
-}
+$sql = "SELECT * FROM events ORDER BY eventId DESC LIMIT ? OFFSET ?";
+$stmt = mysqli_prepare($connect, $sql);
 
-$result = mysqli_query($connect, $sql);
+mysqli_stmt_bind_param($stmt, "ii", $eventsPerPage, $offset);
+mysqli_stmt_execute($stmt);
+
+$result = mysqli_stmt_get_result($stmt);
 
 $events = array();
 
 if ($result && mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-        $eventName = $row['eventName'];
+        $eventName = htmlspecialchars($row['eventName'], ENT_QUOTES, 'UTF-8');
         $eventDate = $row['eventDate'];
         $eventDescription = $row['eventDescription'];
         $eventImage = $row['eventImage'];
-
-        $image = file_get_contents($eventImage);
-        $image_base64 = base64_encode($image);
 
         $event = array(
             'name' => $eventName,
             'date' => '<h3 class="eventDate">' . $eventDate . '</h3>',
             'description' => '<p class="eventDescription">' . $eventDescription . '</p>',
-            'image' => '<img src="data:img/jpg;base64,' . $image_base64 . '" alt="' . $eventName . '">'
+            'image' => '<img src="' . $eventImage . '" alt="' . $eventName . '">'
         );
         $events[] = $event;
     }
@@ -47,4 +43,6 @@ if ($result && mysqli_num_rows($result) > 0) {
     echo "Nie znaleziono wydarzenia";
 }
 
+mysqli_stmt_close($stmt);
 mysqli_close($connect);
+?>
