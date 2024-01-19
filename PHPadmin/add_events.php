@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Przenoś plik z folderu tymczasowego do docelowego
     if (move_uploaded_file($_FILES['eventImage']['tmp_name'], $file_path)) {
         // Ścieżka do zapisania w bazie danych
-        $eventImagePath = 'http://localhost/inx2/img/' . basename($_FILES['eventImage']['name']);
+        $eventImagePath = 'http://localhost/cos/img/' . basename($_FILES['eventImage']['name']);
 
         // Przygotuj zapytanie SQL do dodania danych do bazy
         $sql = "INSERT INTO events (eventName, eventDate, eventDescription, eventImage) VALUES (?, ?, ?, ?)";

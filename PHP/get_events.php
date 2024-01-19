@@ -9,17 +9,24 @@ if (!$connect) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$eventsPerPage = 3;
-$page = isset($_GET['page']) ? $_GET['page'] : 1;
+// Sprawdź, czy parametr eventName jest ustawiony
+if (isset($_GET['eventName'])) {
+    $eventName = urldecode($_GET['eventName']);
+    $sql = "SELECT * FROM events WHERE eventName = ?";
+    $stmt = mysqli_prepare($connect, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $eventName);
+} else {
+    // Parametr eventName nie jest ustawiony, pobierz listę wydarzeń
+    $eventsPerPage = 3;
+    $page = isset($_GET['page']) ? $_GET['page'] : 1;
+    $offset = ($page - 1) * $eventsPerPage;
 
-$offset = ($page - 1) * $eventsPerPage;
+    $sql = "SELECT * FROM events ORDER BY eventId DESC LIMIT ? OFFSET ?";
+    $stmt = mysqli_prepare($connect, $sql);
+    mysqli_stmt_bind_param($stmt, "ii", $eventsPerPage, $offset);
+}
 
-$sql = "SELECT * FROM events ORDER BY eventId DESC LIMIT ? OFFSET ?";
-$stmt = mysqli_prepare($connect, $sql);
-
-mysqli_stmt_bind_param($stmt, "ii", $eventsPerPage, $offset);
 mysqli_stmt_execute($stmt);
-
 $result = mysqli_stmt_get_result($stmt);
 
 $events = array();

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Pobierz i wstaw nagłówek
-  fetch("http://localhost/inx2/navbar.php")
+  fetch("http://localhost/cos/navbar.php")
     .then((response) => response.text())
     .then((data) => {
       document.querySelector("header").innerHTML = data;
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Pobierz i wstaw stopkę
-  fetch("http://localhost/inx2/footer.php")
+  fetch("http://localhost/cos/footer.php")
     .then((response) => response.text())
     .then((data) => {
       document.querySelector("footer").innerHTML = data;

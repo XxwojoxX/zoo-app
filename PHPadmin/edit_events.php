@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Przenoś plik z folderu tymczasowego do docelowego
         if (move_uploaded_file($_FILES['newEventImage']['tmp_name'], $upload_dir . $_FILES['newEventImage']['name'])) {
             // Ścieżka do zapisania w bazie danych
-            $eventImagePath = 'http://localhost/inx2/img/' . $_FILES['newEventImage']['name'];
+            $eventImagePath = 'http://localhost/cos/img/' . $_FILES['newEventImage']['name'];
         } else {
             echo "Błąd przy przesyłaniu pliku.";
             exit;

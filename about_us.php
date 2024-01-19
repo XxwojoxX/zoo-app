@@ -31,13 +31,7 @@
                     Jesteśmy pasjonatami przyrody, którzy oddają się niesamowitemu świecie zwierząt. Nasze zoo to miejsce, w którym starannie dbamy o dobrostan i edukację naszych podopiecznych. 
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.
-                </p>
-                <p>
                     Dążymy do stworzenia przestrzeni, w której zarówno zwierzęta, jak i odwiedzający, mogą czerpać radość z bliskiego kontaktu z naturą.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet urna vitae volutpat. Proin iaculis, leo quis tristique fringilla, quam odio congue odio, nec rhoncus ex velit eget felis.
                 </p>
                 <p>
                     Przyjdź i odkryj fascynujący świat fauny, doświadczając jednocześnie naszej troski o każde zwierzę. Razem tworzymy miejsce, gdzie natura i edukacja łączą się w jedną niezapomnianą podróż.
