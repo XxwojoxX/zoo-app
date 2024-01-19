@@ -1,63 +1,25 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Sty 07, 2024 at 09:17 PM
--- Wersja serwera: 10.4.28-MariaDB
--- Wersja PHP: 8.2.4
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `zoo`
---
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `animals`
---
+CREATE DATABASE zoo;
 
 CREATE TABLE `animals` (
   `animalId` int(11) NOT NULL,
   `animalSpecies` varchar(25) DEFAULT NULL,
   `animalDescription` varchar(999) DEFAULT NULL,
-  `animalName` varchar(25) DEFAULT NULL,
   `animalDiet` varchar(25) DEFAULT NULL,
   `animalFeeding` varchar(255) DEFAULT NULL,
   `animalImage` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `animals`
---
-
-INSERT INTO `animals` (`animalId`, `animalSpecies`, `animalDescription`, `animalName`, `animalDiet`, `animalFeeding`, `animalImage`) VALUES
-(1, 'Lew Afrykański', 'Lew afrykański, znany naukowo jako Panthera leo, to majestatyczne drapieżniki zamieszkujące głównie obszary subsaharyjskie Afryki. Jego charakterystyczna grzywa i potężna sylwetka czynią go jednym z najsilniejszych i najbardziej rozpoznawalnych drapieżników na świecie.\r\n\r\nLwy afrykańskie są zwierzętami stadnymi, żyjącymi w grupach zwanych stadami. W skład stada wchodzą przeważnie spokrewnione samice, młode i kilku dorosłych samców. To społeczne podejście do życia umożliwia im skuteczne polowanie na większą zdobycz.\r\n\r\nTe majestatyczne zwierzęta są często symbolem siły, dumy i sprawności w kulturze afrykańskiej. W naszym zoo z przyjemnością prezentujemy lwy afrykańskie, zapewniając odwiedzającym niezapomniane chwile obserwacji ich majestatycznego zachowania. Doświadcz bliskiego spotkania z królami sawanny i zgłęb tajemnice ich fascynującego życia.', 'lew', 'mięso', '14:00', 'http://localhost/cos/img/lew.jpg'),
-(2, 'Tygrys Bengalski', 'Tygrys bengalski, znany naukowo jako Panthera tigris tigris, to jeden z najbardziej charakterystycznych i zagrożonych gatunków tygrysów. Zamieszkują głównie obszary lasów deszczowych, bagiennej roślinności i równin w Azji Południowo-Wschodniej. Jego okazała sierść o wyrazistych, ciemnych pasach sprawia, że jest jednym z najbardziej rozpoznawalnych drapieżników na świecie.\r\n\r\nTygrysy bengalskie są znane ze swojej siły i zwinności. To doskonali myśliwi, polując głównie na dziki i jelenie. Jednak niestety, ze względu na utratę naturalnych siedlisk i kłusownictwo, są one zagrożone wyginięciem.\r\n\r\nW naszym zoo z pełnym szacunkiem prezentujemy tygrysy bengalskie, starając się podkreślić ich ważną rolę w ochronie różnorodności biologicznej. Oferujemy odwiedzającym niepowtarzalną szansę na obserwację tych pięknych i majestatycznych zwierząt oraz zrozumienie potrzeby ich ochrony w dzikiej przyrodzie.', 'Tygrys', 'mięso', '15:00', 'http://localhost/cos/img/tygrys.jpg'),
-(3, 'Słoń Afrykański', 'Słoń afrykański, znany naukowo jako Loxodonta africana, to olbrzymi i wyjątkowy gatunek, zamieszkujący różnorodne obszary Afryki, od sawann po lasy deszczowe. Z charakterystycznymi, wygiętymi kłami i potężnymi uszami, słoń afrykański jest jednym z najbardziej rozpoznawalnych ssaków na świecie.\r\n\r\nTe inteligentne i społeczne zwierzęta żyją w rodzinnych grupach, znanych jako stada. Stada składają się z samic, ich potomstwa i czasem dorosłych samców. Słoń afrykański jest także kluczowym graczem w ekosystemie, wpływając na kształtowanie krajobrazu i zachowanie innych gatunków.\r\n\r\nNiestety, ze względu na kłusownictwo i utratę siedlisk, słoń afrykański jest obecnie zagrożony wyginięciem. W naszym zoo, z zaangażowaniem w ochronę przyrody, prezentujemy te imponujące stworzenia, zachęcając do zrozumienia ich roli w ekosystemie oraz potrzeby skutecznej ochrony dla przyszłych pokoleń.', 'Słoń', 'rośliny', '10:00', 'http://localhost/cos/img/slon.jpg'),
-(4, 'Pingwin Cesarski', 'Pingwin cesarski, naukowo znany jako Aptenodytes forsteri, to majestatyczny ptak zamieszkujący arktyczne obszary Antarktyki. Jego charakterystyczne czarno-białe upierzenie z wyrazistymi, jaskrawożółtymi plamami na głowie czyni go jednym z najbardziej rozpoznawalnych mieszkańców zimowego krańca świata.\r\n\r\nTe zdolne do pływania i nurkowania ptaki cesarskie żyją w dużych koloniach, gdzie budują silne społeczności. Opieka nad jajami i młodymi odgrywa kluczową rolę w ich życiu społecznym, co nadaje pingwinom cesarskim wyjątkową tożsamość w królestwie przyrody.\r\n\r\nW naszym zoo z dumą prezentujemy te fascynujące ptaki, umożliwiając odwiedzającym bliskie spotkanie z ich naturalnym środowiskiem. Zachęcamy do zgłębiania tajemnic życia pingwinów cesarskich oraz do zrozumienia ich roli w ekosystemie Antarktyki.', 'Pingwin', 'ryby', '11:00', 'http://localhost/cos/img/pingwin.jpg'),
-(5, 'Żyrafa Siatkowana', 'Żyrafa siatkowana, znana również jako Giraffa reticulata, to imponujące ssaki zamieszkujące głównie obszary sawann i lasów Afryki. Charakteryzują się długą szyją i plamistą sierścią, co sprawia, że są jednymi z najbardziej rozpoznawalnych zwierząt na Ziemi.\r\n\r\nTe wyjątkowe stworzenia żywią się głównie liśćmi z drzew, korzystając z długiej szyi, by dotrzeć do koron drzew, które są poza zasięgiem innych zwierząt. Żyrafa siatkowana dostosowała się do życia w różnorodnych środowiskach, od suchych sawann po wilgotne lasy.\r\n\r\nW naszym zoo z dumą prezentujemy żyrafy siatkowane, umożliwiając odwiedzającym bliskie spotkanie z tymi imponującymi zwierzętami. Zachęcamy do obserwacji ich naturalnego zachowania i do zgłębienia tajemnic ich fascynującego świata.', 'Zyrafa', 'rośliny', '9:00', 'http://localhost/cos/img/zyrafa.jpg'),
-(6, 'Gepard', 'Gepard, Acinonyx jubatus, jest niezwykłym drapieżnikiem zamieszkującym głównie obszary sawann Afryki. Jego elegancka sylwetka, ozdobiona charakterystycznym złotym futrem i ciemnymi plamami, czyni go jednym z najbardziej rozpoznawalnych mieszkańców afrykańskich równin.\r\n\r\nGepardy są bezsprzecznie najszybszymi lądowymi drapieżnikami, zdolnymi osiągnąć znaczące prędkości w krótkich biegach. Ich smukła budowa ciała, długie nogi i zdolności łowieckie uczyniły z nich mistrzów skradania się i zdobywania pokarmu. To społeczne zwierzęta żyją w małych grupach rodzinnych, co podkreśla ich silne więzi społeczne.\r\n\r\nW naszym zoo z pasją prezentujemy gepardy, umożliwiając odwiedzającym niezwykłą okazję do bliskiego spotkania z tymi ekscytującymi drapieżnikami. Zachęcamy do zgłębiania fascynującego świata gepardów i do zrozumienia ich roli w delikatnej równowadze ekosystemu Afryki.', 'Gepard', 'mięso', '9:30', 'http://localhost/cos/img/gepard.jpg'),
-(7, 'Krokodyl Nilowy', '\r\nKrokodyl nilowy, znany naukowo jako Crocodylus niloticus, to imponujący drapieżnik żyjący w wodach rzek i jezior Afryki. Jego charakterystyczny wygląd, z twardym pancerzem skórnym i groźnymi szczękami, czyni go jednym z najbardziej rozpoznawalnych gadów.\r\n\r\nTe potężne zwierzęta są doskonałymi myśliwymi, polując głównie w wodzie na ryby i inne zwierzęta wodne. Krokodyle nilowe potrafią także wznosić się na bieguna i są bardzo zręczne na lądzie, co czyni je groźnymi drapieżnikami w różnorodnych środowiskach.\r\n\r\nW naszym zoo prezentujemy krokodyle nilowe, umożliwiając odwiedzającym bliskie spotkanie z tymi prehistorycznymi stworzeniami. To fascynujące zwierzęta ukazują nam unikalne aspekty ekologii wodnych obszarów Afryki i przypominają o znaczeniu ochrony różnorodności biologicznej w ich siedliskach naturalnych.', 'Krokodyl', 'mięso', '10:30', 'http://localhost/cos/img/krokodyl.jpg'),
-(8, 'Flaming Różowy', '\r\nFlamingi różowe, znane również jako Phoenicopterus roseus, to urocze ptaki zamieszkujące słone bagna, jeziora i inne mokradła w Afryce, Azji, Europie i Ameryce. Charakteryzują się wyjątkowym różowym upierzeniem, długimi szyjami i zakrzywionymi dziobami.\r\n\r\nTe społeczne ptaki żyją w dużych koloniach, tworząc niesamowite widoki swoimi intensywnie różowymi skupiskami. Ich kolorowe pióra zawdzięczają zawartym w pożywieniu substancjom organicznym, takim jak karotenoidy. Flamingi różowe spędzają dużo czasu w wodzie, gdzie szukają pokarmu, a ich charakterystyczne nogi pozwalają im wadeować po płytkich obszarach.\r\n\r\nW naszym zoo prezentujemy te piękne flamingi, umożliwiając odwiedzającym niezapomniane chwile obserwacji ich eleganckiego tańca i unikalnego wyglądu. To doskonała okazja do zanurzenia się w tajemnice życia tych uroczych ptaków i zrozumienia ich roli w ekosystemie mokradeł.', 'Flaming', 'skorupiaki', '11:30', 'http://localhost/cos/img/flaming.jpg'),
-(9, 'Panda Wielka', '\r\nPanda wielka, znana także jako Ailuropoda melanoleuca, to uroczy i zagrożony wyginięciem gatunek żyjący w górskich lasach Chin. Jej charakterystyczne czarne i białe ubarwienie oraz sympatyczna aparycja sprawiają, że jest jednym z najbardziej rozpoznawalnych zwierząt na świecie.\r\n\r\nPandy wielkie są roślinożerne, a ich głównym pożywieniem są bambusy. Ich wyspecjalizowane kły i umiejętność chwytania pędy bambusa sprawiają, że są doskonałymi adeptami życia w gęstych lasach. Choć zwykle żyją samotnie, towarzyszą im małe pandy, które wprowadzają dodatkowy urok do ich społeczności.\r\n\r\nW naszym zoo z dumą prezentujemy pandy wielkie, umożliwiając odwiedzającym bliskie spotkanie z tymi uroczymi mieszkańcami górskich obszarów Chin. To niepowtarzalna okazja do zrozumienia ich unikalnej biologii, problemów związanych z ochroną oraz do zachwycenia się ich urokiem i delikatnością.', 'Panda', 'rośliny', '12:30', 'http://localhost/cos/img/panda.jpg'),
-(10, 'Wilk Szary', 'Wilk szary, znany naukowo jako Canis lupus, to majestatyczny drapieżnik, zamieszkujący różnorodne obszary na całym świecie, od tundr po lasy i góry. Jego charakterystyczne sierść, zwykle o odcieniach szarości, oraz spojrzenie pełne determinacji sprawiają, że jest jednym z najbardziej ikonicznych przedstawicieli dzikich karnivorów.\r\n\r\nWataha wilków szarych, zorganizowana grupa rodzinna, odgrywa kluczową rolę w ich społeczności. Współpracujące polowania oraz opieka nad młodymi członkami watahy podkreślają ich silne więzi rodzinne. Jako zwierzęta terytorialne, wilki szare odgrywają istotną rolę w regulacji populacji zwierząt, wpływając na równowagę ekosystemu.\r\n\r\nW naszym zoo z pasją prezentujemy wilki szare, umożliwiając odwiedzającym bliskie spotkanie z tymi dzikimi i pięknymi drapieżnikami. To niezwykła okazja do zgłębienia ich naturalnych zachowań, a także do zrozumienia roli, jaką odgrywają w przyrodzie.\r\n\r\n\r\n\r\n\r\n\r\n', 'Wilk', 'mięso', '15:00', 'http://localhost/cos/img/wilk.jpg');
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `contact`
---
+INSERT INTO `animals` (`animalId`, `animalSpecies`, `animalDescription`, `animalDiet`, `animalFeeding`, `animalImage`) VALUES
+(1, 'Lew Afrykański', 'Lew afrykański, znany naukowo jako Panthera leo, to majestatyczne drapieżniki zamieszkujące głównie obszary subsaharyjskie Afryki. Jego charakterystyczna grzywa i potężna sylwetka czynią go jednym z najsilniejszych i najbardziej rozpoznawalnych drapieżników na świecie.\r\n\r\nLwy afrykańskie są zwierzętami stadnymi, żyjącymi w grupach zwanych stadami. W skład stada wchodzą przeważnie spokrewnione samice, młode i kilku dorosłych samców. To społeczne podejście do życia umożliwia im skuteczne polowanie na większą zdobycz.\r\n\r\nTe majestatyczne zwierzęta są często symbolem siły, dumy i sprawności w kulturze afrykańskiej. W naszym zoo z przyjemnością prezentujemy lwy afrykańskie, zapewniając odwiedzającym niezapomniane chwile obserwacji ich majestatycznego zachowania. Doświadcz bliskiego spotkania z królami sawanny i zgłęb tajemnice ich fascynującego życia.', 'mięso', '14:00', 'http://localhost/cos/img/lew.jpg'),
+(2, 'Tygrys Bengalski', 'Tygrys bengalski, znany naukowo jako Panthera tigris tigris, to jeden z najbardziej charakterystycznych i zagrożonych gatunków tygrysów. Zamieszkują głównie obszary lasów deszczowych, bagiennej roślinności i równin w Azji Południowo-Wschodniej. Jego okazała sierść o wyrazistych, ciemnych pasach sprawia, że jest jednym z najbardziej rozpoznawalnych drapieżników na świecie.\r\n\r\nTygrysy bengalskie są znane ze swojej siły i zwinności. To doskonali myśliwi, polując głównie na dziki i jelenie. Jednak niestety, ze względu na utratę naturalnych siedlisk i kłusownictwo, są one zagrożone wyginięciem.\r\n\r\nW naszym zoo z pełnym szacunkiem prezentujemy tygrysy bengalskie, starając się podkreślić ich ważną rolę w ochronie różnorodności biologicznej. Oferujemy odwiedzającym niepowtarzalną szansę na obserwację tych pięknych i majestatycznych zwierząt oraz zrozumienie potrzeby ich ochrony w dzikiej przyrodzie.', 'mięso', '15:00', 'http://localhost/cos/img/tygrys.jpg'),
+(3, 'Słoń Afrykański', 'Słoń afrykański, znany naukowo jako Loxodonta africana, to olbrzymi i wyjątkowy gatunek, zamieszkujący różnorodne obszary Afryki, od sawann po lasy deszczowe. Z charakterystycznymi, wygiętymi kłami i potężnymi uszami, słoń afrykański jest jednym z najbardziej rozpoznawalnych ssaków na świecie.\r\n\r\nTe inteligentne i społeczne zwierzęta żyją w rodzinnych grupach, znanych jako stada. Stada składają się z samic, ich potomstwa i czasem dorosłych samców. Słoń afrykański jest także kluczowym graczem w ekosystemie, wpływając na kształtowanie krajobrazu i zachowanie innych gatunków.\r\n\r\nNiestety, ze względu na kłusownictwo i utratę siedlisk, słoń afrykański jest obecnie zagrożony wyginięciem. W naszym zoo, z zaangażowaniem w ochronę przyrody, prezentujemy te imponujące stworzenia, zachęcając do zrozumienia ich roli w ekosystemie oraz potrzeby skutecznej ochrony dla przyszłych pokoleń.', 'rośliny', '10:00', 'http://localhost/cos/img/slon.jpg'),
+(4, 'Pingwin Cesarski', 'Pingwin cesarski, naukowo znany jako Aptenodytes forsteri, to majestatyczny ptak zamieszkujący arktyczne obszary Antarktyki. Jego charakterystyczne czarno-białe upierzenie z wyrazistymi, jaskrawożółtymi plamami na głowie czyni go jednym z najbardziej rozpoznawalnych mieszkańców zimowego krańca świata.\r\n\r\nTe zdolne do pływania i nurkowania ptaki cesarskie żyją w dużych koloniach, gdzie budują silne społeczności. Opieka nad jajami i młodymi odgrywa kluczową rolę w ich życiu społecznym, co nadaje pingwinom cesarskim wyjątkową tożsamość w królestwie przyrody.\r\n\r\nW naszym zoo z dumą prezentujemy te fascynujące ptaki, umożliwiając odwiedzającym bliskie spotkanie z ich naturalnym środowiskiem. Zachęcamy do zgłębiania tajemnic życia pingwinów cesarskich oraz do zrozumienia ich roli w ekosystemie Antarktyki.', 'ryby', '11:00', 'http://localhost/cos/img/pingwin.jpg'),
+(5, 'Żyrafa Siatkowana', 'Żyrafa siatkowana, znana również jako Giraffa reticulata, to imponujące ssaki zamieszkujące głównie obszary sawann i lasów Afryki. Charakteryzują się długą szyją i plamistą sierścią, co sprawia, że są jednymi z najbardziej rozpoznawalnych zwierząt na Ziemi.\r\n\r\nTe wyjątkowe stworzenia żywią się głównie liśćmi z drzew, korzystając z długiej szyi, by dotrzeć do koron drzew, które są poza zasięgiem innych zwierząt. Żyrafa siatkowana dostosowała się do życia w różnorodnych środowiskach, od suchych sawann po wilgotne lasy.\r\n\r\nW naszym zoo z dumą prezentujemy żyrafy siatkowane, umożliwiając odwiedzającym bliskie spotkanie z tymi imponującymi zwierzętami. Zachęcamy do obserwacji ich naturalnego zachowania i do zgłębienia tajemnic ich fascynującego świata.', 'rośliny', '9:00', 'http://localhost/cos/img/zyrafa.jpg'),
+(6, 'Gepard', 'Gepard, Acinonyx jubatus, jest niezwykłym drapieżnikiem zamieszkującym głównie obszary sawann Afryki. Jego elegancka sylwetka, ozdobiona charakterystycznym złotym futrem i ciemnymi plamami, czyni go jednym z najbardziej rozpoznawalnych mieszkańców afrykańskich równin.\r\n\r\nGepardy są bezsprzecznie najszybszymi lądowymi drapieżnikami, zdolnymi osiągnąć znaczące prędkości w krótkich biegach. Ich smukła budowa ciała, długie nogi i zdolności łowieckie uczyniły z nich mistrzów skradania się i zdobywania pokarmu. To społeczne zwierzęta żyją w małych grupach rodzinnych, co podkreśla ich silne więzi społeczne.\r\n\r\nW naszym zoo z pasją prezentujemy gepardy, umożliwiając odwiedzającym niezwykłą okazję do bliskiego spotkania z tymi ekscytującymi drapieżnikami. Zachęcamy do zgłębiania fascynującego świata gepardów i do zrozumienia ich roli w delikatnej równowadze ekosystemu Afryki.', 'mięso', '9:30', 'http://localhost/cos/img/gepard.jpg'),
+(7, 'Krokodyl Nilowy', '\r\nKrokodyl nilowy, znany naukowo jako Crocodylus niloticus, to imponujący drapieżnik żyjący w wodach rzek i jezior Afryki. Jego charakterystyczny wygląd, z twardym pancerzem skórnym i groźnymi szczękami, czyni go jednym z najbardziej rozpoznawalnych gadów.\r\n\r\nTe potężne zwierzęta są doskonałymi myśliwymi, polując głównie w wodzie na ryby i inne zwierzęta wodne. Krokodyle nilowe potrafią także wznosić się na bieguna i są bardzo zręczne na lądzie, co czyni je groźnymi drapieżnikami w różnorodnych środowiskach.\r\n\r\nW naszym zoo prezentujemy krokodyle nilowe, umożliwiając odwiedzającym bliskie spotkanie z tymi prehistorycznymi stworzeniami. To fascynujące zwierzęta ukazują nam unikalne aspekty ekologii wodnych obszarów Afryki i przypominają o znaczeniu ochrony różnorodności biologicznej w ich siedliskach naturalnych.', 'mięso', '10:30', 'http://localhost/cos/img/krokodyl.jpg'),
+(8, 'Flaming Różowy', '\r\nFlamingi różowe, znane również jako Phoenicopterus roseus, to urocze ptaki zamieszkujące słone bagna, jeziora i inne mokradła w Afryce, Azji, Europie i Ameryce. Charakteryzują się wyjątkowym różowym upierzeniem, długimi szyjami i zakrzywionymi dziobami.\r\n\r\nTe społeczne ptaki żyją w dużych koloniach, tworząc niesamowite widoki swoimi intensywnie różowymi skupiskami. Ich kolorowe pióra zawdzięczają zawartym w pożywieniu substancjom organicznym, takim jak karotenoidy. Flamingi różowe spędzają dużo czasu w wodzie, gdzie szukają pokarmu, a ich charakterystyczne nogi pozwalają im wadeować po płytkich obszarach.\r\n\r\nW naszym zoo prezentujemy te piękne flamingi, umożliwiając odwiedzającym niezapomniane chwile obserwacji ich eleganckiego tańca i unikalnego wyglądu. To doskonała okazja do zanurzenia się w tajemnice życia tych uroczych ptaków i zrozumienia ich roli w ekosystemie mokradeł.', 'skorupiaki', '11:30', 'http://localhost/cos/img/flaming.jpg'),
+(9, 'Panda Wielka', '\r\nPanda wielka, znana także jako Ailuropoda melanoleuca, to uroczy i zagrożony wyginięciem gatunek żyjący w górskich lasach Chin. Jej charakterystyczne czarne i białe ubarwienie oraz sympatyczna aparycja sprawiają, że jest jednym z najbardziej rozpoznawalnych zwierząt na świecie.\r\n\r\nPandy wielkie są roślinożerne, a ich głównym pożywieniem są bambusy. Ich wyspecjalizowane kły i umiejętność chwytania pędy bambusa sprawiają, że są doskonałymi adeptami życia w gęstych lasach. Choć zwykle żyją samotnie, towarzyszą im małe pandy, które wprowadzają dodatkowy urok do ich społeczności.\r\n\r\nW naszym zoo z dumą prezentujemy pandy wielkie, umożliwiając odwiedzającym bliskie spotkanie z tymi uroczymi mieszkańcami górskich obszarów Chin. To niepowtarzalna okazja do zrozumienia ich unikalnej biologii, problemów związanych z ochroną oraz do zachwycenia się ich urokiem i delikatnością.', 'rośliny', '12:30', 'http://localhost/cos/img/panda.jpg'),
+(10, 'Wilk Szary', 'Wilk szary, znany naukowo jako Canis lupus, to majestatyczny drapieżnik, zamieszkujący różnorodne obszary na całym świecie, od tundr po lasy i góry. Jego charakterystyczne sierść, zwykle o odcieniach szarości, oraz spojrzenie pełne determinacji sprawiają, że jest jednym z najbardziej ikonicznych przedstawicieli dzikich karnivorów.\r\n\r\nWataha wilków szarych, zorganizowana grupa rodzinna, odgrywa kluczową rolę w ich społeczności. Współpracujące polowania oraz opieka nad młodymi członkami watahy podkreślają ich silne więzi rodzinne. Jako zwierzęta terytorialne, wilki szare odgrywają istotną rolę w regulacji populacji zwierząt, wpływając na równowagę ekosystemu.\r\n\r\nW naszym zoo z pasją prezentujemy wilki szare, umożliwiając odwiedzającym bliskie spotkanie z tymi dzikimi i pięknymi drapieżnikami. To niezwykła okazja do zgłębienia ich naturalnych zachowań, a także do zrozumienia roli, jaką odgrywają w przyrodzie.\r\n\r\n\r\n\r\n\r\n\r\n', 'mięso', '15:00', 'http://localhost/cos/img/wilk.jpg');
 
 CREATE TABLE `contact` (
   `contactId` int(11) NOT NULL,
@@ -66,10 +28,6 @@ CREATE TABLE `contact` (
   `contactMessage` varchar(999) DEFAULT NULL,
   `contactDate` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `contact`
---
 
 INSERT INTO `contact` (`contactId`, `contactName`, `contactEmail`, `contactMessage`, `contactDate`) VALUES
 (1, 'aaa', 'aaa@aaa', '', '2023-09-15 07:23:40'),
@@ -95,13 +53,9 @@ INSERT INTO `contact` (`contactId`, `contactName`, `contactEmail`, `contactMessa
 (24, 'aaa', 'admin@admin.pl', 'a', '2023-10-05 07:56:57'),
 (25, 'a', 'aaa@aaa', 'a', '2023-10-05 08:04:40'),
 (26, 'aaa', 'aaa@aaa', 'a', '2023-10-05 08:05:39'),
-(27, 'cos', 'cos@cos.gmail', 'abc', '2023-12-13 14:13:51');
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `events`
---
+(27, 'cos', 'cos@cos.gmail', 'abc', '2023-12-13 14:13:51'),
+(28, 'a', 'a@a', 'aa', '2024-01-14 09:29:28'),
+(29, 'test', 'test@test.pl', 'test', '2024-01-14 09:30:21');
 
 CREATE TABLE `events` (
   `eventId` int(11) NOT NULL,
@@ -110,10 +64,6 @@ CREATE TABLE `events` (
   `eventDescription` varchar(999) DEFAULT NULL,
   `eventImage` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `events`
---
 
 INSERT INTO `events` (`eventId`, `eventName`, `eventDate`, `eventDescription`, `eventImage`) VALUES
 (1, 'Piknik rodzinny', '2024-04-10 12:00:00', 'Zapraszamy na wyjątkowy piknik rodzinny w naszym zoo! Czekają na Was niezapomniane chwile w otoczeniu egzotycznych zwierząt. Odpocznijcie na kocu, delektując się pysznym jedzeniem, uczestniczcie w konkursach, malujcie twarze dzieciom, a także bierzcie udział w edukacyjnych pokazach o naszych zwierzętach. Stwórzcie wspólne wspomnienia podczas pikniku rodzinengo w Królestwie Zwierząt!', 'http://localhost/cos/img/piknik.jpg'),
@@ -126,12 +76,6 @@ INSERT INTO `events` (`eventId`, `eventName`, `eventDate`, `eventDescription`, `
 (9, 'Adopcja zwierząt', '2024-06-20 14:00:00', 'Adoptuj zwierzę z naszego zoo i stań się jego opiekunem! Twój wkład wspiera konkretne zwierzę, a w zamian otrzymasz certyfikat, zdjęcia oraz regularne aktualizacje. To nie tylko wyjątkowy gest wsparcia, ale także możliwość zaangażowania się w ochronę zagrożonych gatunków i ich środowiska. Dołącz do naszej społeczności opiekunów i spraw, aby życie tych zwierząt było lepsze i bezpieczniejsze.', 'http://localhost/cos/img/adopcja2.jpg'),
 (10, 'Konkurs fotograficzny', '2024-06-28 08:00:00', 'Witamy w naszym Konkursie Fotograficznym! Zapraszamy do udziału wszystkich miłośników fotografii. Wystarczy złapać chwilę związaną z naturą, wysłać nam zdjęcie, a może zdobywasz fantastyczne nagrody! Termin zgłaszania prac upływa tydzień po ogłoszeniu konkursu, więc nie przegap szansy podzielenia się swoim talentem i celebracji piękna przyrody!', 'http://localhost/cos/img/konkurs_foto2.jpg');
 
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `orders`
---
-
 CREATE TABLE `orders` (
   `orderId` int(11) NOT NULL,
   `userId` int(11) DEFAULT NULL,
@@ -143,18 +87,9 @@ CREATE TABLE `orders` (
   `orderStatus` int(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `orders`
---
-
 INSERT INTO `orders` (`orderId`, `userId`, `orderDeliveryStreet`, `orderDeliveryOption`, `orderPaymentMethod`, `Data_zamówienia`, `orderDeliveryLocal`, `orderStatus`) VALUES
-(35, 1, 'cos', 'paczkomat', 'paypal', '2024-01-07', '2137', 0);
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `order_products`
---
+(35, 1, 'cos', 'paczkomat', 'paypal', '2024-01-07', '2137', 0),
+(37, 1, 'test', 'paczkomat', 'bank_transfer', '2024-01-15', 'test ', 0);
 
 CREATE TABLE `order_products` (
   `order_productsId` int(11) NOT NULL,
@@ -162,31 +97,9 @@ CREATE TABLE `order_products` (
   `productId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `order_products`
---
-
 INSERT INTO `order_products` (`order_productsId`, `order_id`, `productId`) VALUES
-(30, 35, 3);
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `password_change_tokens`
---
-
-CREATE TABLE `password_change_tokens` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `token` varchar(255) DEFAULT NULL,
-  `expires_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `password_reset_tokens`
---
+(30, 35, 3),
+(32, 37, 2);
 
 CREATE TABLE `password_reset_tokens` (
   `id` int(11) NOT NULL,
@@ -195,11 +108,8 @@ CREATE TABLE `password_reset_tokens` (
   `expires_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `products`
---
+INSERT INTO `password_reset_tokens` (`id`, `user_id`, `token`, `expires_at`) VALUES
+(35, 2, 'cb5155414f67d56aef9db5c44507805daec3780f8a736ac8e76a50bbb331f47f', '2024-01-15 22:36:58');
 
 CREATE TABLE `products` (
   `productId` int(11) NOT NULL,
@@ -210,10 +120,6 @@ CREATE TABLE `products` (
   `productCategory` varchar(15) DEFAULT NULL,
   `productImage` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `products`
---
 
 INSERT INTO `products` (`productId`, `productName`, `productDescription`, `productPrice`, `productQuantity`, `productCategory`, `productImage`) VALUES
 (2, 'Koszulka motyw ZOO', 'Koszulka z motywem zwierząt zoo. Doskonała dla miłośników przyrody i wizyt w ogrodzie zoologicznym. Przyciągnij uwagę swoim ulubionym zwierzakiem na koszulce i wyraź swoją pasję do świata dzikiej przyrody. Niech ta koszulka stanie się Twoim towarzyszem podczas fascynujących przygód związanych z odkrywaniem świata zwierząt!', 40.00, 100, 't-shirt', 'http://localhost/cos/img/koszulka_zoo.jpg'),
@@ -232,12 +138,6 @@ INSERT INTO `products` (`productId`, `productName`, `productDescription`, `produ
 (15, 'Bilet normalny', 'Bilet normalny to klucz do pełnego spektrum atrakcji, dostępny dla wszystkich entuzjastów bez żadnych dodatkowych wymogów. Oferuje pełną swobodę zwiedzania muzeów, parków rozrywki i innych miejsc pełnych kultury oraz rozrywki. Skorzystaj z tej wygodnej opcji, aby odkrywać fascynujący świat bez żadnych ograniczeń. Zakup biletu normalnego i ciesz się niezapomnianymi przeżyciami, dostosowanymi do Twoich własnych upodobań i planów.', 30.00, 0, 'ticket', 'http://localhost/cos/img/bilet_normalny.jpg'),
 (16, 'Bilet rodzinny', 'Bilet rodzinny to idealna opcja dla rodzin, oferująca wyjątkową okazję do wspólnego odkrywania atrakcji. Ten bilet jest dostępny dla rodzin składających się z dwóch dorosłych i dwójki dzieci, co sprawia, że cała rodzina może cieszyć się razem niezapomnianymi chwilami. Bez względu na to, czy planujesz wizytę w muzeum, parku rozrywki czy innym miejscu pełnym rozrywki, bilet rodzinny zapewnia dostęp do fascynujących atrakcji dla każdego członka rodziny. Stwórzcie wspólne wspomnienia i cieszcie się rodzinna przygodą z biletem dedykowanym dla Was - rodziny 2+2.', 80.00, 0, 'ticket', 'http://localhost/cos/img/bilet_rodzinny.jpg');
 
--- --------------------------------------------------------
-
---
--- Struktura tabeli dla tabeli `users`
---
-
 CREATE TABLE `users` (
   `userId` int(11) NOT NULL,
   `userName` varchar(25) DEFAULT NULL,
@@ -245,165 +145,68 @@ CREATE TABLE `users` (
   `userEmail` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `users`
---
-
 INSERT INTO `users` (`userId`, `userName`, `userPassword`, `userEmail`) VALUES
-(1, 'admin', '$2y$10$UAHTtcLq8zTmtpZ/I9uq.OaznoFwIvvws3vvFymuxCBHX7mzXHj26', 'admin@admin.pl'),
+(1, 'admin', '$2y$10$Pg7T76hojroNhJpSrDU9VOJ7uZxwLCf5i9ug1I156Dlz2Gekl7/J.', 'admin@admin.pl'),
 (2, 'user1', '$2y$10$6GnsMrGcgdVOZtnNDwl7ouoevBtIEArTSw3L3h/OUU5fEdPeK8g5a', 'cos.test.inz@gmail.com');
 
---
--- Indeksy dla zrzutów tabel
---
-
---
--- Indeksy dla tabeli `animals`
---
 ALTER TABLE `animals`
   ADD PRIMARY KEY (`animalId`);
 
---
--- Indeksy dla tabeli `contact`
---
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`contactId`);
 
---
--- Indeksy dla tabeli `events`
---
 ALTER TABLE `events`
   ADD PRIMARY KEY (`eventId`);
 
---
--- Indeksy dla tabeli `orders`
---
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`orderId`),
   ADD KEY `userId` (`userId`);
 
---
--- Indeksy dla tabeli `order_products`
---
 ALTER TABLE `order_products`
   ADD PRIMARY KEY (`order_productsId`),
   ADD KEY `order_id` (`order_id`),
   ADD KEY `product_id` (`productId`);
 
---
--- Indeksy dla tabeli `password_change_tokens`
---
-ALTER TABLE `password_change_tokens`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`);
-
---
--- Indeksy dla tabeli `password_reset_tokens`
---
 ALTER TABLE `password_reset_tokens`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
---
--- Indeksy dla tabeli `products`
---
 ALTER TABLE `products`
   ADD PRIMARY KEY (`productId`);
 
---
--- Indeksy dla tabeli `users`
---
 ALTER TABLE `users`
   ADD PRIMARY KEY (`userId`);
 
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `animals`
---
 ALTER TABLE `animals`
-  MODIFY `animalId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `animalId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
---
--- AUTO_INCREMENT for table `contact`
---
 ALTER TABLE `contact`
-  MODIFY `contactId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `contactId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
---
--- AUTO_INCREMENT for table `events`
---
 ALTER TABLE `events`
   MODIFY `eventId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
---
--- AUTO_INCREMENT for table `orders`
---
 ALTER TABLE `orders`
-  MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `orderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
---
--- AUTO_INCREMENT for table `order_products`
---
 ALTER TABLE `order_products`
-  MODIFY `order_productsId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `order_productsId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
---
--- AUTO_INCREMENT for table `password_change_tokens`
---
-ALTER TABLE `password_change_tokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
-
---
--- AUTO_INCREMENT for table `password_reset_tokens`
---
 ALTER TABLE `password_reset_tokens`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
---
--- AUTO_INCREMENT for table `products`
---
 ALTER TABLE `products`
   MODIFY `productId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
---
--- AUTO_INCREMENT for table `users`
---
 ALTER TABLE `users`
   MODIFY `userId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `orders`
---
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`);
 
---
--- Constraints for table `order_products`
---
 ALTER TABLE `order_products`
   ADD CONSTRAINT `order_products_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`orderId`),
   ADD CONSTRAINT `order_products_ibfk_2` FOREIGN KEY (`productId`) REFERENCES `products` (`productId`);
 
---
--- Constraints for table `password_change_tokens`
---
-ALTER TABLE `password_change_tokens`
-  ADD CONSTRAINT `password_change_tokens_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`userId`) ON DELETE CASCADE;
-
---
--- Constraints for table `password_reset_tokens`
---
 ALTER TABLE `password_reset_tokens`
   ADD CONSTRAINT `password_reset_tokens_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`userId`) ON DELETE CASCADE;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
