@@ -1,5 +1,3 @@
-CREATE DATABASE zoo;
-
 CREATE TABLE `animals` (
   `animalId` int(11) NOT NULL,
   `animalSpecies` varchar(25) DEFAULT NULL,
