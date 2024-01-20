@@ -666,15 +666,19 @@ footer {
 }
 
 #chosen-event {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  max-width: 45%;
-  max-height: 80%;
+  max-width: 30%;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   text-align: center;
   align-items: center;
   padding: 10px;
+}
+
+#chosen-event img{
+  max-width: 50%;
 }
 
 #flex {
@@ -704,6 +708,9 @@ footer {
 }
 
 .pagination {
+  min-width: 10%;
+  max-width: 15%;
+  height: 5%;
   background: rgba(255, 255, 255, 0.2);
   margin-top: 10px;
   border-radius: 20px;
@@ -726,6 +733,9 @@ footer {
   font-size: 15px;
   font-weight: 350;
   cursor: pointer;
+  padding: 10px;
+  width: 40%;
+  margin: 10px 0 0 10px;
 }
 
 .page-link:hover {

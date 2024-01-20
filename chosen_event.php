@@ -49,7 +49,6 @@ if (!$selectedEvent) {
     <div class="home">
     <header></header>
 
-        <div class="event-container event-row">
             <?php
             echo '<div id="chosen-event">';
             echo '<div id="flex">';
@@ -61,7 +60,6 @@ if (!$selectedEvent) {
             echo '<div class="event-description">' . $selectedEvent['description'] . '</div>';
             echo '</div>';
             ?>
-        </div>
 
         <footer></footer>
     </div>
