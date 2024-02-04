@@ -26,7 +26,7 @@
         <header></header>
 
             <form class="form" method="POST" action="PHP/contact.php" autocomplete="off">
-                <p class="title">Contact us</p>
+                <p class="title">Skontaktuj się z nami</p>
                     <label>
                         <input required="" placeholder="" type="text" class="input" name="name">
                         <span>Name</span>
@@ -41,7 +41,7 @@
                     <textarea required="" class="input" type="textarea" name="message"></textarea>
                 </label>
 
-                <button class="submit">Submit</button>
+                <button class="submit">Wyślij</button>
 
                 <?php
                     if(isset($_SESSION['success']) && $_SESSION['success'] === true)

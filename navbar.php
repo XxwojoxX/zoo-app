@@ -52,7 +52,7 @@ header("Access-Control-Allow-Origin: *");
             $userName = $_SESSION['userName'];
             echo
             '<a href="PHP/logout.php">
-                                <button class="log-reg-btn">Logout</button>
+                                <button class="log-reg-btn">Wyloguj</button>
                             </a>';
 
             echo '<span class="username">' . $userName . '</span>';
@@ -69,12 +69,12 @@ header("Access-Control-Allow-Origin: *");
         } else {
             echo
             '<a href="login_form.php">
-                                <button class="log-reg-btn">Login</button>
+                                <button class="log-reg-btn">Zaloguj</button>
                             </a>';
 
             echo
             '<a href="register_form.php">
-                                <button class="log-reg-btn">Register</button>
+                                <button class="log-reg-btn">Zarejestruj</button>
                             </a>';
         }
         ?>

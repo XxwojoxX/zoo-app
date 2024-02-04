@@ -40,7 +40,7 @@
         <header></header>
 
             <form class="form" id="demo-form" method="POST" action="PHP/register.php" autocomplete="off">
-                <p class="title">Register </p>
+                <p class="title">Rejestracja</p>
                     <label>
                         <input required="" placeholder="" class="input" type="text" name="Nick">
 
@@ -104,7 +104,7 @@
 
                     <label for="regulationsCheckBox">
                         <input type="checkbox" class="regulationsCheckBox" id="regulationsCheckBox" name="regulations">
-                        <p>Accept regulations*</p>
+                        <p>Zaakceptuj regulamin*</p>
 
                         <?php
                             if(isset($_SESSION['e_regulations']))
@@ -125,9 +125,9 @@
                         }
                     ?>
 
-                    <button class="submit">Submit</button>
+                    <button class="submit">Wyślij</button>
                     
-                    <p class="signin">Already have an acount ? <a href="login_form.php">Signin</a> </p>
+                    <p class="signin">Masz już konto? <a href="login_form.php">Zaloguj się</a> </p>
             </form>
 
             <footer></footer>

@@ -43,7 +43,7 @@
             }
             ?>
 
-            <p class="title">Remind password</p>
+            <p class="title">Przypomnij hasło</p>
             <p class="message">Podaj email</p>
 
             <label>
@@ -51,7 +51,7 @@
                 <span>Email</span>
             </label>
 
-            <button class="submit" name="remind-button">Submit</button>
+            <button class="submit" name="remind-button">Wyślij</button>
         </form>
 
         <footer></footer>

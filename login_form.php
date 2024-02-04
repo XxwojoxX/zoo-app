@@ -58,8 +58,8 @@ if (isset($_SESSION['e_bot']))
             }
             ?>
 
-            <p class="title">Login </p>
-            <p class="message">Log in and get full access to our app. </p>
+            <p class="title">Logowanie</p>
+            <p class="message">Zaloguj się, aby uzyskać pełny dostęp do aplikacji</p>
             <?php
             if (isset($_SESSION['fail'])) {
                 echo $_SESSION['fail'];
@@ -81,8 +81,8 @@ if (isset($_SESSION['e_bot']))
                 <span>Email</span>
             </label>
 
-            <button class="submit">Submit</button>
-            <p class="signin">Forgot your password ? <a href="remind_pass_form.php">Remind me</a> </p>
+            <button class="submit">Wyślij</button>
+            <p class="signin">Zapomniałeś hasła? <a href="remind_pass_form.php">Przypomnij</a> </p>
         </form>
 
         <footer></footer>

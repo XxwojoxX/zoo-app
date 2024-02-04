@@ -31,7 +31,7 @@
     <header></header>
 
         <form class="form" id="reset-form" action="PHP/reset_password.php" method="POST" name="reset_form" autocomplete="off">
-    <p class="title">Reset password</p>
+    <p class="title">Resetowanie hasła</p>
     <p class="message">Podaj nowe hasło</p>
 
     <label>
@@ -47,7 +47,7 @@
     <?php $resetToken = $_GET['token']; ?>
     <input type="hidden" name="token" value="<?php echo $resetToken; ?>">
 
-    <button class="submit" name="reset-button">Submit</button>
+    <button class="submit" name="reset-button">Wyślij</button>
     
 </form>
 
